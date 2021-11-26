@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /deltarune
+permalink: /deltarune/
 title: DELTARUNE
 ---
 # DELTARUNE
