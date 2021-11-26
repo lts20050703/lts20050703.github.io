@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /ptnk/
+permalink: /ptnk
 title: PTNK
 ---
 # PTNK

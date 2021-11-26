@@ -3,6 +3,6 @@ layout: default
 title: lts20050703
 ---
 
-# [PTNK](ptnk)
+# [PTNK](/ptnk)
 
-# [DELTARUNE](deltarune)
+# [DELTARUNE](/deltarune)
