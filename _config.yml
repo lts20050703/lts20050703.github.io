@@ -1,0 +1,12 @@
+title: lts20050703
+description: lts20050703
+url: https://lts20050703.github.io
+github_username: lts20050703
+theme: minima
+minima:
+  skin: dark
+plugins:
+  - jekyll-redirect-from
+header_pages:
+  - pages/ptnk.md
+  - pages/deltarune.md
