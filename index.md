@@ -1,9 +1,10 @@
 ---
 layout: default
-permalink: /
 title: lts20050703
 ---
 
-# [PTNK](ptnk)
+# lts20050703
 
-# [DELTARUNE](deltarune)
+# [PTNK](/ptnk/)
+
+# [DELTARUNE](/deltarune/)

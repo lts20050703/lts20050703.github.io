@@ -3,5 +3,7 @@ layout: default
 permalink: /deltarune/
 title: DELTARUNE
 ---
-# DELTARUNE
-- [Playlist](playlist)
+
+# [lts20050703](/) / DELTARUNE
+
+- [Playlist](/playlist/deltarune/)
