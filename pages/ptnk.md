@@ -1,7 +1,6 @@
 ---
 layout: default
 permalink: /ptnk/
-redirect_from: /ptnk
 title: PTNK
 ---
 # PTNK
