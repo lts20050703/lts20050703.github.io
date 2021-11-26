@@ -8,3 +8,4 @@ title: Hóa
 
 - [Playlist](/playlist/hoa/)
 - [Chuyên đề: Nhóm cacbon](/video/hoa/2021/11/22/)
+- [](/video/hoa/2021/11/26/)
