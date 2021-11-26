@@ -1,6 +1,5 @@
 ---
 layout: default
-permalink: /
 title: lts20050703
 ---
 
