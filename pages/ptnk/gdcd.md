@@ -8,3 +8,4 @@ title: GDCD
 
 - [Playlist](/playlist/gdcd/)
 - [Bài 5: Cung - cầu trong sản xuất và lưu thông hàng hóa](/video/gdcd/2021/11/22/)
+- [](/video/gdcd/2021/11/29)

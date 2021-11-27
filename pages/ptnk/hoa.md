@@ -9,3 +9,4 @@ title: Hóa
 - [Playlist](/playlist/hoa/)
 - [Chuyên đề: Nhóm cacbon](/video/hoa/2021/11/22/)
 - [Toán CO2 tác dụng dung dịch kiềm](/video/hoa/2021/11/26/)
+- [](/video/hoa/2021/11/29)
