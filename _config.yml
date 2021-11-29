@@ -9,4 +9,3 @@ plugins:
   - jekyll-redirect-from
 header_pages:
   - pages/ptnk.md
-  - pages/deltarune.md
