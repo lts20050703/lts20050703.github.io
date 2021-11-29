@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /ptnk/ly
+permalink: /ptnk/ly/
 title: Lý
 ---
 
