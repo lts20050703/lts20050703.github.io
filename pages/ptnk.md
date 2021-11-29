@@ -4,7 +4,7 @@ permalink: /ptnk/
 title: PTNK
 ---
 
-# [lts20050703](/) / PTNK
+## [lts20050703](/) / PTNK
 
 - [Playlist](/playlist/ptnk/)
 - [Anh](/ptnk/anh/)
