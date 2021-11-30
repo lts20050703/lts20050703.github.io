@@ -3,7 +3,6 @@ layout: default
 permalink: /ptnk/dia/
 title: Địa
 ---
-
 ## [lts20050703](/) / [PTNK](/ptnk/) / Địa
 
 - [Playlist](/playlist/dia/)

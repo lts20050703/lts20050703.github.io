@@ -3,7 +3,6 @@ layout: default
 permalink: /ptnk/
 title: PTNK
 ---
-
 ## [lts20050703](/) / PTNK
 
 - [Playlist](/playlist/ptnk/)
@@ -18,6 +17,5 @@ title: PTNK
 - [Lý](/ptnk/ly/)
 - [Sinh](/ptnk/sinh/)
 - [Sử](/ptnk/su/)
-- [Thể Dục](/ptnk/the-duc/)
 - [Tin](/ptnk/tin/)
 - [Văn](/ptnk/van/)

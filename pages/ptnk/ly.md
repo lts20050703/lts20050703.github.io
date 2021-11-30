@@ -3,7 +3,6 @@ layout: default
 permalink: /ptnk/ly/
 title: Lý
 ---
-
 ## [lts20050703](/) / [PTNK](/ptnk/) / Lý
 
 - [Playlist](/playlist/ly/)

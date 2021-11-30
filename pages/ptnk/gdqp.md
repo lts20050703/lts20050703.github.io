@@ -3,7 +3,6 @@ layout: default
 permalink: /ptnk/gdqp/
 title: GDQP
 ---
-
 ## [lts20050703](/) / [PTNK](/ptnk/) / GDQP
 
 - [Playlist](/playlist/gdqp/)

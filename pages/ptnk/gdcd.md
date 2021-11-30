@@ -3,7 +3,6 @@ layout: default
 permalink: /ptnk/gdcd/
 title: GDCD
 ---
-
 ## [lts20050703](/) / [PTNK](/ptnk/) / GDCD
 
 - [Playlist](/playlist/gdcd/)

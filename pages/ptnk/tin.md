@@ -3,7 +3,6 @@ layout: default
 permalink: /ptnk/tin/
 title: Tin
 ---
-
 ## [lts20050703](/) / [PTNK](/ptnk/) / Tin
 
 - [Playlist](/playlist/tin/)
