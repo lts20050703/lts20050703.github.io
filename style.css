@@ -1,5 +1,6 @@
 * {
 	margin: 0
+	
 }
 
 .container {
@@ -9,4 +10,8 @@
 	background-position: center;
 	width: 100vw;
 	height: 100vh;
+	font-size: 8rem;
+	display: flex;
+  justify-content: center;
+  align-items: center;
 }
