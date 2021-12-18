@@ -7,7 +7,7 @@
 	"[css]": {
 		"editor.defaultFormatter": "HookyQR.beautify"
 	},
-	"[js]": {
+	"[javascript]": {
 		"editor.defaultFormatter": "dprint.dprint"
 	},
 	"[json]": {
