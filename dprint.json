@@ -10,9 +10,7 @@
 		"trailingCommas": "never",
 		"preferSingleLine": true
 	},
+	"json": { "preferSingleLine": true },
 	"includes": ["**/*.{js,json,jsonc}"],
-	"plugins": [
-		"https://plugins.dprint.dev/typescript-0.59.2.wasm",
-		"https://plugins.dprint.dev/json-0.13.2.wasm"
-	]
+	"plugins": ["https://plugins.dprint.dev/typescript-0.59.2.wasm", "https://plugins.dprint.dev/json-0.13.2.wasm"]
 }
