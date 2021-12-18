@@ -1,5 +1,19 @@
 {
-	"editor.defaultFormatter": "HookyQR.beautify",
+	"editor.insertSpaces": false,
 	"editor.formatOnSave": true,
-	"editor.insertSpaces": false
+	"[html]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[js]": {
+		"editor.defaultFormatter": "dprint.dprint"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "dprint.dprint"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "dprint.dprint"
+	}
 }
