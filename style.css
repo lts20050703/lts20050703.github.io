@@ -1,16 +1,27 @@
-* {
-	margin: 0;
+.outer,
+.inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
 }
 
-.container {
-	background-image: url("./bg.jpg");
-	background-repeat: no-repeat;
+.outer {
+	inset: 0;
+	position: fixed;
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("./bg.jpg");
+}
+
+.inner {
 	width: 100vw;
 	height: 100vh;
-	font-size: 8rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	font-size: 2rem;
+	max-width: 64rem;
+	max-height: 32rem;
+	flex-direction: column;
+	background-color: #fff7;
 }
