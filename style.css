@@ -19,7 +19,7 @@
 .inner {
 	width: 100vw;
 	height: 100vh;
-	font-size: 2rem;
+	font-size: 1rem;
 	max-width: 64rem;
 	max-height: 32rem;
 	flex-direction: column;
