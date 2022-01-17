@@ -3,7 +3,7 @@
 	"editor.formatOnSave": true,
 	"[html]": { "editor.defaultFormatter": "HookyQR.beautify" },
 	"[css]": { "editor.defaultFormatter": "HookyQR.beautify" },
-	"[javascript]": { "editor.defaultFormatter": "dprint.dprint" },
+	"[typescript]": { "editor.defaultFormatter": "dprint.dprint" },
 	"[json]": { "editor.defaultFormatter": "dprint.dprint" },
 	"[jsonc]": { "editor.defaultFormatter": "dprint.dprint" }
 }
