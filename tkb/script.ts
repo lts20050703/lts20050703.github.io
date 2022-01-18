@@ -11,10 +11,14 @@ const isOnlines: { [key: number]: { [key: number]: { [key: number]: boolean } } 
 	1: {
 		2: { 0: false, 1: true },
 		3: { 0: false },
-		4: { 0: true, 1: false },
-		5: { 0: true },
-		6: { 0: false, 1: true },
-		7: { 0: false }
+		// 4: { 0: true, 1: false },
+		// 5: { 0: true },
+		// 6: { 0: false, 1: true },
+		// 7: { 0: false }
+		4: { 0: true, 1: true },
+		5: { 0: true, 1: true },
+		6: { 0: true, 1: true },
+		7: { 0: true, 1: true }
 	}
 }
 const tkb: { [key: number]: { [key: number]: { [key: number]: string } } } = {
@@ -28,6 +32,7 @@ const tkb: { [key: number]: { [key: number]: { [key: number]: string } } } = {
 	7: { 0: { 1: "Hóa", 2: "Hóa", 3: "Công nghệ", 4: "Công nghệ", 5: "Hình" } }
 }
 
+// const date = new Date(2022,0,17)
 const date = new Date()
 
 for (let i = 0; i < p.length; i++) {

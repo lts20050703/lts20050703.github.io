@@ -12,10 +12,14 @@ const isOnlines = {
     1: {
         2: { 0: false, 1: true },
         3: { 0: false },
-        4: { 0: true, 1: false },
-        5: { 0: true },
-        6: { 0: false, 1: true },
-        7: { 0: false }
+        // 4: { 0: true, 1: false },
+        // 5: { 0: true },
+        // 6: { 0: false, 1: true },
+        // 7: { 0: false }
+        4: { 0: true, 1: true },
+        5: { 0: true, 1: true },
+        6: { 0: true, 1: true },
+        7: { 0: true, 1: true }
     }
 };
 const tkb = {
@@ -28,6 +32,7 @@ const tkb = {
     6: { 0: { 1: "Giải tích", 2: "Giải tích", 3: "Giải tích", 4: "Văn", 5: "Văn" }, 1: { 2: "Sử", 3: "Lý", 4: "Lý" } },
     7: { 0: { 1: "Hóa", 2: "Hóa", 3: "Công nghệ", 4: "Công nghệ", 5: "Hình" } }
 };
+// const date = new Date(2022,0,17)
 const date = new Date();
 for (let i = 0; i < p.length; i++) {
     switch (p[i].id) {
