@@ -24,6 +24,8 @@
 	display: grid;
 	align-items: center;
 	justify-items: center;
+	grid-auto-flow: column;
+	grid-template-rows: repeat(8, 1fr);
 }
 
 a {
