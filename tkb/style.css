@@ -1,0 +1,16 @@
+.inner {
+	grid-auto-flow: column;
+}
+
+.left,
+.right {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2rem;
+	margin: 0
+}
