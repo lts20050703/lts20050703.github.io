@@ -17,9 +17,9 @@ const isOnlines = {
         // 6: { 0: false, 1: true },
         // 7: { 0: false }
         4: { 0: true, 1: true },
-        5: { 0: true, 1: true },
+        5: { 0: true },
         6: { 0: true, 1: true },
-        7: { 0: true, 1: true }
+        7: { 0: true }
     }
 };
 const tkb = {
