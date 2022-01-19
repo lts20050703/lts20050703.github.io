@@ -1,24 +1,27 @@
-.inner {
-	grid-template-rows: auto;
+.content {
+	grid-template-columns: repeat(7, 1fr);
+	width: max(1000px, 100vw);
+	position: absolute;
 }
 
-.left,
-.right {
+.column {
 	display: grid;
+	grid-auto-flow: row;
+
 	align-items: center;
 	justify-items: center;
+
+	grid-template-rows: repeat(13, 1fr);
+
+	height: 100%
 }
 
 p {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 2rem;
+	color: #fff;
 	margin: 0;
-	color: #fff
-}
 
-p[id="10"],
-p[id="30"],
-p[id="60"],
-p[id="80"] {
-	padding-top: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: min(4vh, 4vw);
+
+	text-align: center;
 }
