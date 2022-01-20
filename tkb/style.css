@@ -23,3 +23,11 @@ p {
 
 	text-align: center;
 }
+
+.online {
+	color: #0f0;
+}
+
+.offline {
+	color: #f00;
+}
