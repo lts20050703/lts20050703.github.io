@@ -11,7 +11,6 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				anh: resolve(__dirname, "src/anh/index.html"),
-				celeste: resolve(__dirname, "src/celeste/index.html"),
 				"cong-nghe": resolve(__dirname, "src/cong-nghe/index.html"),
 				dia: resolve(__dirname, "src/dia/index.html"),
 				gdcd: resolve(__dirname, "src/gdcd/index.html"),
