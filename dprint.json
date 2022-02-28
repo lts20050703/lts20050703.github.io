@@ -1,6 +1,7 @@
 {
 	"useTabs": true,
 	"incremental": true,
+	"newLineKind": "system",
 	"typescript": {
 		"bracePosition": "sameLine",
 		"nextControlFlowPosition": "sameLine",
@@ -14,7 +15,7 @@
 		"useTab": true
 	},
 	"includes": [
-		"**/*.{ts,json,jsonc,md,html,css}"
+		"**/*.{ts,js,json,jsonc,md,html,css}"
 	],
 	"excludes": [
 		"**/node_modules",
