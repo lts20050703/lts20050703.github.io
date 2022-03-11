@@ -10,17 +10,9 @@
 		"trailingCommas": "never",
 		"useBraces": "preferNone"
 	},
-	"prettier": {
-		"printWidth": 120,
-		"useTab": true
-	},
-	"includes": [
-		"**/*.{ts,js,json,jsonc,md,html,css}"
-	],
-	"excludes": [
-		"**/node_modules",
-		"**/package*.json"
-	],
+	"prettier": { "printWidth": 120, "useTab": true },
+	"includes": ["**/*.{ts,js,json,jsonc,md,html,css}"],
+	"excludes": ["**/node_modules"],
 	"plugins": [
 		"https://plugins.dprint.dev/typescript-0.64.0.wasm",
 		"https://plugins.dprint.dev/json-0.14.1.wasm",
