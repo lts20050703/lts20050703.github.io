@@ -23,4 +23,5 @@ div[body] {
 
 a {
 	font-size: calc(2vw + 2vh);
+	color: #00f;
 }
