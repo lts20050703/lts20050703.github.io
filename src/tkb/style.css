@@ -16,7 +16,7 @@ div[body] {
 
 	display: grid;
 	grid-auto-flow: column;
-	grid-template-rows: repeat(14, 1fr);
+	grid-template-rows: repeat(13, 1fr);
 
 	align-items: center;
 	justify-items: center;
@@ -25,10 +25,4 @@ div[body] {
 p {
 	color: #fff;
 	font-size: calc(1vh + 1vw);
-}
-p[online] {
-	color: #0f0;
-}
-p[offline] {
-	color: #f00;
 }
