@@ -3,9 +3,9 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
 	base: "/",
-	root: "src",
+	root: "./src/",
 	build: {
-		outDir: "../dist",
+		outDir: "../dist/",
 		polyfillModulePreload: false,
 		emptyOutDir: true,
 		rollupOptions: {
