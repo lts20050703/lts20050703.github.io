@@ -1,23 +1,10 @@
 {
-	"name": "lts20050703.github.io",
-	"version": "2022.03.11.0",
-	"description": "lts20050703.github.io",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"deploy": "gh-pages -d dist"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/lts20050703/lts20050703.github.io.git"
-	},
-	"author": "lts20050703",
-	"license": "GPL-3.0",
-	"bugs": {
-		"url": "https://github.com/lts20050703/lts20050703.github.io/issues"
-	},
-	"homepage": "https://github.com/lts20050703/lts20050703.github.io#readme",
 	"devDependencies": {
 		"@types/node": "^17.0.21",
 		"gh-pages": "^3.2.3",
