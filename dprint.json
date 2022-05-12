@@ -11,6 +11,6 @@
 		"https://plugins.dprint.dev/typescript-0.68.2.wasm",
 		"https://plugins.dprint.dev/json-0.15.2.wasm",
 		"https://plugins.dprint.dev/markdown-0.13.2.wasm",
-		"https://plugins.dprint.dev/prettier-0.7.2.json@04c4c97ec64f171a18e24336fc5d2cdd6401a762836a1631b832abbe0dd6ec82"
+		"https://plugins.dprint.dev/prettier-0.8.0.json@7229a9f8c7c07a0f2865f665728160c1a50f56d7a447117884fbd5fb803df90a"
 	]
 }
