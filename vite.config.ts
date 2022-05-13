@@ -6,6 +6,9 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			input: {
+				discordeno: resolve(__dirname, "./src/discordeno/index.html"),
+				paypal: resolve(__dirname, "./src/paypal/index.html"),
+
 				anh: resolve(__dirname, "./src/anh/index.html"),
 				"cong-nghe": resolve(__dirname, "./src/cong-nghe/index.html"),
 				dia: resolve(__dirname, "./src/dia/index.html"),
