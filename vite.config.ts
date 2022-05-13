@@ -2,12 +2,8 @@ import { resolve } from "path"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-	base: "/",
 	root: "./src/",
 	build: {
-		outDir: "../dist/",
-		polyfillModulePreload: false,
-		emptyOutDir: true,
 		rollupOptions: {
 			input: {
 				anh: resolve(__dirname, "./src/anh/index.html"),
