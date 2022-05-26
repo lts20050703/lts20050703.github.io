@@ -24,8 +24,8 @@ export default defineConfig({
 				su: resolve(__dirname, "./src/su/index.html"),
 				"the-duc": resolve(__dirname, "./src/the-duc/index.html"),
 				tin: resolve(__dirname, "./src/tin/index.html"),
-				van: resolve(__dirname, "./src/van/index.html"),
-			},
-		},
-	},
+				van: resolve(__dirname, "./src/van/index.html")
+			}
+		}
+	}
 })
