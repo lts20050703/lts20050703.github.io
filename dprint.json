@@ -11,7 +11,7 @@
 		"preferHanging": true
 	},
 	"prettier": { "printWidth": 120, "useTab": true },
-	"includes": ["*.{ts,json,html,css}"],
+	"includes": ["*.{ts,js,json,html,css}"],
 	"excludes": ["dist", "node_modules"],
 	"plugins": [
 		"https://plugins.dprint.dev/typescript-0.69.5.wasm",
