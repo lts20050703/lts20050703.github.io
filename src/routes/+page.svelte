@@ -17,8 +17,8 @@
 		><img src="./wist.ico" alt="Wist Icon" />Wist</a
 	>
 	<a id="entrots" href="https://codeberg.org/lts20050703/entrots">Entrots</a>
-	<a id="botw_stamina_wheel" href="https://lts20050703.codeberg.page/botw_stamina_wheel">
-		BOTW Stamina Wheel
+	<a id="timer" href="https://lts20050703.codeberg.page/timer">
+		Timer loosely based on BOTW Stamina Wheel
 	</a>
 	<a id="tunic" href="https://tunicgame.com"><img src="./tunic.png" alt="Tunic Icon" />TUNIC</a>
 </div>
