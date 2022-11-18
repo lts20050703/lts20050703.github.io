@@ -1,9 +1,14 @@
+<script lang="ts">
+	const version = '2022.11.18.0';
+	console.log(`LTS20050703 | Work In Progress | VERSION ${version}`);
+</script>
+
 <svelte:head>
-	<title>LTS20050703 | Work In Progress</title>
+	<title>LTS20050703 | Work In Progress | VERSION {version}</title>
 </svelte:head>
 
 <div>
-	<span>LTS20050703 | Work In Progress</span>
+	<span>LTS20050703 | Work In Progress | VERSION {version}</span>
 	<a id="assc" href="https://antisoftware.club/"
 		><img src="./assc.png" alt="Anti Software Software Club Icon" />Anti Software Software Club</a
 	>
