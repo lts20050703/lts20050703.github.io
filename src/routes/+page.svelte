@@ -1,6 +1,9 @@
+<svelte:head>
+	<title>LTS20050703 | Work In Progress</title>
+</svelte:head>
+
 <div>
-	<span>Work In Progress</span>
-	<span>Links</span>
+	<span>LTS20050703 | Work In Progress</span>
 	<a id="assc" href="https://antisoftware.club/"
 		><img src="./assc.png" alt="Anti Software Software Club Icon" />Anti Software Software Club</a
 	>
