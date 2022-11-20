@@ -22,10 +22,6 @@
 	<a id="timer" href="https://lts20050703.codeberg.page/timer">
 		Timer loosely based on BOTW Stamina Wheel
 	</a>
-	<span>Work In Progress | In Development</span>
-	<span>Rewrite from scratch to SvelteKit</span>
-	<a id="entrots" href="https://codeberg.org/lts20050703/entropykit">Entropy kit</a>
-	<a id="wistkit" href="https://codeberg.org/lts20050703/wistkit">WIST kit</a>
 </div>
 
 <style>
