@@ -17,7 +17,7 @@
 		><img src="./sfc.ico" alt="software freedom conservancy icon" />Give Up GitHub</a
 	>
 	<a id="wist" href="https://wist.lts20050703.repl.co"
-		><img src="./wist.ico" alt="WIST icon" />WIST</a
+		><img src="./wist.png" alt="WIST icon" />WIST</a
 	>
 	<a id="timer" href="https://lts20050703.codeberg.page/timer">
 		Timer loosely based on BOTW Stamina Wheel
