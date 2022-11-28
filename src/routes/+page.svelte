@@ -22,10 +22,7 @@
 	<a href="https://wist.lts20050703.repl.co" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./wist.png" alt="WIST icon" class="h-12" /> WIST</a
 	>
-	<a
-		href="https://lts20050703.codeberg.page/timer"
-		class="btn btn-link btn-lg gap-2 text-3xl flex-1"
-	>
+	<a href="./timer/" class="btn btn-link btn-lg gap-2 text-3xl flex-1">
 		<img src="./favicon.png" alt="Long Term Support icon" class="h-12" />
 		Timer loosely based on BOTW Stamina Wheel
 	</a>
