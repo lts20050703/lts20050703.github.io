@@ -3,13 +3,15 @@
 </script>
 
 <div class="flex flex-col items-center justify-center">
-	<div class="breadcrumbs flex-1 gap-2 text-3xl">
+	<div
+		class="breadcrumbs flex-1 gap-2 text-sm max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl"
+	>
 		<ul>
-			<li><a href="../../" class="btn btn-link btn-lg text-3xl">LTS20050703</a></li>
+			<li><a href="../../" class="btn btn-link btn-sm text-sm">LTS20050703</a></li>
 			<li>
-				<a href="../" class="btn btn-link btn-lg text-3xl">WIST VERSION {version}</a>
+				<a href="../" class="btn btn-link btn-sm text-sm">WIST VERSION {version}</a>
 			</li>
-			<li class="text-3xl">SINGLEPLAYER</li>
+			<li class="text-sm">SINGLEPLAYER</li>
 		</ul>
 	</div>
 	<a href="./40l/" class="btn btn-link btn-lg flex-1 gap-2 text-3xl">40 Lines</a>
