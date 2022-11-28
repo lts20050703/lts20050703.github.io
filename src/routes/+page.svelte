@@ -1,3 +1,7 @@
+<script>
+	import '../app.css';
+</script>
+
 <svelte:head>
 	<title>LTS20050703</title>
 </svelte:head>
@@ -23,6 +27,8 @@
 		Timer loosely based on BOTW Stamina Wheel
 	</a>
 </div>
+
+<slot />
 
 <style>
 	@import 'https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css';
