@@ -194,7 +194,7 @@
 </script>
 
 <svelte:head>
-	<title>LTS20050703</title>
+	<title>LTS20050703 > TIMER</title>
 </svelte:head>
 
 <div class="flex flex-col justify-center items-center">

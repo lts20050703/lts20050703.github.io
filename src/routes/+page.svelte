@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center">
-	<span class="text-3xl gap-2">LTS20050703</span>
+	<div class="text-3xl flex-1 gap-2">LTS20050703</div>
 	<a href="https://antisoftware.club/" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./assc.png" alt="anti software software club icon" class="h-12" /> anti software software
 		club</a
@@ -19,7 +19,7 @@
 		class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./sfc.ico" alt="software freedom conservancy icon" class="h-12" /> Give Up GitHub</a
 	>
-	<a href="https://wist.lts20050703.repl.co" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
+	<a href="./wist/" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./wist.png" alt="WIST icon" class="h-12" /> WIST</a
 	>
 	<a href="./timer/" class="btn btn-link btn-lg gap-2 text-3xl flex-1">
