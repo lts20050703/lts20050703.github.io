@@ -12,10 +12,6 @@
 	<a href="https://mastodon.social/@lts20050703" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./mastodon.ico" alt="Mastodon icon" class="h-12" /> Mastodon</a
 	>
-	<a href="./timer/" class="btn btn-link btn-lg gap-2 text-3xl flex-1">
-		<img src="./favicon.png" alt="Long Term Support icon" class="h-12" />
-		Timer loosely based on BOTW Stamina Wheel
-	</a>
 	<a
 		href="https://codeberg.org/lts20050703/wist_archive"
 		class="btn btn-link btn-lg gap-2 text-3xl flex-1"
