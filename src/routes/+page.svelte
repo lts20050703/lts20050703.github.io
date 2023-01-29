@@ -16,13 +16,15 @@
 		<img src="./favicon.png" alt="Long Term Support icon" class="h-12" />
 		Timer loosely based on BOTW Stamina Wheel
 	</a>
-	<a href="https://wist.lts20050703.repl.co" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
-		><img src="./wist.png" alt="WIST icon" class="h-12" />WIST</a
+	<a
+		href="https://codeberg.org/lts20050703/wist_archive"
+		class="btn btn-link btn-lg gap-2 text-3xl flex-1"
+		><img src="./wist.png" alt="WIST icon" class="h-12" />WIST ARCHIVE</a
 	>
 	<div class="gap-2 text-3xl flex-1 flex flex-row pt-10">
 		<img src="./irx.png" alt="In Real Experience icon" class="h-12" />IRX
 	</div>
-	<a href="./wist/" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
+	<a href="https://codeberg.org/lts20050703/wist" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./wist.png" alt="WIST icon" class="h-12" /> WIST</a
 	>
 	<a href="https://codeberg.org/lts20050703/e5y" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
