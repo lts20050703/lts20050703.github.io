@@ -1,3 +1,3 @@
-https://lts20050703.codeberg.page
+# LTS20050703's Pages
 
-https://codeberg.org/lts20050703/pages/src/branch/main
+<https://lts20050703.codeberg.page>
