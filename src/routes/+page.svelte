@@ -9,7 +9,10 @@
 	<a href="https://cohost.org/lts20050703" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./cohost.ico" alt="" class="h-12" />cohost!</a
 	>
-	<a href="https://mastodon.social/@lts20050703" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
+	<a
+		rel="me"
+		href="https://mastodon.social/@lts20050703"
+		class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./mastodon.ico" alt="" class="h-12" />Mastodon</a
 	>
 	<div class="gap-2 text-3xl flex-1 flex flex-row pt-10 text-white">
