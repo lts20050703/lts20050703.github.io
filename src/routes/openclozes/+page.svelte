@@ -7,6 +7,10 @@
 	$: live, console.log(live)
 </script>
 
+<svelte:head>
+	<title>OPEN CLOZES</title>
+</svelte:head>
+
 <div class="w-screen flex items-center flex-col p-4">
 	<div class="text-white leading-loose xl:w-[48rem]">
 		{#each input.split(/{|}/) as text, i}
