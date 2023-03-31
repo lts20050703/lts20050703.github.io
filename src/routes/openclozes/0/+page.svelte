@@ -48,7 +48,9 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-loose w-full lg:w-[48rem]">
-		<div class="text-center text-3xl font-bold">AN OLD MAN LOOKED BACK ON HIS LIFE</div>
+		<div class="text-center text-3xl font-bold {override ? '' : 'mt-10 sm:mt-0'}">
+			AN OLD MAN LOOKED BACK ON HIS LIFE
+		</div>
 		<div class="{override ? 'hidden' : 'flex sm:hidden'} flex-row justify-center">
 			<a href="../" class="btn btn-primary btn-sm"
 				><svg
@@ -66,7 +68,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 					/>
 				</svg>
 			</a>
-			<div class="flex flex-row gap-2 items-center fixed bottom-0 right-0 bg-white dark:bg-black">
+			<div class="flex flex-row gap-2 items-center fixed top-0 right-0 bg-white dark:bg-black">
 				<span>Live update</span>
 				<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
 			</div>
@@ -124,7 +126,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 				</svg>
 			</button>
 			<span
-				class="fixed bottom-0 left-0 bg-white dark:bg-black {autosave === 'saved!'
+				class="fixed top-0 left-0 bg-white dark:bg-black {autosave === 'saved!'
 					? 'text-green-500'
 					: 'text-yellow-500'}"
 			>
@@ -150,7 +152,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 		<div
 			class="{override
 				? 'flex'
-				: 'hidden sm:flex'} text-center flex-col sm:flex-row gap-4 justify-center mt-2 mb-3"
+				: 'hidden sm:flex'} text-center flex-col sm:flex-row gap-4 justify-center mt-2"
 		>
 			<a href="../" class="btn btn-primary btn-sm">Back</a>
 			<div class="flex flex-row gap-2 items-center">
