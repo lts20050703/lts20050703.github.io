@@ -13,7 +13,8 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 		stored.push(...Array(answers.length - stored.length).fill(""))
 	let inputs = stored ?? answers.map((_) => "")
 	let live = !!localStorage.getItem("live")
-	$: inputs, live, save()
+	let override = !!localStorage.getItem("override")
+	$: inputs, live, override, save()
 	function clear() {
 		localStorage.removeItem("inputs0")
 		location.reload()
@@ -34,6 +35,10 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 		}, 500)
 		localStorage.setItem("inputs0", inputs.join())
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
+		override ? localStorage.setItem("override", "true") : localStorage.removeItem("override")
+	}
+	function toggle() {
+		override = !override
 	}
 </script>
 
@@ -41,10 +46,112 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 	<title>AN OLD MAN LOOKED BACK ON HIS LIFE</title>
 </svelte:head>
 
-<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 py-1">
+<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-loose w-full lg:w-[48rem]">
 		<div class="text-center text-3xl font-bold">AN OLD MAN LOOKED BACK ON HIS LIFE</div>
-		<div class="text-center grid grid-cols-2 sm:flex sm:flex-row gap-4 justify-center mt-2 mb-3">
+		<div class="{override ? 'hidden' : 'flex sm:hidden'} flex-row justify-center">
+			<a href="../" class="btn btn-primary btn-sm"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+					/>
+				</svg>
+			</a>
+			<div class="flex flex-row gap-2 items-center fixed bottom-0 right-0 bg-white dark:bg-black">
+				<span>Live update</span>
+				<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
+			</div>
+			<button class="btn btn-success btn-sm" on:click={check}
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+					/>
+				</svg>
+			</button>
+			<button class="btn btn-warning btn-sm" on:click={show_answer}
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+					/>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+					/>
+				</svg>
+			</button>
+			<button class="btn btn-error btn-sm" on:click={clear}
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+					/>
+				</svg>
+			</button>
+			<span
+				class="fixed bottom-0 left-0 bg-white dark:bg-black {autosave === 'saved!'
+					? 'text-green-500'
+					: 'text-yellow-500'}"
+			>
+				{autosave}
+			</span>
+			<button class="btn btn-secondary btn-sm" on:click={toggle}
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 h-6"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+					/>
+				</svg>
+			</button>
+		</div>
+		<div
+			class="{override
+				? 'flex'
+				: 'hidden sm:flex'} text-center flex-col sm:flex-row gap-4 justify-center mt-2 mb-3"
+		>
 			<a href="../" class="btn btn-primary btn-sm">Back</a>
 			<div class="flex flex-row gap-2 items-center">
 				<span>Live update</span>
@@ -56,6 +163,8 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 			<span class={autosave === "saved!" ? "text-green-500" : "text-yellow-500"}>
 				{autosave}
 			</span>
+			<button on:click={toggle} class="block sm:hidden btn btn-secondary btn-sm">Mobile view</button
+			>
 		</div>
 		{#each input.split(/{|}/) as text, i}
 			{#if i % 2 === 0}
