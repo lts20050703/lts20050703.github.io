@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center">
-	<div class="text-3xl flex-1 gap-2 flex flex-row pt-3 text-white">
+	<div class="text-3xl flex-1 gap-2 flex flex-row pt-3 text-black dark:text-white">
 		<img src="./favicon.png" alt="" class="h-12" />LTS20050703
 	</div>
 	<a href="https://cohost.org/lts20050703" class="btn btn-link btn-lg gap-2 text-3xl flex-1"

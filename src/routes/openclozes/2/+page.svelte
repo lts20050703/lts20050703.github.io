@@ -27,9 +27,9 @@
 </svelte:head>
 
 <div class="w-screen flex items-center flex-col p-4">
-	<div class="text-white leading-loose xl:w-[48rem]">
+	<div class="text-black dark:text-white leading-loose xl:w-[48rem]">
 		<div class="text-red-500 text-center">WORK IN PROGRESS, NOT COMPLETED YET</div>
-		<div class="text-white text-center flex flex-row gap-4 justify-center">
+		<div class="text-center flex flex-row gap-4 justify-center">
 			<a href="../" class="btn btn-primary btn-sm">Back</a>
 			<div>
 				Live update <input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
