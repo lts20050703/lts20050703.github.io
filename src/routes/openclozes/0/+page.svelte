@@ -68,7 +68,9 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 					/>
 				</svg>
 			</a>
-			<div class="flex flex-row gap-2 items-center fixed top-0 right-0 px-4 bg-white dark:bg-black">
+			<div
+				class="flex flex-row gap-2 items-center fixed top-0 right-0 m-1 px-3 rounded-md bg-white dark:bg-black"
+			>
 				<span>Live update</span>
 				<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
 			</div>
@@ -126,7 +128,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 				</svg>
 			</button>
 			<span
-				class="fixed top-0 left-0 bg-white dark:bg-black px-4 {autosave === 'saved!'
+				class="fixed top-0 left-0 bg-white dark:bg-black m-1 px-3 rounded-md {autosave === 'saved!'
 					? 'text-green-500'
 					: 'text-yellow-500'}"
 			>
@@ -152,7 +154,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 		<div
 			class="{override
 				? 'flex'
-				: 'hidden sm:flex'} text-center grid grid-cols-2 sm:flex-row gap-4 justify-center mt-2 items-center"
+				: 'hidden'} text-center grid grid-cols-2 sm:flex sm:flex-row gap-4 justify-center mt-2 items-center"
 		>
 			<a href="../" class="btn btn-primary btn-sm">Back</a>
 			<div class="flex flex-row gap-2 items-center">
