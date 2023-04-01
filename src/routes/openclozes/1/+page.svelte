@@ -201,10 +201,10 @@ That's because I {put off} doing my assignments. "So do I," said Pedro. "My teac
 			{:else if show_answer_pls}
 				<input
 					type="text"
-					class="input h-7 mx-1 p-1"
+					class="input input-disabled h-7 mx-1 p-1"
 					size={answers[(i - 1) / 2].length}
 					value={answers[(i - 1) / 2]}
-					disabled
+					readonly
 				/>
 			{:else}
 				<input
