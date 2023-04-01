@@ -1,5 +1,11 @@
 <script lang="ts">
-	const input = ``
+	const input = `It was 9 Am on Friday morning. George had gone to work, and the twins had gone to school. Edna dressed and then {tuned in} a program on the radio. She was used to listening to the radio while she was working. She liked to know what was {going on} in the world.
+Edna left the radio on while she was {cleaning up} the kitchen. She {cleared off} the table, {washed up} all the dirty dishes, and {wiped off} the table and the counters. She {washed out} the sink. She {rubbed off} some stains from the stove top, where some soup had {boiled over} the day before when the twins were cooking. Then she {mopped up} the kitchen floor.
+Edna kept the windows opened in the bedroom. Then she started all the fans moving. She wanted to {air} the room {out}. Soon, she closed the windows to {shut out} the cold. Then she {put up} the curtains in one bedroom. She thought, "Neither of them has {put} any clothes {away} for three days!" In the bathroom she found the drain in the washbasin {plugged up}. She tried to {open} it {up} with a plunger.
+While she was {straightening up} the living room, the telephone rang. Cynthia Smith {called up}. She wanted Edna to become an officer of League of Woman voters. During the conversation the telephone suddenly became silent, and Edna {hung up}. Cynthia soon {called back}. "I believe that something {cut} us {off}," she said.
+A litle later, Edna sat down to {make out} a menu for dinner and to prepare a shopping list. "The family {eat} everything {up} so fast," she thought to herself. "let's see. I need to {stock up on} sugar and flour and to buy some meat and vegetables for Saturday and Sunday. And we need eggs. This family doesn't like to {do without} eggs.
+She didn't {dress up} to go to the shopping center. She wore ordinary clothes. She went into a clothing store and {tried on} some dresses, but did not buy any. In the food store, she {picked out} the vegetables and carefully {looked over} the meat.
+Back home, she thought, "I'd like to lie down, {dozing off} for a few minutes, but it's too late. I'll spend the time mixing a cake before I {cut up} the chicken.`
 	let answers = input.split(/{|}/).filter((_, i) => i % 2 === 1)
 	let stored = localStorage.getItem("inputs3")?.split(",")
 	if (stored && stored.length < answers.length)
@@ -37,13 +43,13 @@
 </script>
 
 <svelte:head>
-	<title>AN OLD MAN LOOKED BACK ON HIS LIFE</title>
+	<title>WHAT WAS GOING ON ON FRIDAY MORNING?</title>
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-[2.5rem] w-full lg:w-[48rem]">
 		<div class="text-center text-3xl font-bold {override ? '' : 'mt-11 sm:mt-0'}">
-			AN OLD MAN LOOKED BACK ON HIS LIFE
+			WHAT WAS GOING ON ON FRIDAY MORNING?
 		</div>
 		<div class="{override ? 'hidden' : 'flex sm:hidden'} flex-row justify-center gap-4 m-2">
 			<a href="../" class="btn btn-primary btn-sm"
