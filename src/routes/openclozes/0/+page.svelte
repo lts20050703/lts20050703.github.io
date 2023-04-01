@@ -48,7 +48,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-[2.5rem] w-full lg:w-[48rem]">
-		<div class="text-center text-3xl font-bold {override ? '' : 'mt-10 sm:mt-0'}">
+		<div class="text-center text-3xl font-bold {override ? '' : 'mt-11 sm:mt-0'}">
 			AN OLD MAN LOOKED BACK ON HIS LIFE
 		</div>
 		<div class="{override ? 'hidden' : 'flex sm:hidden'} flex-row justify-center gap-4 m-2">
@@ -69,7 +69,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 				</svg>
 			</a>
 			<div
-				class="flex flex-row gap-2 items-center fixed top-0 right-0 m-1 px-3 rounded-md bg-white dark:bg-black"
+				class="flex flex-row gap-2 items-center fixed top-0 right-0 m-1 px-3 rounded-md bg-white dark:bg-[#2a303c]"
 			>
 				<span>Live update</span>
 				<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
@@ -128,7 +128,8 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 				</svg>
 			</button>
 			<span
-				class="fixed top-0 left-0 bg-white dark:bg-black m-1 px-3 rounded-md {autosave === 'saved!'
+				class="fixed top-0 left-0 bg-white dark:bg-[#2a303c] m-1 px-3 rounded-md {autosave ===
+				'saved!'
 					? 'text-green-500'
 					: 'text-yellow-500'}"
 			>

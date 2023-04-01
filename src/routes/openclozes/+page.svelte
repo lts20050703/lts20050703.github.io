@@ -5,7 +5,7 @@
 <div class="w-screen flex items-center flex-col p-4">
 	<div class="text-black dark:text-white leading-loose w-full">
 		<div class="text-red-500 text-center">WORK IN PROGRESS, NOT COMPLETED YET</div>
-		<div>VERSION {version}, LAST UPDATED 2023.04.01@13:10</div>
+		<div>VERSION {version}, LAST UPDATED 2023.04.01@13:20</div>
 		<br />
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4">
 			<a href="./0" class="btn btn-primary flex-1">AN OLD MAN LOOKED BACK ON HIS LIFE</a>
