@@ -2,19 +2,20 @@
 	import version from "$lib/version"
 </script>
 
-<div class="w-screen flex items-center flex-col p-4">
+<div class="absolute top-0 left-0 right-0 flex items-center flex-col p-4">
 	<div class="text-black dark:text-white leading-loose w-full">
 		<div class="text-red-500 text-center">WORK IN PROGRESS, NOT COMPLETED YET</div>
-		<div>VERSION {version}, LAST UPDATED 2023.04.01@15:10</div>
+		<div class="text-center">VERSION {version}, LAST UPDATED 2023.04.01@15:30</div>
 		<br />
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4">
 			<a href="./0" class="btn btn-primary flex-1">AN OLD MAN LOOKED BACK ON HIS LIFE</a>
-			<a href="./1" class="btn btn-primary flex-1">1</a>
+			<a href="./1" class="btn btn-primary flex-1">GETTING ALONG IN ONE'S SCHOOL WORK</a>
 			<a href="./2" class="btn btn-primary flex-1">2</a>
 			<a href="./3" class="btn btn-primary flex-1">3</a>
 		</div>
 		<br />
 		<div class="text-center">Changelog</div>
+		<div>2023.04.01@15:30 Completed GETTING ALONG IN ONE'S SCHOOL WORK</div>
 		<div>2023.04.01@15:10 Make show answers button toggle (click again to hide answers)</div>
 		<div>2023.04.01@11:40 makes text spaced more apart</div>
 		<div>2023.03.31@23:30 Added support for mobile (portrait)</div>

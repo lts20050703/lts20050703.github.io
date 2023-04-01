@@ -20,7 +20,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 		location.reload()
 	}
 	function check() {
-		live = true
+		live = !live
 	}
 	let show_answer_pls = false
 	function show_answer() {
@@ -215,7 +215,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 			{:else}
 				<input
 					type="text"
-					class="input h-7 mx-1 p-1 {inputs[(i - 1) / 2] === '' || !live
+					class="input h-7 mx-1 p-1 lowercase {inputs[(i - 1) / 2] === '' || !live
 						? 'input-primary'
 						: inputs[(i - 1) / 2].toLowerCase().split(/ +/).join(' ').trim() ===
 						  answers[(i - 1) / 2]
