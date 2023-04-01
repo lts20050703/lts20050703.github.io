@@ -1492,9 +1492,6 @@ html {
 .w-full {
   width: 100%;
 }
-.w-screen {
-  width: 100vw;
-}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1561,6 +1558,9 @@ html {
 }
 .font-bold {
   font-weight: 700;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .leading-\[2\.5rem\] {
   line-height: 2.5rem;
@@ -1641,11 +1641,5 @@ html {
 
   .lg\:flex-row {
     flex-direction: row;
-  }
-}
-@media (min-width: 1280px) {
-
-  .xl\:w-\[48rem\] {
-    width: 48rem;
   }
 }
