@@ -1,5 +1,5 @@
 <script lang="ts">
-	const input = ``
+	const input = `The alarm clock in Mr. and Mrs. Jackson {went off} at 6:30 AM. Sleepily, Mr. Jackson reached toward it to {turn} it {off}. He {gave up} trying to reach it and let it {run down}. Mrs. Jackson was awake. She {turned on} the light beside the bed and shook her husband. It's time to {get up}, George," she told him. "Aw-don't" he muttered. But she {kept on} shaking him until he was awake. He {sat up}, but he kept his eyes closed. Finally, he {stood up}. Mr. Jackson put on a bathrobe. He {went in} to take a shower and went downstairs to help Mrs. Jackson set the table. In the kitchen, Mrs. Jackson {plugged in} the coffee maker. She also wanted to boil eggs, but remembered that they had {used up} the eggs the day before. She put bread into the toaster and waited for it to {pop up}. Mr. Jackson put cereal, milk and juice on the table. Then Mrs. Jackson {let out} the cat. She called the sixteen year-old twins. "Breakfast!" she shouted. "Jim! Jane!" In a few minutes four were at the table. "What on the world do you {have on}?" Jim asked Jane. "I forgot to {wash out} my clothes last night, so this morning I {hunted up} these things to wear." "I thought you had {given away} those old things," Jim told her. "They look shabby." "{get off} my back!" she said angrily. "Children," Mrs. Jackson begged, "please don't {get into} a fight. I'm {running out of} patience with both of you. I don't {feel like} listening to another argument. Tom didn't often argue before he left for college. Jane, you should {put} your clothes {away}. Then you should find something better to wear. I've told both of you again and again, to {hang up} your clothes." George Jackson was reading a newspaper. He laughed softly. If you {come across} something funny or even interesting, you might {let} us {in on} it," his wife said. "I'm just {looking at} the sports pages, Edna," he told her. "You usually don't {care for} professional sports." She went to {see about} the cat and {let} it {in}. The twins {picked up} their schoolbooks and went to school. George {put on} his coat. As he was {set out} for work, he said to his wife, "Have a good day, Edna."`
 	let answers = input.split(/{|}/).filter((_, i) => i % 2 === 1)
 	let stored = localStorage.getItem("inouts2")?.split(",")
 	if (stored && stored.length < answers.length)
@@ -37,13 +37,13 @@
 </script>
 
 <svelte:head>
-	<title>AN OLD MAN LOOKED BACK ON HIS LIFE</title>
+	<title>GETTING UP WITH THE JACKSONS</title>
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-[2.5rem] w-full lg:w-[48rem]">
 		<div class="text-center text-3xl font-bold {override ? '' : 'mt-11 sm:mt-0'}">
-			AN OLD MAN LOOKED BACK ON HIS LIFE
+			GETTING UP WITH THE JACKSONS
 		</div>
 		<div class="{override ? 'hidden' : 'flex sm:hidden'} flex-row justify-center gap-4 m-2">
 			<a href="../" class="btn btn-primary btn-sm"
