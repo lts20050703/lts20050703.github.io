@@ -1419,11 +1419,23 @@ html {
 .left-0 {
   left: 0px;
 }
+.left-1 {
+  left: 0.25rem;
+}
 .right-0 {
   right: 0px;
 }
+.right-1 {
+  right: 0.25rem;
+}
 .top-0 {
   top: 0px;
+}
+.top-1 {
+  top: 0.25rem;
+}
+.m-2 {
+  margin: 0.5rem;
 }
 .mx-1 {
   margin-left: 0.25rem;
@@ -1518,6 +1530,9 @@ html {
 }
 .font-bold {
   font-weight: 700;
+}
+.leading-\[2\.5rem\] {
+  line-height: 2.5rem;
 }
 .leading-loose {
   line-height: 2;
