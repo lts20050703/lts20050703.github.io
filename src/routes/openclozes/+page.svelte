@@ -5,7 +5,7 @@
 <div class="w-screen flex items-center flex-col p-4">
 	<div class="text-black dark:text-white leading-loose w-full">
 		<div class="text-red-500 text-center">WORK IN PROGRESS, NOT COMPLETED YET</div>
-		<div>VERSION {version}, LAST UPDATED 2023.04.01@12:20</div>
+		<div>VERSION {version}, LAST UPDATED 2023.04.01@12:25</div>
 		<br />
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4">
 			<a href="./0" class="btn btn-primary flex-1">AN OLD MAN LOOKED BACK ON HIS LIFE</a>
@@ -15,13 +15,8 @@
 		</div>
 		<br />
 		<div class="text-center">Changelog</div>
-		<div>2023.04.01@12:20 add padding to the toast to default mobile portrait view</div>
-		<div>
-			2023.04.01@11:40 add some margin and padding to default mobile portrait view, also makes text
-			spaced more apart
-		</div>
-		<div>2023.03.31@23:55 Minor changes to default mobile portrait view</div>
-		<div>2023.03.31@23:30 For portrait mobile, use icons</div>
+		<div>2023.04.01@11:40 makes text spaced more apart</div>
+		<div>2023.03.31@23:30 Added support for mobile (portrait)</div>
 		<div>2023.03.31@22:30 Completed AN OLD MAN LOOKED BACK ON HIS LIFE</div>
 		<div>2023.03.31@16:50 Fix white theme bug</div>
 		<div>2023.03.31@16:40 Add check answer, show answers, and clear button</div>
