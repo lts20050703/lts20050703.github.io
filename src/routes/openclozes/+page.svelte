@@ -1,5 +1,5 @@
 <script>
-	import version from "$lib/version"
+	import version from "$lib/v"
 </script>
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col p-4">

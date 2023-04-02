@@ -1,10 +1,14 @@
+<script lang="ts">
+	import v from "$lib/v"
+</script>
+
 <svelte:head>
-	<title>LTS20050703</title>
+	<title>LTS20050703 {v}</title>
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center">
 	<div class="text-3xl flex-1 gap-2 flex flex-row pt-3 text-black dark:text-white">
-		<img src="./favicon.png" alt="" class="h-12" />LTS20050703
+		<img src="./favicon.png" alt="" class="h-12" />LTS20050703 {v}
 	</div>
 	<a href="https://cohost.org/lts20050703" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./cohost.ico" alt="" class="h-12" />cohost!</a
