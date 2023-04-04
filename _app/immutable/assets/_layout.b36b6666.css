@@ -1872,6 +1872,11 @@ html {
     background-color: rgb(42 48 60 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-base-100 {
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  }
+
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
