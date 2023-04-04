@@ -70,7 +70,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 						</svg>
 					</a>
 					<div
-						class="flex flex-row gap-2 items-center fixed top-0 right-0 m-1 px-3 rounded-md bg-white dark:bg-base-100"
+						class="flex flex-row gap-2 items-center fixed bottom-0 right-0 m-1 px-3 rounded-md bg-white dark:bg-base-100"
 					>
 						<span>Live update</span>
 						<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
@@ -148,7 +148,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 						</svg>
 					</button>
 					<span
-						class="fixed top-0 left-0 bg-white dark:bg-base-100 m-1 px-3 rounded-md {autosave ===
+						class="fixed bottom-0 left-0 bg-white dark:bg-base-100 m-1 px-3 rounded-md {autosave ===
 						'saved!'
 							? 'text-green-500'
 							: 'text-yellow-500'}"
