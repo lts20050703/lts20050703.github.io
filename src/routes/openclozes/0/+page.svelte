@@ -13,8 +13,7 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 		stored.push(...Array(answers.length - stored.length).fill(""))
 	let inputs = stored ?? answers.map((_) => "")
 	let live = !!localStorage.getItem("live")
-	let override = !!localStorage.getItem("override")
-	$: inputs, live, override, save()
+	$: inputs, live, save()
 	function clear() {
 		localStorage.removeItem("inputs0")
 		location.reload()
@@ -36,10 +35,6 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 		}, 500)
 		localStorage.setItem("inputs0", inputs.join())
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
-		override ? localStorage.setItem("override", "true") : localStorage.removeItem("override")
-	}
-	function toggle() {
-		override = !override
 	}
 </script>
 
@@ -49,10 +44,10 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-[2.5rem] w-full lg:w-[48rem]">
-		<div class="text-center text-3xl font-bold mt-11">AN OLD MAN LOOKED BACK ON HIS LIFE</div>
+		<div class="text-center text-3xl font-bold mt-12">AN OLD MAN LOOKED BACK ON HIS LIFE</div>
 		<div class="fixed top-0 left-0 right-0 flex justify-center">
 			<div class="m-1 px-3 rounded-md bg-white dark:bg-base-100">
-				<div class="{override ? 'hidden' : 'flex sm:hidden'} flex-row justify-center gap-4 m-2">
+				<div class="flex sm:hidden flex-row justify-center gap-4 m-1">
 					<a href="../" class="btn btn-primary btn-sm"
 						><svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -155,28 +150,8 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 					>
 						{autosave}
 					</span>
-					<button class="btn btn-secondary btn-sm" on:click={toggle}
-						><svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="w-6 h-6"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
-							/>
-						</svg>
-					</button>
 				</div>
-				<div
-					class="{override
-						? 'flex'
-						: 'hidden'} text-center grid grid-cols-2 sm:flex sm:flex-row gap-4 justify-center mt-2 items-center"
-				>
+				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
 					<a href="../" class="btn btn-primary btn-sm">Back</a>
 					<div class="flex flex-row gap-2 items-center">
 						<span>Live update</span>
@@ -192,9 +167,6 @@ He was getting tired and was beginning to {drift off}, but he tried to keep talk
 					<span class={autosave === "saved!" ? "text-green-500" : "text-yellow-500"}>
 						{autosave}
 					</span>
-					<button on:click={toggle} class="block sm:hidden btn btn-secondary btn-sm"
-						>Mobile view</button
-					>
 				</div>
 			</div>
 		</div>
