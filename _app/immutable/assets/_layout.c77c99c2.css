@@ -1206,6 +1206,13 @@ html {
 .input-primary:focus {
   outline: 2px solid hsl(var(--p));
 }
+.input-info {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--in) / var(--tw-border-opacity));
+}
+.input-info:focus {
+  outline: 2px solid hsl(var(--in));
+}
 .input-success {
   --tw-border-opacity: 1;
   border-color: hsl(var(--su) / var(--tw-border-opacity));
