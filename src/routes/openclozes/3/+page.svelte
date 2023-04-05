@@ -181,7 +181,7 @@ Back home, she thought, "I'd like to lie down, {dozing off} for a few minutes, b
 			{:else if show_answer_pls}
 				<input
 					type="text"
-					class="input input-disabled h-7 mx-1 p-1"
+					class="input input-info h-7 mx-1 p-1"
 					size={answers[(i - 1) / 2].length}
 					value={answers[(i - 1) / 2]}
 					readonly
