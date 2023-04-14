@@ -63,7 +63,7 @@
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-[2.5rem] w-full lg:w-[48rem]">
-		<div class="text-center text-xl font-bold mt-12">In Real Xperience / Openclozes {v}</div>
+		<div class="text-center text-xl mt-12">In Real Xperience / Openclozes {v}</div>
 		<div class="text-center text-3xl font-bold my-4">
 			{data.title[0] + data.title.slice(1).toLowerCase()}
 		</div>
@@ -186,7 +186,12 @@
 						<button class="btn btn-warning btn-sm" on:click={show_answer}>Show answers</button>
 					{/if}
 					<button class="btn btn-error btn-sm" on:click={clear}>Clear</button>
-					<span class={autosave === "saved!" ? "text-green-500" : "text-yellow-500"}>
+					<span
+						class="fixed bottom-0 m-1 px-3 rounded-md bg-white dark:bg-base-100 {autosave ===
+						'saved!'
+							? 'text-green-500'
+							: 'text-yellow-500'}"
+					>
 						{autosave}
 					</span>
 				</div>

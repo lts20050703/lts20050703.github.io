@@ -27,10 +27,10 @@
 	let mounted = false
 
 	function save() {
-		autosave = "saving"
+		autosave = "đang lưu..."
 		last_save = Date.now()
 		setTimeout(() => {
-			if (Date.now() - last_save >= 500) autosave = "saved!"
+			if (Date.now() - last_save >= 500) autosave = "đã lưu thành công!"
 		}, 500)
 		localStorage.setItem(`inputs${data.subject}${data.title}`, inputs.join(","))
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
@@ -84,7 +84,10 @@
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white w-full lg:w-[48rem]">
-		<div class="text-center text-3xl font-bold mt-12 flex flex-row justify-center gap-4">
+		<div class="text-center text-xl mt-12">
+			In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)}
+		</div>
+		<div class="text-center text-3xl font-bold my-4 flex flex-row justify-center gap-4">
 			{data.title}
 		</div>
 		<div class="fixed top-0 left-0 right-0 flex justify-center">
@@ -109,7 +112,7 @@
 					<div
 						class="flex flex-row gap-2 items-center fixed bottom-0 right-0 m-1 px-3 rounded-md bg-white dark:bg-base-100"
 					>
-						<span>Live update</span>
+						<span>Cập nhật trực tiếp</span>
 						<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
 					</div>
 					<button class="btn btn-success btn-sm" on:click={check}
@@ -193,30 +196,35 @@
 						{autosave}
 					</span>
 					<a
-						class="btn btn-primary btn-sm"
+						class="btn btn-secondary btn-sm"
 						href={data.azota}
 						target="_blank"
 						rel="noopener noreferrer">AZOTA</a
 					>
 				</div>
 				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
-					<a href="../" class="btn btn-primary btn-sm">Back</a>
+					<a href="../" class="btn btn-primary btn-sm">Quay lại</a>
 					<div class="flex flex-row gap-2 items-center">
-						<span>Live update</span>
+						<span>Cập nhật trực tiếp</span>
 						<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
 					</div>
-					<button class="btn btn-success btn-sm" on:click={check}>Check</button>
+					<button class="btn btn-success btn-sm" on:click={check}>Kiểm tra</button>
 					{#if show_answer_pls}
-						<button class="btn btn-warning btn-sm" on:click={show_answer}>Hide answers</button>
+						<button class="btn btn-warning btn-sm" on:click={show_answer}>Ẩn Đáp Án</button>
 					{:else}
-						<button class="btn btn-warning btn-sm" on:click={show_answer}>Show answers</button>
+						<button class="btn btn-warning btn-sm" on:click={show_answer}>Hiện Đáp Án</button>
 					{/if}
-					<button class="btn btn-error btn-sm" on:click={clear}>Clear</button>
-					<span class={autosave === "saved!" ? "text-green-500" : "text-yellow-500"}>
+					<button class="btn btn-error btn-sm" on:click={clear}>Xóa</button>
+					<span
+						class="fixed bottom-0 m-1 px-3 rounded-md bg-white dark:bg-base-100 {autosave ===
+						'đã lưu thành công!'
+							? 'text-green-500'
+							: 'text-yellow-500'}"
+					>
 						{autosave}
 					</span>
 					<a
-						class="btn btn-primary btn-sm"
+						class="btn btn-secondary btn-sm"
 						href={data.azota}
 						target="_blank"
 						rel="noopener noreferrer">AZOTA</a
@@ -266,3 +274,11 @@
 		{/each}
 	</div>
 </div>
+
+<svelte:head
+	><title>
+		In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)} / {data.title?.[0].toUpperCase()}{data.title
+			?.slice(1)
+			.toLowerCase()}</title
+	></svelte:head
+>
