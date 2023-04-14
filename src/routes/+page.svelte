@@ -22,6 +22,8 @@
 	<div class="gap-2 text-3xl flex-1 flex flex-row pt-10 text-white">
 		<img src="./irx.png" alt="" class="h-12" />In Real Xperience
 	</div>
+	<a href="./openclozes" class="btn btn-link btn-lg gap-2 text-3xl flex-1">Openclozes</a>
+	<a href="./2023" class="btn btn-link btn-lg gap-2 text-3xl flex-1">2023</a>
 	<a href="https://wist.lts20050703.repl.co" class="btn btn-link btn-lg gap-2 text-3xl flex-1"
 		><img src="./wist.png" alt="" class="h-12" />WIST</a
 	>
