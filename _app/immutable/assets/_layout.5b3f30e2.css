@@ -1331,6 +1331,9 @@ html {
 .mt-12 {
   margin-top: 3rem;
 }
+.block {
+  display: block;
+}
 .flex {
   display: flex;
 }
@@ -1464,6 +1467,10 @@ html {
   }
 }
 @media (min-width: 640px) {
+
+  .sm\:block {
+    display: block;
+  }
 
   .sm\:flex {
     display: flex;
