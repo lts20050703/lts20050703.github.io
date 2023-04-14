@@ -54,9 +54,9 @@
 	})
 </script>
 
-<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
+<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10 leading-loose">
 	<div class="text-black dark:text-white w-full lg:w-[48rem]">
-		<div class="text-center text-3xl font-bold mt-12">
+		<div class="text-center text-3xl font-bold mt-12 flex flex-row justify-center gap-4">
 			{data.title}
 		</div>
 		<div class="fixed top-0 left-0 right-0 flex justify-center">
@@ -164,9 +164,15 @@
 					>
 						{autosave}
 					</span>
+					<a
+						class="btn btn-primary btn-sm"
+						href={data.azota}
+						target="_blank"
+						rel="noopener noreferrer">AZOTA</a
+					>
 				</div>
 				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
-					<a href="../../" class="btn btn-primary btn-sm">Back</a>
+					<a href="../" class="btn btn-primary btn-sm">Back</a>
 					<div class="flex flex-row gap-2 items-center">
 						<span>Live update</span>
 						<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
@@ -181,55 +187,50 @@
 					<span class={autosave === "saved!" ? "text-green-500" : "text-yellow-500"}>
 						{autosave}
 					</span>
+					<a
+						class="btn btn-primary btn-sm"
+						href={data.azota}
+						target="_blank"
+						rel="noopener noreferrer">AZOTA</a
+					>
 				</div>
 			</div>
 		</div>
 		{#each data.questions as question, i}
-			<div>{question.question}</div>
-			{#if show_answer_pls}
-				{#each question.answers as answer, j}
-					{#if j === question.right}
-						<div class="flex flex-row gap-4 text-green-500">
-							<input
-								class="input input-success input-xs"
-								type="radio"
-								name={`${i}`}
-								id={`${i}${j}`}
-							/>
-							<label for={`${i}${j}`}>{answer}</label>
-						</div>
-					{:else}
-						<div class="flex flex-row gap-4">
-							<input
-								class="input input-primary input-xs"
-								type="radio"
-								name={`${i}`}
-								id={`${i}${j}`}
-							/>
-							<label for={`${i}${j}`}>{answer}</label>
-						</div>{/if}
-				{/each}
-			{:else}
-				{#each question.answers as answer, j}
-					<div
-						class="flex flex-row gap-4 {live && inputs[i] === `${i}${j}`
-							? j === question.right
-								? 'text-green-500'
-								: 'text-red-500'
-							: ''}"
-					>
-						<input
-							bind:group={inputs[i]}
-							class="input input-primary input-xs"
-							type="radio"
-							name={`${i}`}
-							value={`${i}${j}`}
-							id={`${i}${j}`}
-						/>
-						<label for={`${i}${j}`}>{answer}</label>
-					</div>
-				{/each}
-			{/if}
+			<br />
+			<div
+				class={inputs[i] !== "" && inputs[i] !== undefined && (live || show_answer_pls)
+					? inputs[i] === `${i}${question.right}`
+						? "text-green-500"
+						: "text-red-500"
+					: ""}
+			>
+				{@html question.question}
+			</div>
+
+			{#each question.answers as answer, j}
+				<div
+					class="flex flex-row gap-4 {show_answer_pls
+						? j === question.right
+							? 'text-green-500'
+							: ''
+						: ''} {(live || show_answer_pls) && inputs[i] === `${i}${j}`
+						? j === question.right
+							? 'text-green-500'
+							: 'text-red-500'
+						: ''}"
+				>
+					<input
+						bind:group={inputs[i]}
+						class="input input-primary input-xs"
+						type="radio"
+						name={`${i}`}
+						value={`${i}${j}`}
+						id={`${i}${j}`}
+					/>
+					<label for={`${i}${j}`}>{answer}</label>
+				</div>
+			{/each}
 		{/each}
 	</div>
 </div>

@@ -10,6 +10,7 @@ export const load = (async ({ params }) => {
 		)
 		const data = text.split("\n")
 		const title = data.shift()
+		const azota = data.shift()
 		const questions: { question: string; answers: string[]; right?: number }[] = []
 		for (let i = 0; i < data.length; i += 1) {
 			if (data[i].startsWith("Câu")) {
@@ -53,11 +54,11 @@ export const load = (async ({ params }) => {
 			} else {
 				const question = questions.at(-1)
 				if (!question) continue
-				question.question += `\n${data[i]}`
+				question.question += `<br>${data[i]}`
 			}
 		}
-		return { subject: params.subject, title, questions }
+		return { subject: params.subject, title, questions, azota }
 	} catch {
-		return { subject: "404 Not Found", title: "404 Not Found", questions: [] }
+		return { subject: "404 Not Found", title: "404 Not Found", questions: [], azota: "" }
 	}
 }) satisfies PageServerLoad
