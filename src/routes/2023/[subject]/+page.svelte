@@ -16,5 +16,6 @@
 		<a href="./24353637383940" class="btn btn-primary">BÀI 24 35 36 37 38 39 40</a>
 	{:else if data.subject === "gdcd"}
 		<a href="./6" class="btn btn-primary">BÀI 6 CÔNG DÂN VỚI CÁC QUYỀN TỰ DO CƠ BẢN </a>
+		<a href="./7" class="btn btn-primary">BÀI 7 CÔNG DÂN VỚI CÁC QUYỀN DÂN CHỦ </a>
 	{/if}
 </div>
