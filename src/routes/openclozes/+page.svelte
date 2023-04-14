@@ -8,9 +8,15 @@
 			<a href="./an-old-man-looked-back-on-his-life" class="btn btn-primary flex-1"
 				>AN OLD MAN LOOKED BACK ON HIS LIFE</a
 			>
-			<a href="./1" class="btn btn-primary flex-1">GETTING ALONG IN ONE'S SCHOOL WORK</a>
-			<a href="./2" class="btn btn-primary flex-1">GETTING UP WITH THE JACKSONS</a>
-			<a href="./3" class="btn btn-primary flex-1">WHAT WAS GOING ON ON FRIDAY MORNING?</a>
+			<a href="./getting-along-in-one's-school-work" class="btn btn-primary flex-1"
+				>GETTING ALONG IN ONE'S SCHOOL WORK</a
+			>
+			<a href="./getting-up-with-the-jacksons" class="btn btn-primary flex-1"
+				>GETTING UP WITH THE JACKSONS</a
+			>
+			<a href="./what-was-going-on-on-friday-morning" class="btn btn-primary flex-1"
+				>WHAT WAS GOING ON ON FRIDAY MORNING?</a
+			>
 		</div>
 		<br />
 		<div class="text-center">VERSION {version}</div>

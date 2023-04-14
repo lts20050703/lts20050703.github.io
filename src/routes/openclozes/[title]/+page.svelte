@@ -25,6 +25,9 @@
 
 	let autosave = ""
 	let last_save = 0
+
+	let mounted = false
+
 	function save() {
 		autosave = "saving"
 		last_save = Date.now()
@@ -37,6 +40,8 @@
 
 	let inputs: string[] = []
 
+	$: inputs, live, mounted && save()
+
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
 		stored = (localStorage.getItem("inputs0") ?? "").split(",")
@@ -45,6 +50,8 @@
 			stored.push(...Array(answers.length - stored.length).fill(""))
 
 		inputs = stored ?? answers.map((_) => "")
+
+		mounted = true
 	})
 </script>
 
