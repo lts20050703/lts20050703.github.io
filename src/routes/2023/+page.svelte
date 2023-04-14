@@ -46,7 +46,7 @@
 	<div class="flex flex-row gap-1">
 		<a
 			class="btn btn-primary"
-			href="https://azota.vn/de-thi/mzmncx"
+			href="https://azota.vn/de-thi/fdzej5"
 			target="_blank"
 			rel="noopener noreferrer">AZOTA</a
 		>
