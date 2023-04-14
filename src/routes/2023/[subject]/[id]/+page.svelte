@@ -49,7 +49,7 @@
 		stored = (localStorage.getItem(`inputs${data.subject}${data.title}`) ?? "").split(",")
 
 		if (stored.length < data.questions.length)
-			stored.push(...Array(data.questions.length - stored.length).fill([]))
+			stored.push(...Array(data.questions.length - stored.length).fill(""))
 
 		inputs = stored
 

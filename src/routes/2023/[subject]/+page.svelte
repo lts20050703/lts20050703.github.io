@@ -17,5 +17,6 @@
 	{:else if data.subject === "gdcd"}
 		<a href="./6" class="btn btn-primary">BÀI 6 CÔNG DÂN VỚI CÁC QUYỀN TỰ DO CƠ BẢN </a>
 		<a href="./7" class="btn btn-primary">BÀI 7 CÔNG DÂN VỚI CÁC QUYỀN DÂN CHỦ </a>
+		<a href="./8" class="btn btn-primary">BÀI 8 PHÁP LUẬT VỚI SỰ PHÁT TRIỂN CỦA CÔNG DÂN </a>
 	{/if}
 </div>
