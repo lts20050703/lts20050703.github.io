@@ -42,7 +42,7 @@
 	người ta nhận thấy đường cong tăng trưởng của quần thể có dạng như sau:
 </p>
 
-<p><img src="/2023/sinh37386.png" style="width:3.90333in;height:2.17833in" /></p>
+<p><img src="/2023/sinh37386.png" alt="" /></p>
 
 <p>Khẳng định nào sau đây là phù hợp nhất?</p>
 <p><mark>A. Nhiều khả năng loài này có kích thước cơ thể nhỏ, vòng đời ngắn.</mark></p>
