@@ -6,4 +6,5 @@
 	<a href="./3738" class="btn btn-primary">BÀI 37 38 CÁC ĐẶC TRƯNG CƠ BẢN CỦA QUẦN THỂ SINH VẬT</a>
 	<a href="./39" class="btn btn-primary">BÀI 39 BIẾN ĐỘNG SỐ LƯỢNG CÁ THỂ CỦA QUẦN THỂ SINH VẬT</a>
 	<a href="./40" class="btn btn-primary">BÀI 40 QUẦN XÃ SINH VẬT VÀ MỘT SỐ ĐẶC TRƯNG</a>
+	<a href="./24353637383940" class="btn btn-primary">SINH BÀI 24 35 36 37 38 39 40</a>
 </div>

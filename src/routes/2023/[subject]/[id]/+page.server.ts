@@ -18,7 +18,9 @@ export const load = (async ({ params }) => {
 			right?: number
 		}[] = []
 		for (let i = 0; i < data.length; i += 1) {
-			if (data[i].toUpperCase().startsWith("CÂU")) {
+			if (data[i].startsWith("//")) {
+				continue
+			} else if (data[i].toUpperCase().startsWith("CÂU")) {
 				const question = data[i].split(/\.|:/)
 				question.shift()
 				questions.push({ question: question.join("."), answers: [], id: i })
