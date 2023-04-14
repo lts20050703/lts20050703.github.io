@@ -40,6 +40,10 @@
 
 	$: inputs, live, mounted && save()
 
+	function uncheck(question: number, answer: number) {
+		if (inputs[question] === `${question}${answer}`) inputs[question] = ""
+	}
+
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
 		stored = (localStorage.getItem(`inputs${data.subject}${data.title}`) ?? "").split(",")
@@ -78,7 +82,7 @@
 	}
 </script>
 
-<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10 leading-loose">
+<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white w-full lg:w-[48rem]">
 		<div class="text-center text-3xl font-bold mt-12 flex flex-row justify-center gap-4">
 			{data.title}
@@ -233,10 +237,9 @@
 			>
 				Câu {i + 1}: {@html question.question}
 			</div>
-
 			{#each question.answers as answer, j}
 				<div
-					class="flex flex-row gap-4 {show_answer_pls
+					class="flex flex-row gap-4 m-3 items-center {show_answer_pls
 						? answer.id === question.right
 							? 'text-green-500'
 							: ''
@@ -247,6 +250,7 @@
 						: ''}"
 				>
 					<input
+						on:click={() => uncheck(question.id, answer.id)}
 						bind:group={inputs[question.id]}
 						class="input input-primary input-xs"
 						type="radio"

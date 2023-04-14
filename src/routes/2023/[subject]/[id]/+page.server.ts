@@ -18,32 +18,32 @@ export const load = (async ({ params }) => {
 			right?: number
 		}[] = []
 		for (let i = 0; i < data.length; i += 1) {
-			if (data[i].startsWith("Câu")) {
+			if (data[i].toUpperCase().startsWith("CÂU")) {
 				const question = data[i].split(/\.|:/)
 				question.shift()
 				questions.push({ question: question.join("."), answers: [], id: i })
-			} else if (/^\*?A/.test(data[i])) {
+			} else if (/^\*?A/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
 				answer.shift()
 				question.answers[0] = { answer: answer.join("."), id: 0 }
 				if (data[i].startsWith("*")) question.right = 0
-			} else if (/^\*?B/.test(data[i])) {
+			} else if (/^\*?B/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
 				answer.shift()
 				question.answers[1] = { answer: answer.join("."), id: 1 }
 				if (data[i].startsWith("*")) question.right = 1
-			} else if (/^\*?C/.test(data[i])) {
+			} else if (/^\*?C/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
 				answer.shift()
 				question.answers[2] = { answer: answer.join("."), id: 2 }
 				if (data[i].startsWith("*")) question.right = 2
-			} else if (/^\*?D/.test(data[i])) {
+			} else if (/^\*?D/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
