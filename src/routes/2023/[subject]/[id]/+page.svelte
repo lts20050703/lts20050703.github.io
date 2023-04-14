@@ -255,7 +255,7 @@
 						id={`${question.id}${answer.id}`}
 					/>
 					<label for={`${question.id}${answer.id}`}
-						>{["A", "B", "C", "D"][j]}. {answer.answer}</label
+						>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
 					>
 				</div>
 			{/each}
