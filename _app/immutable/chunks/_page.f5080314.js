@@ -1,0 +1,1 @@
+const t=async({params:e})=>{try{return{title:e.title.replaceAll("-"," ").toUpperCase(),text:"Under developement"}}catch{return{title:"404 Not Found",text:"404 Not Found"}}},o=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{o as _,t as l};
