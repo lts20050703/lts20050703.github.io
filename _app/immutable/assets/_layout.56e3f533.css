@@ -1321,6 +1321,13 @@ html {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .mt-12 {
   margin-top: 3rem;
 }
