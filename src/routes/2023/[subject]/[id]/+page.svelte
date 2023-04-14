@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte"
 	import type { PageData } from "./$types"
-	import v from "$lib/v"
 
 	export let data: PageData
 
@@ -20,7 +19,7 @@
 		inputs = []
 	}
 
-	let answers = data.text.split(/{|}/).filter((_, i) => i % 2 === 1)
+	let answers = data.questions.map((question) => question.right)
 	let stored: string[] = []
 
 	let autosave = ""
@@ -34,7 +33,7 @@
 		setTimeout(() => {
 			if (Date.now() - last_save >= 500) autosave = "saved!"
 		}, 500)
-		localStorage.setItem(`inputs${data.title}`, inputs.join())
+		localStorage.setItem(`inputs${data.subject}${data.title}`, inputs.join(","))
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
 	}
 
@@ -44,28 +43,21 @@
 
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
-		stored = (localStorage.getItem(`inputs${data.title}`) ?? "").split(",")
+		stored = (localStorage.getItem(`inputs${data.subject}${data.title}`) ?? "").split(",")
 
 		if (stored.length < answers.length)
-			stored.push(...Array(answers.length - stored.length).fill(""))
+			stored.push(...Array(answers.length - stored.length).fill([]))
 
-		inputs = stored ?? answers.map((_) => "")
+		inputs = stored
 
 		mounted = true
 	})
 </script>
 
-<svelte:head>
-	<title
-		>In Real Xperience / Openclozes {v} / {data.title[0] + data.title.slice(1).toLowerCase()}</title
-	>
-</svelte:head>
-
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
-	<div class="text-black dark:text-white leading-[2.5rem] w-full lg:w-[48rem]">
-		<div class="text-center text-xl font-bold mt-12">In Real Xperience / Openclozes {v}</div>
-		<div class="text-center text-3xl font-bold my-4">
-			{data.title[0] + data.title.slice(1).toLowerCase()}
+	<div class="text-black dark:text-white w-full lg:w-[48rem]">
+		<div class="text-center text-3xl font-bold mt-12">
+			{data.title}
 		</div>
 		<div class="fixed top-0 left-0 right-0 flex justify-center">
 			<div class="m-1 px-3 rounded-md bg-white dark:bg-base-100">
@@ -174,7 +166,7 @@
 					</span>
 				</div>
 				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
-					<a href="../" class="btn btn-primary btn-sm">Back</a>
+					<a href="../../" class="btn btn-primary btn-sm">Back</a>
 					<div class="flex flex-row gap-2 items-center">
 						<span>Live update</span>
 						<input type="checkbox" class="checkbox checkbox-primary" bind:checked={live} />
@@ -192,35 +184,51 @@
 				</div>
 			</div>
 		</div>
-		{#each data.text.split(/{|}/) as text, i}
-			{#if i % 2 === 0}
-				{#if text.includes("\n")}
-					{text.split("\n")[0]}
-					<br />
-					{text.split("\n")[1]}
-				{:else}
-					{text}
-				{/if}
-			{:else if show_answer_pls}
-				<input
-					type="text"
-					class="input input-info h-7 mx-1 p-1"
-					size={answers[(i - 1) / 2].length}
-					value={answers[(i - 1) / 2]}
-					readonly
-				/>
+		{#each data.questions as question, i}
+			<div>{question.question}</div>
+			{#if show_answer_pls}
+				{#each question.answers as answer, j}
+					{#if j === question.right}
+						<div class="flex flex-row gap-4 text-green-500">
+							<input
+								class="input input-success input-xs"
+								type="radio"
+								name={`${i}`}
+								id={`${i}${j}`}
+							/>
+							<label for={`${i}${j}`}>{answer}</label>
+						</div>
+					{:else}
+						<div class="flex flex-row gap-4">
+							<input
+								class="input input-primary input-xs"
+								type="radio"
+								name={`${i}`}
+								id={`${i}${j}`}
+							/>
+							<label for={`${i}${j}`}>{answer}</label>
+						</div>{/if}
+				{/each}
 			{:else}
-				<input
-					type="text"
-					class="input h-7 mx-1 p-1 lowercase {inputs[(i - 1) / 2] === '' || !live
-						? 'input-primary'
-						: inputs[(i - 1) / 2].toLowerCase().split(/ +/).join(' ').trim() ===
-						  answers[(i - 1) / 2]
-						? 'input-success'
-						: 'input-error'}"
-					size={answers[(i - 1) / 2].length}
-					bind:value={inputs[(i - 1) / 2]}
-				/>
+				{#each question.answers as answer, j}
+					<div
+						class="flex flex-row gap-4 {live && inputs[i] === `${i}${j}`
+							? j === question.right
+								? 'text-green-500'
+								: 'text-red-500'
+							: ''}"
+					>
+						<input
+							bind:group={inputs[i]}
+							class="input input-primary input-xs"
+							type="radio"
+							name={`${i}`}
+							value={`${i}${j}`}
+							id={`${i}${j}`}
+						/>
+						<label for={`${i}${j}`}>{answer}</label>
+					</div>
+				{/each}
 			{/if}
 		{/each}
 	</div>

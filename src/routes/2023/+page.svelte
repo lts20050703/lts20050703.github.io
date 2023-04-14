@@ -8,7 +8,7 @@
 			target="_blank"
 			rel="noopener noreferrer">AZOTA</a
 		>
-		<a class="btn btn-primary" href="./sinh/24" target="_blank" rel="noopener noreferrer">TEXT</a>
+		<a class="btn btn-primary" href="./sinh/24">TEXT</a>
 	</div>
 	<span class="text-xl text-center">BÀI 35 36</span>
 	<div class="flex flex-row gap-1">
@@ -18,7 +18,7 @@
 			target="_blank"
 			rel="noopener noreferrer">AZOTA</a
 		>
-		<a class="btn btn-primary" href="./sinh/3536" target="_blank" rel="noopener noreferrer">TEXT</a>
+		<a class="btn btn-primary" href="./sinh/3536">TEXT</a>
 	</div>
 	<span class="text-xl text-center">BÀI 37 38 CÁC ĐẶC TRƯNG CƠ BẢN CỦA QUẦN THỂ SINH VẬT</span>
 	<div class="flex flex-row gap-1">
@@ -28,7 +28,7 @@
 			target="_blank"
 			rel="noopener noreferrer">AZOTA</a
 		>
-		<a class="btn btn-primary" href="./sinh/3738" target="_blank" rel="noopener noreferrer">TEXT</a>
+		<a class="btn btn-primary" href="./sinh/3738">TEXT</a>
 	</div>
 	<span class="text-xl text-center">BÀI 39 BIẾN ĐỘNG SỐ LƯỢNG CÁ THỂ CỦA QUẦN THỂ SINH VẬT </span>
 	<div class="flex flex-row gap-1">
@@ -38,7 +38,7 @@
 			target="_blank"
 			rel="noopener noreferrer">AZOTA</a
 		>
-		<a class="btn btn-primary" href="./sinh/39" target="_blank" rel="noopener noreferrer">TEXT</a>
+		<a class="btn btn-primary" href="./sinh/39">TEXT</a>
 	</div>
 	<span class="text-xl text-center"
 		>BÀI 40 QUẦN XÃ SINH VẬT VÀ MỘT SỐ ĐẶC TRƯNG CƠ BẢN CỦA QUẦN XÃ SINH VẬT
@@ -50,6 +50,6 @@
 			target="_blank"
 			rel="noopener noreferrer">AZOTA</a
 		>
-		<a class="btn btn-primary" href="./sinh/40" target="_blank" rel="noopener noreferrer">TEXT</a>
+		<a class="btn btn-primary" href="./sinh/40">TEXT</a>
 	</div>
 </div>
