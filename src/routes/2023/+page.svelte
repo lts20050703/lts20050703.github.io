@@ -8,7 +8,7 @@
 			target="_blank"
 			rel="noopener noreferrer">AZOTA</a
 		>
-		<a class="btn btn-primary" href="./sinh/24">TEXT</a>
+		<a class="btn btn-primary" href="./sinh/24/">TEXT</a>
 	</div>
 	<span class="text-xl text-center">BÀI 35 36</span>
 	<div class="flex flex-row gap-1">
