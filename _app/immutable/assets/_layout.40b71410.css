@@ -1414,6 +1414,9 @@ html {
 .m-3 {
   margin: 0.75rem;
 }
+.m-4 {
+  margin: 1rem;
+}
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -1427,6 +1430,9 @@ html {
 }
 .mt-12 {
   margin-top: 3rem;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .block {
   display: block;
@@ -1466,9 +1472,6 @@ html {
 }
 .justify-center {
   justify-content: center;
-}
-.gap-1 {
-  gap: 0.25rem;
 }
 .gap-2 {
   gap: 0.5rem;
