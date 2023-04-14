@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte"
 	import type { PageData } from "./$types"
+	import v from "$lib/v"
 
 	export let data: PageData
 
@@ -16,8 +17,7 @@
 	}
 
 	function clear() {
-		localStorage.removeItem("inputs0")
-		location.reload()
+		inputs = []
 	}
 
 	let answers = data.text.split(/{|}/).filter((_, i) => i % 2 === 1)
@@ -56,12 +56,17 @@
 </script>
 
 <svelte:head>
-	<title>{data.title}</title>
+	<title
+		>In Real Xperience / Openclozes {v} / {data.title[0] + data.title.slice(1).toLowerCase()}</title
+	>
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white leading-[2.5rem] w-full lg:w-[48rem]">
-		<div class="text-center text-3xl font-bold mt-12">{data.title}</div>
+		<div class="text-center text-xl font-bold mt-12">In Real Xperience / Openclozes {v}</div>
+		<div class="text-center text-3xl font-bold my-4">
+			{data.title[0] + data.title.slice(1).toLowerCase()}
+		</div>
 		<div class="fixed top-0 left-0 right-0 flex justify-center">
 			<div class="m-1 px-3 rounded-md bg-white dark:bg-base-100">
 				<div class="flex sm:hidden flex-row justify-center gap-4 m-1">
