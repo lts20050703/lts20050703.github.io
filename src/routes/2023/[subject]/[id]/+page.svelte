@@ -19,7 +19,6 @@
 		inputs = []
 	}
 
-	let answers = data.questions.map((question) => question.right)
 	let stored: string[] = []
 
 	let autosave = ""
@@ -45,13 +44,38 @@
 		live = localStorage.getItem("live") !== null
 		stored = (localStorage.getItem(`inputs${data.subject}${data.title}`) ?? "").split(",")
 
-		if (stored.length < answers.length)
-			stored.push(...Array(answers.length - stored.length).fill([]))
+		if (stored.length < data.questions.length)
+			stored.push(...Array(data.questions.length - stored.length).fill([]))
 
 		inputs = stored
 
 		mounted = true
 	})
+
+	const prequestions = data.questions.map((question) => ({
+		...question,
+		answers: shuffle(question.answers)
+	}))
+
+	const questions = shuffle(prequestions)
+
+	function shuffle<T>(arr: T[]): T[] {
+		let array = structuredClone(arr)
+		let currentIndex = array.length,
+			randomIndex
+
+		// While there remain elements to shuffle.
+		while (currentIndex != 0) {
+			// Pick a remaining element.
+			randomIndex = Math.floor(Math.random() * currentIndex)
+			currentIndex--
+
+			// And swap it with the current element.
+			;[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+		}
+
+		return array
+	}
 </script>
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10 leading-loose">
@@ -196,39 +220,43 @@
 				</div>
 			</div>
 		</div>
-		{#each data.questions as question, i}
+		{#each questions as question, i}
 			<br />
 			<div
-				class={inputs[i] !== "" && inputs[i] !== undefined && (live || show_answer_pls)
-					? inputs[i] === `${i}${question.right}`
+				class={inputs[question.id] !== "" &&
+				inputs[question.id] !== undefined &&
+				(live || show_answer_pls)
+					? inputs[question.id] === `${question.id}${question.right}`
 						? "text-green-500"
 						: "text-red-500"
 					: ""}
 			>
-				{@html question.question}
+				Câu {i + 1}: {@html question.question}
 			</div>
 
 			{#each question.answers as answer, j}
 				<div
 					class="flex flex-row gap-4 {show_answer_pls
-						? j === question.right
+						? answer.id === question.right
 							? 'text-green-500'
 							: ''
-						: ''} {(live || show_answer_pls) && inputs[i] === `${i}${j}`
-						? j === question.right
+						: ''} {(live || show_answer_pls) && inputs[question.id] === `${question.id}${answer.id}`
+						? answer.id === question.right
 							? 'text-green-500'
 							: 'text-red-500'
 						: ''}"
 				>
 					<input
-						bind:group={inputs[i]}
+						bind:group={inputs[question.id]}
 						class="input input-primary input-xs"
 						type="radio"
-						name={`${i}`}
-						value={`${i}${j}`}
-						id={`${i}${j}`}
+						name={`${question.id}`}
+						value={`${question.id}${answer.id}`}
+						id={`${question.id}${answer.id}`}
 					/>
-					<label for={`${i}${j}`}>{answer}</label>
+					<label for={`${question.id}${answer.id}`}
+						>{["A", "B", "C", "D"][j]}. {answer.answer}</label
+					>
 				</div>
 			{/each}
 		{/each}

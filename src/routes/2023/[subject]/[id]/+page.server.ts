@@ -11,46 +11,45 @@ export const load = (async ({ params }) => {
 		const data = text.split("\n")
 		const title = data.shift()
 		const azota = data.shift()
-		const questions: { question: string; answers: string[]; right?: number }[] = []
+		const questions: {
+			question: string
+			id: number
+			answers: { answer: string; id: number }[]
+			right?: number
+		}[] = []
 		for (let i = 0; i < data.length; i += 1) {
 			if (data[i].startsWith("Câu")) {
-				questions.push({ question: data[i], answers: [] })
-			} else if (data[i].startsWith("A")) {
+				const question = data[i].split(":")
+				question.shift()
+				questions.push({ question: question.join(":"), answers: [], id: i })
+			} else if (/^\*?A/.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
-				question.answers[0] = data[i]
-			} else if (data[i].startsWith("B")) {
+				const answer = data[i].split(".")
+				answer.shift()
+				question.answers[0] = { answer: answer.join("."), id: 0 }
+				if (data[i].startsWith("*")) question.right = 0
+			} else if (/^\*?B/.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
-				question.answers[1] = data[i]
-			} else if (data[i].startsWith("C")) {
+				const answer = data[i].split(".")
+				answer.shift()
+				question.answers[1] = { answer: answer.join("."), id: 1 }
+				if (data[i].startsWith("*")) question.right = 1
+			} else if (/^\*?C/.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
-				question.answers[2] = data[i]
-			} else if (data[i].startsWith("D")) {
+				const answer = data[i].split(".")
+				answer.shift()
+				question.answers[2] = { answer: answer.join("."), id: 2 }
+				if (data[i].startsWith("*")) question.right = 2
+			} else if (/^\*?D/.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
-				question.answers[3] = data[i]
-			} else if (data[i].startsWith("*A")) {
-				const question = questions.at(-1)
-				if (!question) continue
-				question.right = 0
-				question.answers[0] = data[i].slice(1)
-			} else if (data[i].startsWith("*B")) {
-				const question = questions.at(-1)
-				if (!question) continue
-				question.answers[1] = data[i].slice(1)
-				question.right = 1
-			} else if (data[i].startsWith("*C")) {
-				const question = questions.at(-1)
-				if (!question) continue
-				question.answers[2] = data[i].slice(1)
-				question.right = 2
-			} else if (data[i].startsWith("*D")) {
-				const question = questions.at(-1)
-				if (!question) continue
-				question.answers[3] = data[i].slice(1)
-				question.right = 3
+				const answer = data[i].split(".")
+				answer.shift()
+				question.answers[3] = { answer: answer.join("."), id: 3 }
+				if (data[i].startsWith("*")) question.right = 3
 			} else {
 				const question = questions.at(-1)
 				if (!question) continue
