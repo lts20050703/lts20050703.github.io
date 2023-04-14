@@ -17,13 +17,15 @@ export const load = (async ({ params }) => {
 			answers: { answer: string; id: number }[]
 			right?: number
 		}[] = []
+		let id = 0
 		for (let i = 0; i < data.length; i += 1) {
 			if (data[i].startsWith("//")) {
 				continue
 			} else if (data[i].toUpperCase().startsWith("CÂU")) {
 				const question = data[i].split(/\.|:/)
 				question.shift()
-				questions.push({ question: question.join("."), answers: [], id: i })
+				questions.push({ question: question.join("."), answers: [], id })
+				id += 1
 			} else if (/^\*?A/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue

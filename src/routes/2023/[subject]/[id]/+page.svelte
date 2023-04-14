@@ -272,6 +272,33 @@
 				</div>
 			{/each}
 		{/each}
+		<div class="">Tổng cộng: {questions.length}</div>
+		<div class="flex flex-row gap-4">
+			<div class="">Đã làm: {inputs.filter((input) => input).length}</div>
+			<div class={show_answer_pls || live ? "flex flex-row gap-4" : "hidden"}>
+				<div class="text-green-500">
+					Đúng: {questions.filter(
+						(question) => `${question.id}${question.right}` === inputs[question.id]
+					).length}
+				</div>
+				<div class="text-red-500">
+					Sai: {questions.filter(
+						(question) => `${question.id}${question.right}` !== inputs[question.id]
+					).length - inputs.filter((input) => !input).length}
+				</div>
+			</div>
+		</div>
+		<div class="text-red-500">Chưa làm: {inputs.filter((input) => !input).length}</div>
+		<div class={show_answer_pls || live ? "" : "hidden"}>
+			<div>
+				Điểm: {(
+					(questions.filter((question) => `${question.id}${question.right}` === inputs[question.id])
+						.length /
+						questions.length) *
+					10
+				).toFixed(1)}
+			</div>
+		</div>
 	</div>
 </div>
 
