@@ -35,6 +35,8 @@
 					>BÀI 39 BIẾN ĐỘNG SỐ LƯỢNG CÁ THỂ CỦA QUẦN THỂ SINH VẬT</a
 				>
 				<a href="./40" class="btn btn-primary">BÀI 40 QUẦN XÃ SINH VẬT VÀ MỘT SỐ ĐẶC TRƯNG</a>
+
+				<a href="./21222526282930" class="btn btn-primary">BÀI 21 22 25 26 28 29 30</a>
 				<a href="./24353637383940" class="btn btn-primary">BÀI 24 35 36 37 38 39 40</a>
 			{:else if data.subject === "gdcd"}
 				<a href="./6" class="btn btn-primary">BÀI 6 CÔNG DÂN VỚI CÁC QUYỀN TỰ DO CƠ BẢN </a>
