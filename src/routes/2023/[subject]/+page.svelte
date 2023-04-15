@@ -25,6 +25,7 @@
 				<a href="./25" class="btn btn-primary">SINH: BÀI 25: HỌC THUYẾT TIẾN HÓA ĐACUYN</a>
 				<a href="./26" class="btn btn-primary">SINH: BÀI 26: THUYẾT TIẾN HÓA TỔNG HỢP HIỆN ĐẠI</a>
 				<a href="./28" class="btn btn-primary">SINH: BÀI 28: LOÀI </a>
+				<a href="./2930" class="btn btn-primary">SINH: BÀI 29 - 30: SỰ HÌNH THÀNH LOÀI MỚI </a>
 
 				<a href="./3536" class="btn btn-primary">BÀI 35 36</a>
 				<a href="./3738" class="btn btn-primary"
