@@ -45,7 +45,16 @@
 		if (inputs[question] === `${question}${answer}`) inputs[question] = ""
 	}
 
+	let questions = data.questions
+
 	onMount(() => {
+		const prequestions = data.questions.map((question) => ({
+			...question,
+			answers: shuffle(question.answers)
+		}))
+
+		questions = shuffle(prequestions)
+
 		live = localStorage.getItem("live") !== null
 		stored = (localStorage.getItem(`inputs${data.subject}${data.title}`) ?? "").split(",")
 
@@ -56,13 +65,6 @@
 
 		mounted = true
 	})
-
-	const prequestions = data.questions.map((question) => ({
-		...question,
-		answers: shuffle(question.answers)
-	}))
-
-	const questions = shuffle(prequestions)
 
 	function shuffle<T>(arr: T[]): T[] {
 		let array = structuredClone(arr)
