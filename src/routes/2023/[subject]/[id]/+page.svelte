@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte"
 	import type { PageData } from "./$types"
+	import v from "$lib/v"
 
 	export let data: PageData
 
@@ -84,8 +85,8 @@
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="text-black dark:text-white w-full lg:w-[48rem]">
-		<div class="text-center text-xl mt-12">
-			In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)}
+		<div class="text-center mt-12">
+			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
 		</div>
 		<div class="text-center text-3xl font-bold my-4 flex flex-row justify-center gap-4">
 			{data.title}
@@ -284,11 +285,14 @@
 				<div class="text-red-500">
 					Sai: {questions.filter(
 						(question) => `${question.id}${question.right}` !== inputs[question.id]
-					).length - inputs.filter((input) => !input).length}
+					).length -
+						(questions.length - inputs.filter((input) => input).length)}
 				</div>
 			</div>
 		</div>
-		<div class="text-red-500">Chưa làm: {inputs.filter((input) => !input).length}</div>
+		<div class="text-red-500">
+			Chưa làm: {questions.length - inputs.filter((input) => input).length}
+		</div>
 		<div class={show_answer_pls || live ? "" : "hidden"}>
 			<div>
 				Điểm: {(

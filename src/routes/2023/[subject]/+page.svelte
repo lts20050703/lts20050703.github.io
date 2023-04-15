@@ -1,21 +1,26 @@
 <script lang="ts">
+	import v from "$lib/v"
 	export let data: PageData
 	import type { PageData } from "./$types"
 </script>
 
 <svelte:head
 	><title>
-		In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)}</title
+		In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}</title
 	></svelte:head
 >
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col p-4">
 	<div class="text-black dark:text-white leading-loose w-full">
-		<div class="text-center text-3xl font-bold mb-6 mt-12">
-			In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)}
+		<div class="text-center mb-5 mt-16">
+			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
 		</div>
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 			{#if data.subject === "sinh"}
+				<a href="./2122" class="btn btn-primary"
+					>SINH: CHƯƠNG V: DI TRUYỀN HỌC NGƯỜI (BÀI 21 & 22)
+				</a>
+
 				<a href="./24" class="btn btn-primary">BÀI 24 CÁC BẰNG CHỨNG TIẾN HÓA</a>
 				<a href="./3536" class="btn btn-primary">BÀI 35 36</a>
 				<a href="./3738" class="btn btn-primary"

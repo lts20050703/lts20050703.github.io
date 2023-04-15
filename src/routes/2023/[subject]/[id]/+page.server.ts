@@ -9,7 +9,9 @@ export const load = (async ({ params }) => {
 			"utf8"
 		)
 		const data = text.split("\n")
+		while (data[0].startsWith("//")) data.shift()
 		const title = data.shift()
+		while (data[0].startsWith("//")) data.shift()
 		const azota = data.shift()
 		const questions: {
 			question: string

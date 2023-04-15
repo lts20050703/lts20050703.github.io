@@ -8,7 +8,7 @@
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col p-4">
 	<div class="text-black dark:text-white leading-loose w-full">
-		<div class="text-center text-3xl font-bold mb-6 mt-12">In Real Xperience / Openclozes</div>
+		<div class="text-center mt-16 mb-5">In Real Xperience / Openclozes {v}</div>
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4">
 			<a href="./an-old-man-looked-back-on-his-life" class="btn btn-primary flex-1"
 				>AN OLD MAN LOOKED BACK ON HIS LIFE</a
