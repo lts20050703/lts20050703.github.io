@@ -1,5 +1,6 @@
 <script lang="ts">
 	import v from "$lib/v"
+	import { subscribe } from "svelte/internal"
 	export let data: PageData
 	import type { PageData } from "./$types"
 </script>
@@ -15,14 +16,14 @@
 		<div class="text-center mb-5 mt-16">
 			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
 		</div>
+		{#if data.subject === "sinh"}
+			<div class="flex justify-center mb-4">
+				<img class="max-w-lg" src="/2023/sinh.jpg" alt="" />
+			</div>
+		{/if}
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 			{#if data.subject === "sinh"}
-				<a href="./2122" class="btn btn-primary"
-					>SINH: CHƯƠNG V: DI TRUYỀN HỌC NGƯỜI (BÀI 21 & 22)
-				</a>
-
 				<a href="./24" class="btn btn-primary">BÀI 24 CÁC BẰNG CHỨNG TIẾN HÓA</a>
-				<a href="./25" class="btn btn-primary">SINH: BÀI 25: HỌC THUYẾT TIẾN HÓA ĐACUYN</a>
 				<a href="./26" class="btn btn-primary">SINH: BÀI 26: THUYẾT TIẾN HÓA TỔNG HỢP HIỆN ĐẠI</a>
 				<a href="./28" class="btn btn-primary">SINH: BÀI 28: LOÀI </a>
 				<a href="./2930" class="btn btn-primary">SINH: BÀI 29 - 30: SỰ HÌNH THÀNH LOÀI MỚI </a>
@@ -36,10 +37,8 @@
 				>
 				<a href="./40" class="btn btn-primary">BÀI 40 QUẦN XÃ SINH VẬT VÀ MỘT SỐ ĐẶC TRƯNG</a>
 
-				<a href="./21222526282930" class="btn btn-primary">BÀI 21 22 25 26 28 29 30</a>
-				<a href="./24353637383940" class="btn btn-primary">BÀI 24 35 36 37 38 39 40</a>
-				<a href="./2122242526282930353637383940" class="btn btn-primary"
-					>BÀI 21 22 24 25 26 28 29 30 35 36 37 38 39 40 (CUỐI KỲ 2)</a
+				<a href="./2426282930353637383940" class="btn btn-primary"
+					>BÀI 24 26 28 29 30 35 36 37 38 39 40 (CUỐI KỲ 2)</a
 				>
 			{:else if data.subject === "gdcd"}
 				<a href="./6" class="btn btn-primary">BÀI 6 CÔNG DÂN VỚI CÁC QUYỀN TỰ DO CƠ BẢN </a>

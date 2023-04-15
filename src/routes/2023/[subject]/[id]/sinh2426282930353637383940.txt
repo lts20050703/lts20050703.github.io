@@ -1,5 +1,5 @@
-BÀI 24 35 36 37 38 39 40
-https://azota.vn/de-thi/mr0bwn
+BÀI 24 26 28 29 30 35 36 37 38 39 40 (CUỐI KỲ 2)
+https://azota.vn/de-thi/i0lfao
 // BÀI 24 CÁC BẰNG CHỨNG TIẾN HÓA
 Câu 1: Bằng chứng tiến hóa nào sau đây được xem là bằng chứng giải phẫu so sánh? 
 A. Tất cả các sinh vật từ đơn bào đến đa bào đều được cấu tạo từ tế bào.  
@@ -83,6 +83,286 @@ A. Sự tương đồng về nhiều đặc điểm ở cấp độ phân tử v
 B. Những loài có quan hệ họ hàng càng gần thì trình tự các axit amin trong phân tử protein hay trình tự các nucleotit  trong các gen tương ứng càng có xu hướng giống nhau và ngược lại.  
 *C. Phân tích trình tự các axit amin của các loại protein khác nhau hay trình tự các nucleotit của các gen khác nhau ở  các loài có thể cho ta biết mối quan hệ họ hàng giữa các loài.  
 D. Các tế bào của tất cả các loài sinh vật hiện nay đều sử dụng chung một loại mã di truyền, đều dùng cùng 20 loại axit  amin để cấu tạo nên protein, … chứng tỏ chúng tiến hóa từ một tổ tiên chung.
+// BÀI 26 THUYẾT TIẾN HÓA TỔNG HỢP HIỆN ĐẠI
+Câu 1. Theo thuyết tiến hóa hiện đại, nhân tố nào dưới đây không được xem là nhân tố tiến hóa?
+A. Các yếu tố ngẫu nhiên.
+B. Chọn lọc tự nhiên.
+*C. Giao phối ngẫu nhiên.
+D. Giao phối không ngẫu nhiên.
+Câu 2. Theo quan niệm tiến hóa hiện đại, nhân tố tiến hóa nào có thể làm tăng sự đa dạng di truyền trong quần thể?
+A. Các yếu tố ngẫu nhiên.
+*B. Đột biến.
+C. Giao phối không ngẫu nhiên.
+D. Chọn lọc tự nhiên.
+Câu 3. Nếu chỉ xét riêng từng nhân tố thì nhân tố tiến hóa nào sau đây làm thay đổi tần số alen của quần thể với tốc độ chậm nhất?
+A. Chọn lọc tự nhiên.
+B. Các yếu tố ngẫu nhiên.
+*C. Đột biến gen.
+D. Di - nhập gen.
+Câu 4. Khi nói về nhân tố di - nhập gen, phát biểu nào sau đây đúng?
+A. Di - nhập gen có thể làm thay đổi tần số alen nhưng không làm thay đổi thành phần kiểu gen của quần thể.
+*B. Sự phát tán hạt phấn ở thực vật chính là một hình thức di - nhập gen.
+C. Di - nhập gen luôn mang đến cho quần thể những alen có lợi.
+D. Di - nhập gen luôn làm thăng tần số alen trội của quần thể.
+Câu 5. Trong các nhân tố sau, nhân tố tiến hóa nào sau đây là nhân tố tiến hóa có hướng?
+*A. Chọn lọc tự nhiên.
+B. Đột biến.
+C. Di nhập gen.
+D. Yếu tố ngẫu nhiên.
+Câu 6. Theo thuyết tiến hóa hiện dại, phát biểu nào sau đây là sai?
+*A. Di nhập gen định hướng cho quá trình tiến hóa của quần thể.
+B. Yếu tố ngẫu nhiên có thể loại bỏ một alen có lợi ra khỏi quần thể.
+C. Đột biến cung cấp nguyên liệu sơ cấp cho tiến hóa.
+D. Chọn lọc tự nhiên đào thải alen trội làm thay đổi tần số alen trội của quần thể nhanh hơn đào thải alen lặn.
+Câu 7. Theo quan điểm hiện đại về chọn lọc tự nhiên, phát biểu nào sau đây không đúng?
+A. Chọn lock tự nhiên quy định chiều hướng và nhịp điệu biến đổi thành phần kiểu gen của quần thể.
+B. Khi môi trường thay đổi theo một hướng xác định thì chọn lọc tự nhiên sẽ làm biến đổi tần số alen theo một hướng xác định.
+C. Chọn lọc tự nhiên về thực chất là quá trình phân hóa khả năng sống sót và khả năng sinh sản của các cá thể với kiểu gen khác nhau trong quần thể.
+*D. Chọn lọc tự nhiên chỉ tác động lên từng alen và làm thay đổi tần số kiểu gen của quần thể.
+Câu 8. Đối với quá trình tiến hóa, yếu tố ngẫu nhiên có vai trò?
+*A. Làm biến đổi mạnh tần số alen của những quần thể có kích thước nhỏ.
+B. Làm tăng sự đa dạng di truyền của quần thể sinh vật.
+C. Làm thay đổi tần số alen và thành phần kiểu gen của quần thể theo một hướng xác định.
+D. Chỉ đào thải các alen có hại và giữ lại các alen có lợi cho quần thể.
+Câu 9. Ở một loài thực vật giao phấn, các hạt phấn của quần thể 1 theo gió bay sang quần thể 2 và thụ phấn cho các cây ở quần thể 2. Đây là ví dụ về?
+A. Biến động di truyền.
+*B. Di - nhập gen.
+C. Yếu tố ngẫu nhiên.
+D. Giao phối không ngẫu nhiên.
+Câu 10. Theo quan niệm hiện đại, loại biến dị nào sau đây là nguồn nguyên liệu sơ cấp cho quá trình tiến hóa?
+A. Biến dị tổ hợp.
+B. Thường biến.
+C. Yếu tố ngẫu nhiên.
+*D. Đột biến gen.
+Câu 11. Theo quan niệm của thuyết tiến hóa hiện đại, phát biểu nào sau đây về chọn lock tự nhiên là SAI?
+A. Chon lọc tự nhiên tác động trực tiếp lên kiểu hình và qua đó gián tiếp tác động lên vốn gen của quần thể.
+B. Chọn lọc tự nhiên không bao giờ loại bỏ hết alen lặn ra khỏi quần thể.
+*C. Kết quả của chọn lọc tự nhiên là hình thành cá thể mang kiểu hình thích nghi với môi trường.
+D. Chọn lọc chống lại alen trội có thể nhanh chóng làm thay đổi tần số alen của quần thể.
+Câu 12. Trong quá trình tiến hóa, nhân tố làm thay đổi tần số alen của quần thể chậm nhất là?
+*A. Đột biến.
+B. Các yếu tố ngẫu nhiên.
+C. Chọn lọc tự nhiên.
+D. Di - nhập gen.
+Câu 13. Theo quan niệm của thuyết tiến hóa tổng hợp, phát biểu nào sau đây sai?
+A. Hình thành loài nhờ cơ chế lai xa và đa bội hóa là con đường hình thành loài nhanh nhất.
+B. Quần thể sẽ không tiến hóa nếu tần số alen và thành phần kiểu gen của quần thể được duy trì không đổi từ thế hệ này sang thế hệ khác.
+*C. Các loài sinh sản vô tính tạo ra số lượng cá thể con cháu rất nhiều và nhanh nên khi môi trường có biến động mạnh sẽ không bị chọn lọc tự nhiên đào thải hàng loạt.
+D. Tiến hóa nhỏ và tiến hóa lớn không độc lập nhau mà liên quan mật thiết.
+Câu 14. Các nhân tố tiến hóa nào sau đây vừa làm thay đổi tần số alen vừa có thể làm phong phú vốn gen của quần thể?
+*A. Đột biến và di - nhập gen.
+B. Chọn lọc tự nhiên và các yếu tố ngẫu nhiên.
+C. Đột biến và giao phối không ngẫu nhiên.
+D. Chọn lọc tự nhiên và giao phối không ngẫu nhiên.
+Câu 15. Theo thuyết tiến hóa tổng hợp hiện đại, phát biểu nào sau đây đúng khi nói về quá trình tiến hóa nhỏ?
+A. Tiến hóa nhỏ diễn ra trong thời gian lịch sử lâu dài.
+*B. Tiến hóa nhỏ làm thay đổi cấu trúc di truyền của quần thể.
+C. Tiến hóa nhỏ diễn ra trên quy mô loài và diễn biến không ngừng.
+D. Tiến hóa nhỏ giúp hình thành các đơn vị phân loại trên loài.
+Câu 16. Giao phối ngẫu nhiên không được xem là nhân tố tiến hóa vì?
+*A. Không làm thay đổi vốn gen của quần thể.
+B. Làm thay đổi tần số kiểu gen của quần thể.
+C. Làm quần thể thay đổi tần số alen.
+D. Làm thay đổi định hướng vốn gen của quần thể.
+Câu 17. Nhân tố nào làm giảm kích thước của quần thể đáng kể và làm cho vốn gen của quần thể khác hẳn so với quần thể ban đầu?
+*A. Các yếu tố ngẫu nhiên.
+B. Đột biến.
+C. Giao phối ngẫu nhiên.
+D. Giao phối không ngẫu nhiên.
+Câu 18. Trong tiến hóa nhỏ, nhân tố đột biến có bao nhiêu đặc điểm trong những đặc điểm sau đây?
+(1) Làm thay đổi tần số alen và thành phần kiểu gen của quần thể theo một hướng xác định.
+(2) Làm phát sinh các biến dị di truyền của quần thể, cung cấp nguồn nguyên liệu sơ cấp cho quá trình tiến hóa.
+(3) Có thể loại bỏ hoàn toàn một alen nào đó khỏi quần thể cho dù alen đó là có lợi.
+(4) Làm thay đổi tần số alen và thành phần kiểu gen của quần thể rất chậm.
+A. 1.
+B. 4.
+C. 3.
+*D. 2.
+Câu 19. Theo thuyết tiến hóa hiện đại, khi nói về nhân tố tiến hóa có bao nhiêu phát biểu sau đây đúng?
+(1) Nếu có sự di - nhập gen chắc chắn làm giảm tần số alen của quần thể.
+(2) Nếu quần thể chịu tác động của các yếu tố ngẫu nhiên có thể làm nghèo vốn gen của quần thể.
+(3) Nếu quần thể chịu tác động của đột biến có thể xuất hiện alen mới.
+(4) Chọn lọc tự nhiên tác động trực tiếp lên kiểu gen làm biến đổi tần số alen của quần thể.
+A. 4.
+B. 3.
+C. 1.
+*D. 2.
+Câu 20. Theo thuyết tiến hóa hiện đại, có bao nhiêu phát biểu sau đây đúng về chọn lọc tự nhiên?
+(1) Chọn lọc tự nhiên tác động trực tiếp lên kiểu hình và giáp tiếp làm biến đổi tần số kiểu gen của quần thể.
+(2) Chọn lọc tự nhiên chống lại alen trội làm biến đổi tần số alen của quần thể nhanh hơn so với chọn lọc chống lại alen lặn.
+(3) Chọn lọc tự nhiên làm xuất hiện các alen mới và làm thay đổi tuần số alen của quần thể.
+(4) Chọn lọc tự nhiên có thể làm biến đổi tần số alen một cách đột ngột không theo một hướng xác định.
+A. 3.
+B. 4.
+C. 1.
+*D. 2.
+// BÀI 28 LOÀI
+Câu 1. "... là một hoặc một nhóm quần thể gồm các cá thể có khả năng giao phối với nhau trong tự nhiên sinh ra đời con có sức sống và có khả năng sinh sản, cách li sinh sản với các nhóm quần thể khác". Từ cần điền vào chỗ trống là?
+*A. Loài.
+B. Chi.
+C. Quần thể giao phối.
+D. Họ.
+Câu 2. Dạng cách li nào sau đây không phải là cách li trước hợp tử?
+*A. Cách li địa lí.
+B. Cách li cơ học.
+C. Cách li tập tính.
+D. Cách li thời gian.
+Câu 3. Hiện tượng các cá thể không giao phối với nhau do chênh lệch mùa sinh sản như thời kì ra hoa, đẻ trứng thuộc dạng cách li nào sau đây?
+A. Cách li cơ học.
+B. Cách li nơi ở.
+C. Cách li tập tính.
+*D. Cách li thời gian.
+Câu 4. Các cá thể không giao phối được do không tương hợp về cơ quan giao phối thuộc dạng cách li nào sau đây?
+*A. Cách li cơ học.
+B. Cách li nơi ở.
+C. Cách li tập tính.
+D. Cách li thời gian.
+Câu 5. Tiêu chuẩn nào sau đây được sử dụng thông dụng để phân biệt hai loài?
+A. Tiêu chuẩn hình thái.
+B. Tiêu chuẩn hóa sinh.
+*C. Tiêu chuẩn cách li sinh sản.
+D. Tiêu chuẩn phân tử.
+Câu 6. Cách li sau hợp tử là?
+*A. Trở ngại ngăn cản con lai phát triển.
+B. Trở ngại ngăn cản sự thụ tinh.
+C. Trở ngại ngăn cản tạo thành giao tử.
+D. Trở ngại ngăn cản con lai hữu thụ.
+Câu 7. Hạt phấn của hoa mướp rơi lên đầu ngụy của hoa bí, sau đó hạt phấn nảy mầm thành ống phấn nhưng độ dài ống phấn ngắn hơn vòi nhụy của hoa bí nên giao tử đực của mướp không tới được noãn của hoa bí để thụ tinh. Đây là loại cách li nào?
+A. Cách li không gian.
+*B. Cách li cơ học.
+C. Cách li tập tính.
+D. Cách li sinh thái.
+Câu 8. Vai trò chủ yếu của cơ chế cách li trong tiến hóa là?
+A. Phân hóa khả năng sinh sản của các kiểu gen.
+B. Nguồn nguyên liệu sơ cấp cho chọn lọc.
+C. Tạo nguyên liệu thứ cấp cho tiến hóa nhỏ.
+*D. Củng cố và tăng cường phân hóa kiểu gen.
+Câu 9. Có bao nhiêu hiện tượng sau đây biểu hiện cách li trước hợp tử?
+I. Cách li nơi ở.
+II. Cách li cơ học.
+III. Cách li tập tính.
+IV. Cách li địa lí.
+V. Cách li thời gian.
+VI. Cách li khoảng cách.
+A. 2.
+B. 3.
+*C. 4.
+D. 5.
+Câu 10. Những ví dụ nào sau đây biểu hiện của cách li sau hợp tử?
+(I). Các cá thể của quần thể này có giao phối với cá thể của quần thể kia nhưng không tạo được hợp tử.
+(II). Hai quần thể sinh sản vào hai mùa khác nhau.
+(III). Các cá thể của quần thể này có giao phối với cá thể của quần thể kia nhưng phôi bị chết trước khi sinh.
+(IV). Các cá thể giao phối với nhau và sinh con nhưng con không sinh sản hữu tính.
+(V). Các cá thể có tập tính giao phối khác nhau nên mặc dù ở trong một môi trường nhưng bị cách li sinh sản.
+A. (I) và (II).
+*B. (III) và (IV).
+C. (III) và (V).
+D. (II) và (IV).
+// BÀI 29 30 SỰ HÌNH THÀNH LOÀI MỚI
+Câu 1. Con đường hình thành loài mới nào diễn ra chủ yếu ở loài có khả năng phát tán xa và thời gian hình thành loài mới tương đối chậm?
+*A. Hình thành loài khác khu vực địa lý.
+B. Hình thành loài bằng cách li sinh thái.
+C. Hình thành loài bằng cách li tập tính.
+D. Hình thành loài bằng lai xa và đa bội hóa.
+Câu 2. Ví dụ nào sau đây không phải là cách li địa lý?
+A. Những con chuột sống trên những hòn đảo khác nhau bị cách li bởi đại dương.
+B. Hai loài cây sống ở hai bên sườn của ngọn núi cao.
+C. Những con cá ở hai khúc sống bị chia cách bởi giải đất liền.
+*D. Những loài cách có thời gian nở hoa khác nhau.
+Câu 3. Các quần thể khác nhau, bị một trở ngại địa lý làm cho chúng cách li nhau, sự giao phối ở cá thể giữa hai quần thể gặp trở ngại, sau một thời gian dài có thể hình thành nên hai loài mới, khi giữa hai quần thể này xuất hiện?
+*A. Cách li sinh sản.
+B. Sự sai khác di truyền.
+C. Những đặc điểm thích nghi.
+D. Sự sai khác tần số kiểu gen.
+Câu 4. Nhóm loài nào sau đây dễ hình thành loài mới bằng con đường cách li địa lý?
+*A. Chim.
+B. Thực vật thân thấp.
+C. Ốc sên.
+D. Kiến vàng.
+Câu 5. Khi nói về vai trò của cách li địa lí trong quá trình hình thành loài mới, có bao nhiêu phát biểu sau đây là không đúng?
+I. Cách li địa lí là những trở ngại về mặt địa lí như sông, núi, biển... ngăn cản các cá thể của quần thể khác loài gặp gỡ và giao phối với nhau.
+II. Cách li địa lí trong một thời gian dài tất yếu sẽ dẫn tới cách li sinh sản và hình thành loài mới.
+III. Cách li địa lí góp phần duy trì sự khác biệt về vốn gen giữa các quần thể được tạo ra bởi các nhân tố tiến hóa.
+IV. Cách li địa lí có thể xảy ra với những loài có khả năng phát tán mạnh, có khả năng di cư và ít di cư.
+A. 2.
+B. 1.
+*C. 3.
+D. 4.
+Câu 6. Khi nói về quá trình hình thành loài mới, kết luận nào sau đây sai?
+*A. Sự hình thành loài mới bằng lai xa và đa bội hóa không liên quan đến chọn lọc tự nhiên.
+B. Cách li địa lí là nhân tố thúc đẩy sự phân hóa vốn gen của quần thể.
+C. Ở những loài sinh sản hữu tính, cách li sinh sản đánh dấu sự hình thành loài mới.
+D. Trong quá trình hình thành loài mới bằng con đường sinh thái không cần đến sự cách li địa lý.
+Câu 7. Phát biểu nào sau đây đúng khi nói về quá trình hình thành loài mới?
+A. Phần lớn các loài thực vật có hoa và dương xỉ được hình thành bằng con đường cách li sinh thái.
+*B. Hình thành loài bằng con đường cách li sinh thái và con đường lai xa và đa bội hóa xảy ra trong cùng khu phân bố.
+C. Ở thực vật, một cá thể được xem là loài mới khi được hình thành bằng cách lai giữa hai loài khác nhau và được đa bội hóa.
+D. Hình thành loài mới ở thực vật có thể diễn ra bằng các con đường cách li địa lí, cách li tập tính, cách li sinh thái.
+Câu 8. So với những con đường hình thành loài mới khác, quá trình hình thành loài khác khu vực địa lý thường diễn ra?
+A. Nhanh hơn do loài dễ phát tán xa hơn.
+*B. Chậm hơn do cần nhiều dạng trung gian chuyển tiếp hơn.
+C. Tương đương nhau do cần thời gian để tích lũy đủ những sai khác di truyền.
+D. Không thể so sánh vì cách thức hình thành loài mới ở các kiểu là khác nhau.
+Câu 9. Sự hình thành loài mới có thể xảy ra mà không cần cách li địa lý nhưng phải xuất hiện điều kiện nào sau đây?
+A. Thay đổi tần số alen trong quần thể.
+B. Thay đổi tần số kiểu gen trong quần thể.
+*C. Cách li sinh sản trong quần thể.
+D. Thay đổi điều kiện sống trong quần thể.
+Câu 10. Quá trình hình thành loài bằng cách li sinh thái thường xảy ra ở những loài?
+*A. Bọ xít ít di chuyển.
+B. Chim.
+C. Cá di cư.
+D. Côn trùng bay xa.
+Câu 11. Nguyên nhân chính dẫn đến sự sai khác thành phần kiểu gen và tần số alen giữa hai quần thể sống trong cùng khu vực địa lý nhưng ở hai sinh cảnh khác nhau là?
+*A. Những cá thể thích giao phối trong cùng ổ sinh thái.
+B. Những cá thể giữa hai ổ sinh thái thường xuyên giao phối với nhau.
+C. Luôn có sự di nhập gen giữa cá thể ở hai quần thể.
+D. Chọn lọc tự nhiên tác động khác nhau hai quần thể.
+Câu 12. Hình thành loài bằng lai xa và đa bội hóa thường gặp ở những nhóm loài nào sau đây?
+A. Động vật phát tán xa.
+B. Động vật di chuyển chậm.
+*C. Thực vật có hoa và dương xỉ.
+D. Động vật hoặc thực vật.
+Câu 13. Bộ nhiễm sắc thể của cây lai giữa hai loài cải bắp và cải củ là?
+*A. 18 NST với các dạng NST khác nhau.
+B. 9 NST với 9 dạng khác nhau.
+C. 36 NST với 36 dạng NST khác nhau.
+D. 36 NST với 18 dạng NST khác nhau.
+Câu 14. Cơ chế hình thành của loài lúa mì trồng ngày nay là con cháu của 3 loài khác nhau lai với nhau và đa bội hóa. Cơ chế chính được mô tả như sau?
+*A. AA x BB => AB => AABB x DD => ABD đa bội hóa AABBDD
+B. AAAA x BBBB => AABB x DD => ABD => đa bội hóa => AABBDD
+C. AA x BB => AB đa bội hóa AAAABBBB x DDDD => AABBDD
+D. AAAA x BBBB => AABB x DDDD => ABDD => đa bội hóa => AABBDD
+Câu 15. Khi nói về sự hình thành loài mới bằng con đường địa lý, phát biểu nào sau đây đúng?
+A. Là phương thức hình thành loài chủ yếu gặp ở động vật, ít gặp ở thực vật.
+B. Điều kiện địa lý là nguyên nhân trực tiếp gây ra những biến đổi trên cơ thể sinh vật.
+*C. Cách li địa lý là nhân tố tạo điều kiện cho sự phân hóa trong loài.
+D. Loài mới và loài gốc thường sống ở cùng một khu vực địa lý.
+Câu 16. Sự hình thành loài mới bằng lai xa và đa bội hóa chủ yếu là do cơ chế cách li nào sau đây?
+A. Các li tập tính.
+B. Cách li sinh thái.
+C. Cách li mùa vụ.
+*D. Cách li sau hợp tử.
+Câu 17. Phần lớn các loài thực vật có hoa và dương xỉ được hình thành bằng cơ chế?
+A. Cách li địa lý.
+B. Cách li sinh thái.
+C. Cách li tập tính.
+*D. Lai xa và đa bội hóa.
+Câu 18. Trong một hồ ở Châu Phi có 2 loài cá khác nhau về màu sắc: một loài màu đỏ, một loại màu xanh, chúng cách ly sinh sản với nhau. Tuy nhiên khi nuôi 2 loài cá trên trong bể có chiếu ánh sáng đơn sắc làm cho chúng có cùng màu thì các cá thể của 2 loài này lại giao phối với nhau và sinh con. Hai loài này được hình thành bởi cơ chế cách li nào sau đây?
+A. Cách li sinh thái.
+B. Cách li cơ học.
+C. Cách li địa lý.
+*D. Cách li tập tính.
+Câu 19. Khi nói về quá trình hình thành loài mới, phát biểu nào sau đây đúng?
+A. Quá trình hình thành loài mới chỉ diễn ra trong cùng khu vực địa lý.
+*B. Hình thành loài mới bằng cách li địa lý có thể có sự tham gia của các yếu tố ngẫu nhiên.
+C. Hình thành loài mới bằng cách li sinh thái là con đường hình thành loài nhanh nhất.
+D. Hình thành loài mới bằng cơ chế lai xa và đa bội hóa chỉ diễn ra ở động vật.
+Câu 20. Trong cùng một khu vực địa lí thường có sự hình thành loài bằng con đường sinh thái. Đặc điểm của quá trình này là?
+A. Chỉ xảy ra ở thực vật mà không xảy ra ở động vật.
+B. Sự hình thành loài mới luôn xảy ra nhanh chóng trong tự nhiên.
+C. Không có sự tham gia của các nhân tố tiến hóa.
+*D. Có sự tích lũy các đột biến nhỏ trong quá trình tiến hóa.
 // BÀI 35 36
 Câu 1: Phát biểu nào sau đây là đúng khi nói về môi trường sống của sinh vật?  
 A. Môi trường là nơi sống của sinh vật, bao gồm tất cả các nhân tố vô sinh và hữu sinh ở xung quanh sinh vật, có tác  động trực tiếp, gián tiếp tới sinh vật.  
@@ -198,7 +478,7 @@ A. Lưỡng cư.
 B. Cá xương.
 *C. Chim.
 D. Bò sát. 
-// SINH BÀI 37 38 CÁC ĐẶC TRƯNG CƠ BẢN CỦA QUẦN THỂ SINH VẬT
+// BÀI 37 38 CÁC ĐẶC TRƯNG CƠ BẢN CỦA QUẦN THỂ SINH VẬT
 Câu 1. Khi nói về tuổi thọ, kết luận nào sau đây không đúng?  
 A. Tuổi của quần thể là trung bình tuổi của các cá thể trong quần thể.  
 B. Tuổi thọ sinh thái được tính từ lúc cá thể sinh ra đến khi chết vì các nguyên nhân sinh thái.
