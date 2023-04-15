@@ -1490,6 +1490,9 @@ html {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -1522,6 +1525,9 @@ html {
 }
 .w-full {
   width: 100%;
+}
+.max-w-lg {
+  max-width: 32rem;
 }
 .flex-1 {
   flex: 1 1 0%;
