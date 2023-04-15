@@ -100,7 +100,7 @@ B. Muốn đứa con tiếp không bị bệnh phải có chế độ ăn kiêng
 C. Muốn đứa con thứ hai không bị bệnh, phải nghiên cứu di truyền tế bào của thai nhi.
 *D. Cả bố và mẹ đều mang gen bệnh.
 Câu 20. Cho sơ đồ phả hệ trong một gia đình về tính trạng nhóm máu. Biết rằng nhóm máu do 1 gen có 3 alen quy định. Xác suất để cặp vợ chồng (vợ nhóm máu A, chồng nhóm máu B) sinh con có nhóm máu O là bao nhiêu?
-<img src="/sinh212220.png">
+<img src="/2023/sinh212220.png">
 A. 1/16.
 *B. 1/6.
 C. 1/4.
