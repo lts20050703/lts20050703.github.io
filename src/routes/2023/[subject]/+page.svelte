@@ -38,6 +38,9 @@
 
 				<a href="./21222526282930" class="btn btn-primary">BÀI 21 22 25 26 28 29 30</a>
 				<a href="./24353637383940" class="btn btn-primary">BÀI 24 35 36 37 38 39 40</a>
+				<a href="./2122242526282930353637383940" class="btn btn-primary"
+					>BÀI 21 22 24 25 26 28 29 30 35 36 37 38 39 40 (CUỐI KỲ 2)</a
+				>
 			{:else if data.subject === "gdcd"}
 				<a href="./6" class="btn btn-primary">BÀI 6 CÔNG DÂN VỚI CÁC QUYỀN TỰ DO CƠ BẢN </a>
 				<a href="./7" class="btn btn-primary">BÀI 7 CÔNG DÂN VỚI CÁC QUYỀN DÂN CHỦ </a>
