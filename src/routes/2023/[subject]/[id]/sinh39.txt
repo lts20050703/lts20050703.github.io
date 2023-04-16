@@ -79,7 +79,8 @@ Câu 13. Cho các dạng biến động số lượng cá thể của quần th�
 (1) Ruồi, muỗi phát triển từ tháng 3 đến tháng 6.  
 (2) Cá cơm ở vùng biển Pêru cứ 7 năm có sự biến động số lượng.  
 (3) Số lượng cây tràm ở rừng U Minh Thượng sau sự cố cháy rừng tháng 3 năm 2002   
-(4) Năm 1997 sự bùng phát của virut H<sub>5</sub>N<sub>1</sub> đã làm chết hàng chục triệu gia cầm trên thế giới.   Những dạng biến động số lượng cá thể của quần thể sinh vật theo chu kì là  
+(4) Năm 1997 sự bùng phát của virut H<sub>5</sub>N<sub>1</sub> đã làm chết hàng chục triệu gia cầm trên thế giới.
+Những dạng biến động số lượng cá thể của quần thể sinh vật theo chu kì là  
 A. (1) và (3).  
 *B. (1) và (2).  
 C. (2) và (3).  

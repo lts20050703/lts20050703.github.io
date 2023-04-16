@@ -228,10 +228,17 @@
 				<br />
 				<div class={marked[question.id] ? "text-warning" : ""}>
 					<input type="checkbox" class="toggle toggle-warning" bind:checked={marked[question.id]} />
-					Câu {i + 1}: {#each question.question.split("<br>") as line}
-						<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-							{@html line.replace("*", "")}
-						</div>
+					{#each question.question.split("<br>") as line, j}
+						{#if j === 0}
+							Câu {i + 1}:
+							<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+								{@html line.replace("*", "")}
+							</span>
+						{:else}
+							<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+								{@html line.replace("*", "")}
+							</div>
+						{/if}
 					{/each}
 				</div>
 				{#each question.answers as answer, j}
