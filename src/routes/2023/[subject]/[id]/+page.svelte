@@ -150,7 +150,7 @@
 						? answer.id === question.right
 							? 'text-success'
 							: ''
-						: ''} {show_answer && inputs[question.id] === `${question.id}${answer.id}`
+						: ''} {(live || show_answer) && inputs[question.id] === `${question.id}${answer.id}`
 						? answer.id === question.right
 							? 'text-success'
 							: 'text-error'
@@ -180,7 +180,7 @@
 		>
 			Đã làm: {inputs.filter((input) => input).length} Câu
 		</div>
-		<div class={show_answer ? "" : "hidden"}>
+		<div class={live || show_answer ? "" : "hidden"}>
 			<div
 				class="text-success {questions.some(
 					(question) =>
@@ -225,7 +225,7 @@
 				.join(", ")}
 		</div>
 		<div
-			class="{show_answer ? '' : 'hidden'} {questions.length ===
+			class="{live || show_answer ? '' : 'hidden'} {questions.length ===
 			questions.filter((question) => `${question.id}${question.right}` === inputs[question.id])
 				.length
 				? 'text-success'
