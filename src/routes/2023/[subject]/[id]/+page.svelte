@@ -230,7 +230,7 @@
 					<input type="checkbox" class="toggle toggle-warning" bind:checked={marked[question.id]} />
 					Câu {i + 1}: {#each question.question.split("<br>") as line}
 						<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-							{line.replace("*", "")}
+							{@html line.replace("*", "")}
 						</div>
 					{/each}
 				</div>
