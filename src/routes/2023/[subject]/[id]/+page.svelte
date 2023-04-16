@@ -5,6 +5,8 @@
 
 	export let data: PageData
 
+	let filter: "" | "wrong" | "unanswered" | "marked" = ""
+
 	let show_answer = false
 
 	let live = false
@@ -147,42 +149,73 @@
 				</div>
 			</div>
 		</div>
+		<div
+			class={filter === "wrong" || filter === "unanswered"
+				? "text-error"
+				: filter === "marked"
+				? "text-warning"
+				: ""}
+		>
+			Lọc:
+			<select class="select select-primary select-sm" bind:value={filter}>
+				<option value="">Hiện tất cả</option>
+				<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
+				<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
+				<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
+			</select>
+		</div>
 		{#each questions as question, i}
-			<br />
-			<div class={marked[question.id] ? "text-warning" : ""}>
-				<input type="checkbox" class="toggle toggle-warning" bind:checked={marked[question.id]} />
-				Câu {i + 1}: {#each question.question.split("<br>") as line}
-					<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-						{line.replace("*", "")}
+			<div
+				class={filter === "wrong"
+					? inputs[question.id] && inputs[question.id] !== `${question.id}${question.right}`
+						? ""
+						: "hidden"
+					: filter === "unanswered"
+					? inputs[question.id]
+						? "hidden"
+						: ""
+					: filter === "marked"
+					? marked[question.id]
+						? ""
+						: "hidden"
+					: ""}
+			>
+				<br />
+				<div class={marked[question.id] ? "text-warning" : ""}>
+					<input type="checkbox" class="toggle toggle-warning" bind:checked={marked[question.id]} />
+					Câu {i + 1}: {#each question.question.split("<br>") as line}
+						<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+							{line.replace("*", "")}
+						</div>
+					{/each}
+				</div>
+				{#each question.answers as answer, j}
+					<div
+						class="flex flex-row gap-4 m-3 items-center {show_answer
+							? answer.id === question.right
+								? 'text-success'
+								: ''
+							: ''} {(live || show_answer) && inputs[question.id] === `${question.id}${answer.id}`
+							? answer.id === question.right
+								? 'text-success'
+								: 'text-error'
+							: ''}"
+					>
+						<input
+							on:click={() => uncheck(question.id, answer.id)}
+							bind:group={inputs[question.id]}
+							class="input input-primary input-xs"
+							type="radio"
+							name={`${question.id}`}
+							value={`${question.id}${answer.id}`}
+							id={`${question.id}${answer.id}`}
+						/>
+						<label for={`${question.id}${answer.id}`}
+							>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
+						>
 					</div>
 				{/each}
 			</div>
-			{#each question.answers as answer, j}
-				<div
-					class="flex flex-row gap-4 m-3 items-center {show_answer
-						? answer.id === question.right
-							? 'text-success'
-							: ''
-						: ''} {(live || show_answer) && inputs[question.id] === `${question.id}${answer.id}`
-						? answer.id === question.right
-							? 'text-success'
-							: 'text-error'
-						: ''}"
-				>
-					<input
-						on:click={() => uncheck(question.id, answer.id)}
-						bind:group={inputs[question.id]}
-						class="input input-primary input-xs"
-						type="radio"
-						name={`${question.id}`}
-						value={`${question.id}${answer.id}`}
-						id={`${question.id}${answer.id}`}
-					/>
-					<label for={`${question.id}${answer.id}`}
-						>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
-					>
-				</div>
-			{/each}
 		{/each}
 		<br />
 		<div class="">Tổng cộng: {questions.length} Câu</div>
@@ -252,6 +285,21 @@
 					10
 				).toFixed(1)}
 			</div>
+		</div>
+		<div
+			class={filter === "wrong" || filter === "unanswered"
+				? "text-error"
+				: filter === "marked"
+				? "text-warning"
+				: ""}
+		>
+			Lọc:
+			<select class="select select-primary select-sm" bind:value={filter}>
+				<option value="">Hiện tất cả</option>
+				<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
+				<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
+				<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
+			</select>
 		</div>
 	</div>
 </div>
