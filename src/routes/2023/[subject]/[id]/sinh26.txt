@@ -31,7 +31,7 @@ B. Yếu tố ngẫu nhiên có thể loại bỏ một alen có lợi ra khỏi
 C. Đột biến cung cấp nguyên liệu sơ cấp cho tiến hóa.
 D. Chọn lọc tự nhiên đào thải alen trội làm thay đổi tần số alen trội của quần thể nhanh hơn đào thải alen lặn.
 Câu 7. Theo quan điểm hiện đại về chọn lọc tự nhiên, phát biểu nào sau đây không đúng?
-A. Chọn lock tự nhiên quy định chiều hướng và nhịp điệu biến đổi thành phần kiểu gen của quần thể.
+A. Chọn lọc tự nhiên quy định chiều hướng và nhịp điệu biến đổi thành phần kiểu gen của quần thể.
 B. Khi môi trường thay đổi theo một hướng xác định thì chọn lọc tự nhiên sẽ làm biến đổi tần số alen theo một hướng xác định.
 C. Chọn lọc tự nhiên về thực chất là quá trình phân hóa khả năng sống sót và khả năng sinh sản của các cá thể với kiểu gen khác nhau trong quần thể.
 *D. Chọn lọc tự nhiên chỉ tác động lên từng alen và làm thay đổi tần số kiểu gen của quần thể.
@@ -50,7 +50,7 @@ A. Biến dị tổ hợp.
 B. Thường biến.
 C. Yếu tố ngẫu nhiên.
 *D. Đột biến gen.
-Câu 11. Theo quan niệm của thuyết tiến hóa hiện đại, phát biểu nào sau đây về chọn lock tự nhiên là SAI?
+Câu 11. Theo quan niệm của thuyết tiến hóa hiện đại, phát biểu nào sau đây về chọn lọc tự nhiên là SAI?
 A. Chon lọc tự nhiên tác động trực tiếp lên kiểu hình và qua đó gián tiếp tác động lên vốn gen của quần thể.
 B. Chọn lọc tự nhiên không bao giờ loại bỏ hết alen lặn ra khỏi quần thể.
 *C. Kết quả của chọn lọc tự nhiên là hình thành cá thể mang kiểu hình thích nghi với môi trường.
@@ -106,7 +106,7 @@ C. 1.
 Câu 20. Theo thuyết tiến hóa hiện đại, có bao nhiêu phát biểu sau đây đúng về chọn lọc tự nhiên?
 *(1) Chọn lọc tự nhiên tác động trực tiếp lên kiểu hình và giáp tiếp làm biến đổi tần số kiểu gen của quần thể.
 *(2) Chọn lọc tự nhiên chống lại alen trội làm biến đổi tần số alen của quần thể nhanh hơn so với chọn lọc chống lại alen lặn.
-(3) Chọn lọc tự nhiên làm xuất hiện các alen mới và làm thay đổi tuần số alen của quần thể.
+(3) Chọn lọc tự nhiên làm xuất hiện các alen mới và làm thay đổi tần số alen của quần thể.
 (4) Chọn lọc tự nhiên có thể làm biến đổi tần số alen một cách đột ngột không theo một hướng xác định.
 A. 3.
 B. 4.
