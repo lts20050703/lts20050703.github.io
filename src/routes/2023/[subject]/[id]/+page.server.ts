@@ -8,10 +8,10 @@ export const load = (async ({ params }) => {
 			`./src/routes/2023/[subject]/[id]/${params.subject}${params.id}.txt`,
 			"utf8"
 		)
-		const data = text.split("\n")
-		while (data[0].startsWith("//") || data[0].trim() === "") data.shift()
+		const data = text.split("\n").map((text) => text.replace(/ +/, " ").trim())
+		while (data[0].startsWith("//") || data[0] === "") data.shift()
 		const title = data.shift()
-		while (data[0].startsWith("//") || data[0].trim() === "") data.shift()
+		while (data[0].startsWith("//") || data[0] === "") data.shift()
 		const azota = data.shift()
 		const questions: {
 			question: string
@@ -22,7 +22,7 @@ export const load = (async ({ params }) => {
 		let id = 0
 		let prev: "cau" | "a" | "b" | "c" | "d" = "cau"
 		for (let i = 0; i < data.length; i += 1) {
-			if (data[i].startsWith("//") || data[i].trim() === "") {
+			if (data[i].startsWith("//") || data[i] === "") {
 				continue
 			} else if (data[i].toUpperCase().startsWith("CÂU")) {
 				const question = data[i].split(/\.|:/)

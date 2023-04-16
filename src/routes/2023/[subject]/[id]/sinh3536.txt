@@ -47,8 +47,9 @@ C. Khoảng chống chịu rộng
 *D. Ổ sinh thái rộng  
 Câu 10: Trong các phát biểu sau:  
 I. Ổ sinh thái của một loài là nơi ở của loài đó.  
-II. Ổ sinh thái đặc trưng cho loài.  
-III. Các loài sống trong một sinh cảnh và cùng sử dụng một nguồn thức ăn thì chúng có xu hướng phân li ổ sinh thái.  IV. Kích thước thức ăn, loại thức ăn của mỗi loài tạo nên các ổ sinh thái về dinh dưỡng.  
+II. Ổ sinh thái đặc trưng cho loài.
+III. Các loài sống trong một sinh cảnh và cùng sử dụng một nguồn thức ăn thì chúng có xu hướng phân li ổ sinh thái.
+IV. Kích thước thức ăn, loại thức ăn của mỗi loài tạo nên các ổ sinh thái về dinh dưỡng.  
 Có bao nhiêu phát biểu đúng khi nói về ổ sinh thái? 
 A. 1.
 B. 2.
@@ -70,7 +71,8 @@ A. Chuột đồng, chim sẻ, nhím.
 B. Dơi, vi khuẩn lam, nấm mèo.
 C. Cá voi, voi biển, chó biển, cá sấu.
 *D. Sâu bọ, tôm, ếch nhái, rùa, rắn, kỳ đà.  
-Câu 13: Cho 4 loài có giới hạn trên, điểm cực thuận và giới hạn dưới về nhiệt độ lần lượt là:  Loài 1: 15°, 33°C, 40°C  
+Câu 13: Cho 4 loài có giới hạn trên, điểm cực thuận và giới hạn dưới về nhiệt độ lần lượt là:
+Loài 1: 15°, 33°C, 40°C  
 Loài 2: 8°C, 20°C, 38°C  
 Loài 3: 29°C, 36°C, 50°C  
 Loài 4: 4°C, 16°C, 22°C  
