@@ -192,7 +192,7 @@
 					</button>
 					<span
 						class="fixed bottom-0 left-0 bg-white dark:bg-base-100 m-1 px-3 rounded-md {autosave ===
-						'saved!'
+						'đã lưu thành công!'
 							? 'text-green-500'
 							: 'text-yellow-500'}"
 					>
