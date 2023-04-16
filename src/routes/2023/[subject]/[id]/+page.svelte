@@ -155,13 +155,13 @@
 					<a href="../" class="btn btn-primary btn-sm">Quay lại </a>
 					<button class="btn btn-error btn-sm" on:click={clear}>Xóa </button>
 					<div
-						class="fixed bottom-0 left-0 bg-base-100 m-1 p-1 rounded-md flex flex-row gap-2 items-center"
+						class="fixed bottom-1 left-0 bg-base-100 m-1 p-1 rounded-md flex flex-row gap-2 items-center"
 					>
 						Kiểm tra: {live ? "Bật" : "Tắt"}
 						<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
 					</div>
 					<div
-						class="fixed bottom-0 right-0 bg-base-100 m-1 py-1 px-2 rounded-md flex flex-row gap-2 items-center"
+						class="fixed bottom-1 right-0 bg-base-100 m-1 py-1 px-2 rounded-md flex flex-row gap-2 items-center"
 					>
 						Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
 						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
