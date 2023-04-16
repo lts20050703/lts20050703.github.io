@@ -7,10 +7,6 @@
 
 	let live = false
 
-	function check() {
-		live = !live
-	}
-
 	let show_answer = false
 
 	function clear() {

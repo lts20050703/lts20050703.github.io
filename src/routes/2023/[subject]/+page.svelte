@@ -1,6 +1,5 @@
 <script lang="ts">
 	import v from "$lib/v"
-	import { subscribe } from "svelte/internal"
 	export let data: PageData
 	import type { PageData } from "./$types"
 </script>

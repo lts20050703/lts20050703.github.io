@@ -7,6 +7,8 @@
 
 	let show_answer = false
 
+	let live = false
+
 	function clear() {
 		inputs = []
 	}
@@ -25,11 +27,12 @@
 			if (Date.now() - last_save >= 500) autosave = "đã lưu thành công!"
 		}, 500)
 		localStorage.setItem(`inputs${data.subject}${data.title}`, inputs.join(","))
+		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
 	}
 
 	let inputs: string[] = []
 
-	$: inputs, mounted && save()
+	$: inputs, live, mounted && save()
 
 	function uncheck(question: number, answer: number) {
 		if (inputs[question] === `${question}${answer}`) inputs[question] = ""
@@ -38,6 +41,8 @@
 	let questions = data.questions
 
 	onMount(() => {
+		live = localStorage.getItem("live") !== null
+
 		const prequestions = data.questions.map((question) => ({
 			...question,
 			answers: shuffle(question.answers)
@@ -87,16 +92,14 @@
 				<div class="flex sm:hidden flex-row justify-center gap-4 m-1">
 					<a href="../" class="btn btn-primary btn-sm">Quay lại </a>
 					<button class="btn btn-error btn-sm" on:click={clear}>Xóa </button>
-					<span
-						class="fixed bottom-0 right-0 m-1 py-1 px-2 rounded-md bg-base-100 {autosave ===
-						'đã lưu thành công!'
-							? 'text-success'
-							: 'text-warning'}"
-					>
-						{autosave}
-					</span>
 					<div
-						class="fixed bottom-0 left-0 bg-base-100 m-1 py-1 px-2 rounded-md flex flex-row gap-2 items-center"
+						class="fixed bottom-0 left-0 bg-base-100 m-1 p-1 rounded-md flex flex-row gap-2 items-center"
+					>
+						Kiểm tra: {live ? "Bật" : "Tắt"}
+						<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+					</div>
+					<div
+						class="fixed bottom-0 right-0 bg-base-100 m-1 py-1 px-2 rounded-md flex flex-row gap-2 items-center"
 					>
 						Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
 						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
@@ -110,6 +113,10 @@
 				</div>
 				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
 					<a href="../" class="btn btn-primary btn-sm">Quay lại</a>
+					<div class="flex flex-row gap-2 items-center">
+						Kiểm tra: {live ? "Bật" : "Tắt"}
+						<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+					</div>
 					<div class="flex flex-row gap-2 items-center">
 						Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
 						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
