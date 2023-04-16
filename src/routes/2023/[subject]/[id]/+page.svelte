@@ -166,16 +166,34 @@
 		{/each}
 		<br />
 		<div class="">Tổng cộng: {questions.length} Câu</div>
-		<div class={inputs.every((input) => input) ? "text-success" : "text-warning"}>
+		<div
+			class="{inputs.some((input) => input) ? '' : 'hidden'} {inputs.every((input) => input)
+				? 'text-success'
+				: 'text-warning'}"
+		>
 			Đã làm: {inputs.filter((input) => input).length} Câu
 		</div>
 		<div class={show_answer ? "" : "hidden"}>
-			<div class="text-success">
+			<div
+				class="text-success {questions.some(
+					(question) =>
+						inputs[question.id] && inputs[question.id] === `${question.id}${question.right}`
+				)
+					? ''
+					: 'hidden'}"
+			>
 				Đúng: {questions.filter(
 					(question) => `${question.id}${question.right}` === inputs[question.id]
 				).length} Câu
 			</div>
-			<div class="text-error">
+			<div
+				class="text-error {questions.some(
+					(question) =>
+						inputs[question.id] && inputs[question.id] !== `${question.id}${question.right}`
+				)
+					? ''
+					: 'hidden'}"
+			>
 				Sai: {questions
 					.map((question, i) =>
 						inputs[question.id] && inputs[question.id] !== `${question.id}${question.right}`
@@ -188,18 +206,24 @@
 		</div>
 
 		<div
-			class="{inputs.every((input) => input) ? 'text-success' : 'text-error'} {inputs.every(
-				(input) => input
+			class="{inputs.every((input) => input) ? 'text-success' : 'text-error'} {inputs.some(
+				(input) => !input
 			)
-				? 'hidden'
-				: ''}"
+				? ''
+				: 'hidden'}"
 		>
 			Chưa làm: {questions
 				.map((question, i) => (inputs[question.id] ? undefined : `Câu ${i + 1}`))
 				.filter((question) => question)
 				.join(", ")}
 		</div>
-		<div class={show_answer ? "" : "hidden"}>
+		<div
+			class="{show_answer ? '' : 'hidden'} {questions.length ===
+			questions.filter((question) => `${question.id}${question.right}` === inputs[question.id])
+				.length
+				? 'text-success'
+				: 'text-warning'}"
+		>
 			<div>
 				Điểm: {(
 					(questions.filter((question) => `${question.id}${question.right}` === inputs[question.id])
