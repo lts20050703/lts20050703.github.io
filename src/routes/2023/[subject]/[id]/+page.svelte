@@ -13,6 +13,23 @@
 
 	function clear() {
 		inputs = []
+
+		const prequestions = data.questions.map((question) => ({
+			...question,
+			answers: shuffle(question.answers)
+		}))
+
+		questions = shuffle(prequestions)
+
+		localStorage.setItem(
+			`question${data.subject}${data.title}`,
+			JSON.stringify(
+				questions.map((question) => ({
+					id: question.id,
+					answers: question.answers.map((answer) => answer.id)
+				}))
+			)
+		)
 	}
 
 	let stored: string[] = []
@@ -50,13 +67,6 @@
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
 
-		const prequestions = data.questions.map((question) => ({
-			...question,
-			answers: shuffle(question.answers)
-		}))
-
-		questions = shuffle(prequestions)
-
 		stored = (localStorage.getItem(`inputs${data.subject}${data.title}`) ?? "").split(",")
 
 		if (stored.length < data.questions.length)
@@ -75,6 +85,40 @@
 		marked = stored_mark
 
 		mounted = true
+
+		const question = localStorage.getItem(`question${data.subject}${data.title}`)
+		if (question) {
+			const parsed = JSON.parse(question) as {
+				id: number
+				answers: [number, number, number, number]
+			}[]
+			parsed.forEach((obj) => {
+				const question = data.questions.find((question) => question.id === obj.id)!
+				const answers = [
+					question.answers.find((answer) => answer.id === obj.answers[0])!,
+					question.answers.find((answer) => answer.id === obj.answers[0])!,
+					question.answers.find((answer) => answer.id === obj.answers[0])!,
+					question.answers.find((answer) => answer.id === obj.answers[0])!
+				]
+				questions.push({ ...question, answers: answers })
+			})
+		} else {
+			const prequestions = data.questions.map((question) => ({
+				...question,
+				answers: shuffle(question.answers)
+			}))
+
+			questions = shuffle(prequestions)
+			localStorage.setItem(
+				`question${data.subject}${data.title}`,
+				JSON.stringify(
+					questions.map((question) => ({
+						id: question.id,
+						answers: question.answers.map((answer) => answer.id)
+					}))
+				)
+			)
+		}
 	})
 
 	function shuffle<T>(arr: T[]): T[] {
