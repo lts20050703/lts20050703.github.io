@@ -16,17 +16,9 @@
 	let answers = data.text.split(/{|}/).filter((_, i) => i % 2 === 1)
 	let stored: string[] = []
 
-	let autosave = ""
-	let last_save = 0
-
 	let mounted = false
 
 	function save() {
-		autosave = "saving"
-		last_save = Date.now()
-		setTimeout(() => {
-			if (Date.now() - last_save >= 500) autosave = "saved!"
-		}, 500)
 		localStorage.setItem(`inputs${data.title}`, inputs.join())
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
 	}
@@ -90,13 +82,6 @@
 					</div>
 
 					<button class="btn btn-error btn-sm" on:click={clear}>Clear</button>
-					<span
-						class="fixed bottom-0 py-1 px-2 rounded-md bg-base-100 {autosave === 'saved!'
-							? 'text-success'
-							: 'text-warning'}"
-					>
-						{autosave}
-					</span>
 				</div>
 			</div>
 		</div>

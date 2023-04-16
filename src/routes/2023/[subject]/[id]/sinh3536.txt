@@ -47,9 +47,9 @@ C. Khoảng chống chịu rộng
 *D. Ổ sinh thái rộng  
 Câu 10: Trong các phát biểu sau:  
 I. Ổ sinh thái của một loài là nơi ở của loài đó.  
-II. Ổ sinh thái đặc trưng cho loài.
-III. Các loài sống trong một sinh cảnh và cùng sử dụng một nguồn thức ăn thì chúng có xu hướng phân li ổ sinh thái.
-IV. Kích thước thức ăn, loại thức ăn của mỗi loài tạo nên các ổ sinh thái về dinh dưỡng.  
+*II. Ổ sinh thái đặc trưng cho loài.
+*III. Các loài sống trong một sinh cảnh và cùng sử dụng một nguồn thức ăn thì chúng có xu hướng phân li ổ sinh thái.
+*IV. Kích thước thức ăn, loại thức ăn của mỗi loài tạo nên các ổ sinh thái về dinh dưỡng.  
 Có bao nhiêu phát biểu đúng khi nói về ổ sinh thái? 
 A. 1.
 B. 2.
@@ -57,10 +57,10 @@ B. 2.
 D. 4.  
 Câu 11: Phần lớn thực vật sống ở vùng nhiệt đới quang hợp tốt nhất ở nhiệt độ 20°C - 30°C, khi nhiệt độ xuống dưới  0°C và cao hơn 40°C cây trồng ngừng quang hợp. Trong các phát biểu sau:  
 1. 20°C - 30°C được gọi là giới hạn sinh thái.  
-2. 20°C - 30°C được gọi là khoảng thuận lợi.  
-3. 0°C - 40°C được gọi là giới hạn sinh thái về nhiệt độ.  
+*2. 20°C - 30°C được gọi là khoảng thuận lợi.  
+*3. 0°C - 40°C được gọi là giới hạn sinh thái về nhiệt độ.  
 4. 0°C - 40°C được gọi là khoảng chống chịu.  
-5. 0°C được gọi là giới hạn dưới, 40°C được gọi là giới hạn trên.  
+*5. 0°C được gọi là giới hạn dưới, 40°C được gọi là giới hạn trên.  
 Có bao nhiêu phát biểu đúng?  
 A. 1
 B. 2

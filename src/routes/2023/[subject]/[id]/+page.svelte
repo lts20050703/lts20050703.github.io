@@ -15,24 +15,19 @@
 
 	let stored: string[] = []
 
-	let autosave = ""
-	let last_save = 0
-
 	let mounted = false
 
+	let marked: boolean[] = []
+
 	function save() {
-		autosave = "đang lưu..."
-		last_save = Date.now()
-		setTimeout(() => {
-			if (Date.now() - last_save >= 500) autosave = "đã lưu thành công!"
-		}, 500)
 		localStorage.setItem(`inputs${data.subject}${data.title}`, inputs.join(","))
+		localStorage.setItem(`marked${data.subject}${data.title}`, marked.join(","))
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
 	}
 
 	let inputs: string[] = []
 
-	$: inputs, live, mounted && save()
+	$: inputs, live, marked, mounted && save()
 
 	function uncheck(question: number, answer: number) {
 		if (inputs[question] === `${question}${answer}`) inputs[question] = ""
@@ -42,6 +37,10 @@
 
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
+
+		marked = (localStorage.getItem(`marked${data.subject}${data.title}`) ?? "")
+			.split(",")
+			.map((marked) => marked === "true")
 
 		const prequestions = data.questions.map((question) => ({
 			...question,
@@ -122,14 +121,7 @@
 						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
 					</div>
 					<button class="btn btn-error btn-sm" on:click={clear}>Xóa</button>
-					<span
-						class="fixed bottom-0 m-1 py-1 px-2 rounded-md bg-base-100 {autosave ===
-						'đã lưu thành công!'
-							? 'text-success'
-							: 'text-warning'}"
-					>
-						{autosave}
-					</span>
+
 					<a
 						class="btn btn-secondary btn-sm"
 						href={data.azota}
@@ -141,8 +133,13 @@
 		</div>
 		{#each questions as question, i}
 			<br />
-			<div>
-				Câu {i + 1}: {@html question.question}
+			<div class={marked[question.id] ? "text-warning" : ""}>
+				<input type="checkbox" class="toggle toggle-warning" bind:checked={marked[question.id]} />
+				Câu {i + 1}: {#each question.question.split("<br>") as line}
+					<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+						{line.replace("*", "")}
+					</div>
+				{/each}
 			</div>
 			{#each question.answers as answer, j}
 				<div
