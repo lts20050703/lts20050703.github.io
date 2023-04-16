@@ -88,6 +88,7 @@
 
 		const question = localStorage.getItem(`question${data.subject}${data.title}`)
 		if (question) {
+			questions = []
 			const parsed = JSON.parse(question) as {
 				id: number
 				answers: [number, number, number, number]
@@ -96,9 +97,9 @@
 				const question = data.questions.find((question) => question.id === obj.id)!
 				const answers = [
 					question.answers.find((answer) => answer.id === obj.answers[0])!,
-					question.answers.find((answer) => answer.id === obj.answers[0])!,
-					question.answers.find((answer) => answer.id === obj.answers[0])!,
-					question.answers.find((answer) => answer.id === obj.answers[0])!
+					question.answers.find((answer) => answer.id === obj.answers[1])!,
+					question.answers.find((answer) => answer.id === obj.answers[2])!,
+					question.answers.find((answer) => answer.id === obj.answers[3])!
 				]
 				questions.push({ ...question, answers: answers })
 			})
