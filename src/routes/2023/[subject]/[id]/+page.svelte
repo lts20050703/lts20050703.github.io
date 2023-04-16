@@ -19,7 +19,17 @@
 
 	let marked: boolean[] = []
 
+	let first: string[] = []
+
 	function save() {
+		if (live) {
+			inputs.forEach((input, i) => {
+				if (first[i] === "" && input !== "" && input !== `${i}${data.questions[i].right}`) {
+					first[i] = input
+					marked[i] = true
+				}
+			})
+		}
 		localStorage.setItem(`inputs${data.subject}${data.title}`, inputs.join(","))
 		localStorage.setItem(`marked${data.subject}${data.title}`, marked.join(","))
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
@@ -38,10 +48,6 @@
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
 
-		marked = (localStorage.getItem(`marked${data.subject}${data.title}`) ?? "")
-			.split(",")
-			.map((marked) => marked === "true")
-
 		const prequestions = data.questions.map((question) => ({
 			...question,
 			answers: shuffle(question.answers)
@@ -55,6 +61,16 @@
 			stored.push(...Array(data.questions.length - stored.length).fill(""))
 
 		inputs = stored
+		first = JSON.parse(JSON.stringify(stored))
+
+		let stored_mark = (localStorage.getItem(`marked${data.subject}${data.title}`) ?? "")
+			.split(",")
+			.map((marked) => marked === "true")
+
+		if (stored_mark.length < data.questions.length)
+			stored_mark.push(...Array(data.questions.length - stored_mark.length).fill(""))
+
+		marked = stored_mark
 
 		mounted = true
 	})

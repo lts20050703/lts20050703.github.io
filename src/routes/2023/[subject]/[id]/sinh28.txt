@@ -41,11 +41,11 @@ B. Nguồn nguyên liệu sơ cấp cho chọn lọc.
 C. Tạo nguyên liệu thứ cấp cho tiến hóa nhỏ.
 *D. Củng cố và tăng cường phân hóa kiểu gen.
 Câu 9. Có bao nhiêu hiện tượng sau đây biểu hiện cách li trước hợp tử?
-I. Cách li nơi ở.
-II. Cách li cơ học.
-III. Cách li tập tính.
+*I. Cách li nơi ở.
+*II. Cách li cơ học.
+*III. Cách li tập tính.
 IV. Cách li địa lí.
-V. Cách li thời gian.
+*V. Cách li thời gian.
 VI. Cách li khoảng cách.
 A. 2.
 B. 3.
