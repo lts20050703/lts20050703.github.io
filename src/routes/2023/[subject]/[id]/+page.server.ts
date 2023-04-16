@@ -30,7 +30,7 @@ export const load = (async ({ params }) => {
 				questions.push({ question: question.join("."), answers: [], id })
 				id += 1
 				prev = "cau"
-			} else if (/^\*?A/i.test(data[i])) {
+			} else if (/^\*?A\./i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
@@ -38,7 +38,7 @@ export const load = (async ({ params }) => {
 				question.answers[0] = { answer: answer.join("."), id: 0 }
 				if (data[i].startsWith("*")) question.right = 0
 				prev = "a"
-			} else if (/^\*?B/i.test(data[i])) {
+			} else if (/^\*?B(\.|:)/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
@@ -46,7 +46,7 @@ export const load = (async ({ params }) => {
 				question.answers[1] = { answer: answer.join("."), id: 1 }
 				if (data[i].startsWith("*")) question.right = 1
 				prev = "b"
-			} else if (/^\*?C/i.test(data[i])) {
+			} else if (/^\*?C(\.|:)/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
@@ -54,7 +54,7 @@ export const load = (async ({ params }) => {
 				question.answers[2] = { answer: answer.join("."), id: 2 }
 				if (data[i].startsWith("*")) question.right = 2
 				prev = "c"
-			} else if (/^\*?D/i.test(data[i])) {
+			} else if (/^\*?D(\.|:)/i.test(data[i])) {
 				const question = questions.at(-1)
 				if (!question) continue
 				const answer = data[i].split(/\.|:/)
