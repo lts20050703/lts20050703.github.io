@@ -1,1 +1,0 @@
-import{default as t}from"../entry/2023-_subject_-page.svelte.b4cf31b6.js";export{t as component};
