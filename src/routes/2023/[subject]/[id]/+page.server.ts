@@ -60,6 +60,7 @@ export const load = (async ({ params }) => {
 				if (data[i].startsWith("*")) question.right = 3
 				prev = "d"
 			} else {
+				if (questions.length === 0) questions.push({ question: "", answers: [], id: 0 })
 				const question = questions.at(-1)
 				if (!question) continue
 				switch (prev) {

@@ -173,7 +173,7 @@
 				{data.title}
 			</div>
 			{#if data.azota}
-				<div class="flex justify-center">
+				<div class="flex justify-center gap-1">
 					<a
 						class="btn btn-secondary btn-lg"
 						href={data.azota}
@@ -181,6 +181,15 @@
 						rel="noopener noreferrer"
 						>AZOTA
 					</a>
+					{#if data.questions[0]?.question}
+						<a
+							class="btn btn-primary btn-lg"
+							href={data.questions[0].question.replace("<br>", "")}
+							target="_blank"
+							rel="noopener noreferrer"
+							>WORD
+						</a>
+					{/if}
 				</div>
 			{:else}
 				<div class="text-3xl text-center">HIỆN TẠI CHƯA CÓ AZOTA, QUAY LẠI SAU!</div>
