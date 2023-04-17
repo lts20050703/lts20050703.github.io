@@ -81,7 +81,6 @@ export const load = (async ({ params }) => {
 				}
 			}
 		}
-		console.log(JSON.stringify(questions, undefined, 1))
 		return { subject: params.subject, title, questions, azota }
 	} catch {
 		return { subject: "404 Not Found", title: "404 Not Found", questions: [], azota: "" }
