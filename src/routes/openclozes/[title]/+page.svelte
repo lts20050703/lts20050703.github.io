@@ -47,7 +47,7 @@
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
-	<div class="dark:text-white w-full lg:w-[48rem]">
+	<div class=" w-full lg:w-[48rem]">
 		<div class="text-center mt-12">In Real Xperience / Openclozes {v}</div>
 		<div class="text-center text-3xl font-bold my-4">
 			{data.title[0] + data.title.slice(1).toLowerCase()}

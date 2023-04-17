@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center">
-	<div class="text-3xl flex-1 gap-2 flex flex-row pt-3 text-black dark:text-white items-center">
+	<div class="text-3xl flex-1 gap-2 flex flex-row pt-3 items-center">
 		<img src="./favicon.png" alt="" class="h-12" />
 		<div class="block sm:hidden">LTS20050703<br />{v}</div>
 		<div class="hidden sm:block">LTS20050703 {v}</div>

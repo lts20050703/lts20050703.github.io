@@ -2,6 +2,7 @@
 	import { onMount } from "svelte"
 	import type { PageData } from "./$types"
 	import v from "$lib/v"
+	import { themeChange } from "theme-change"
 
 	export let data: PageData
 
@@ -120,6 +121,8 @@
 				)
 			)
 		}
+
+		themeChange(false)
 	})
 
 	function shuffle<T>(arr: T[]): T[] {
@@ -141,58 +144,40 @@
 	}
 </script>
 
-<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
-	<div class="dark:text-white w-full lg:w-[48rem]">
-		<div class="text-center mt-24 sm:mt-12">
+<div class="absolute top-0 left-0 right-0 flex flex-col items-center">
+	<div class="fixed m-1 p-1 rounded-md bg-base-100">
+		<div class="flex flex-row gap-4">
+			<div class="flex flex-row gap-1">
+				Kiểm tra: {live ? "Bật" : "Tắt"}
+				<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+			</div>
+			<div class="flex flex-row gap-1">
+				Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
+				<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
+			</div>
+		</div>
+	</div>
+
+	<div class="w-full max-w-[48rem] p-4 mt-8">
+		<div class="flex flex-row justify-center gap-1">
+			<a href="../" class="btn btn-primary">Quay lại</a>
+			<button class="btn btn-error" on:click={clear}>Xóa </button>
+			<a class="btn btn-secondary" href={data.azota} target="_blank" rel="noopener noreferrer"
+				>AZOTA</a
+			>
+		</div>
+		<div class="flex flex-row justify-center items-center gap-1 mt-1">
+			Chủ đề: <select class="select select-primary select-sm" data-choose-theme>
+				<option value="">Hệ thống</option>
+				<option value="dark">Tối</option>
+				<option value="light">Sáng</option>
+			</select>
+		</div>
+		<div class="text-center mt-4">
 			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
 		</div>
 		<div class="text-center text-3xl font-bold my-4">
 			{data.title}
-		</div>
-		<div class="fixed top-0 left-0 right-0 flex justify-center">
-			<div class="m-1 p-1 rounded-md bg-base-100">
-				<div class="flex sm:hidden flex-col m-1 gap-4">
-					<div class="flex flex-row flex-1 justify-center gap-4">
-						<a href="../" class="btn btn-primary btn-sm">Quay lại </a>
-						<button class="btn btn-error btn-sm" on:click={clear}>Xóa </button>
-						<a
-							class="btn btn-secondary btn-sm"
-							href={data.azota}
-							target="_blank"
-							rel="noopener noreferrer">AZOTA</a
-						>
-					</div>
-					<div class="flex flex-row gap-4">
-						<div class="bg-base-100 flex flex-row gap-1 items-center">
-							Kiểm tra: {live ? "Bật" : "Tắt"}
-							<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
-						</div>
-						<div class="bg-base-100 flex flex-row gap-1 items-center">
-							Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
-							<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
-						</div>
-					</div>
-				</div>
-				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
-					<a href="../" class="btn btn-primary btn-sm">Quay lại</a>
-					<div class="flex flex-row gap-2 items-center">
-						Kiểm tra: {live ? "Bật" : "Tắt"}
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
-					</div>
-					<div class="flex flex-row gap-2 items-center">
-						Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
-					</div>
-					<button class="btn btn-error btn-sm" on:click={clear}>Xóa</button>
-
-					<a
-						class="btn btn-secondary btn-sm"
-						href={data.azota}
-						target="_blank"
-						rel="noopener noreferrer">AZOTA</a
-					>
-				</div>
-			</div>
 		</div>
 		<div
 			class={filter === "wrong" || filter === "unanswered"
@@ -203,7 +188,7 @@
 		>
 			Lọc:
 			<select class="select select-primary select-sm" bind:value={filter}>
-				<option value="">Hiện tất cả</option>
+				<option class="text-white" value="">Hiện tất cả</option>
 				<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
 				<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
 				<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
@@ -347,7 +332,7 @@
 		>
 			Lọc:
 			<select class="select select-primary select-sm" bind:value={filter}>
-				<option value="">Hiện tất cả</option>
+				<option class="text-base-content" value="">Hiện tất cả</option>
 				<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
 				<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
 				<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
