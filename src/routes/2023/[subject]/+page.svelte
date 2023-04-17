@@ -21,33 +21,9 @@
 			</div>
 		{/if}
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-			{#if data.subject === "sinh"}
-				<a href="./24" class="btn btn-primary">BÀI 24 CÁC BẰNG CHỨNG TIẾN HÓA</a>
-				<a href="./26" class="btn btn-primary">SINH: BÀI 26: THUYẾT TIẾN HÓA TỔNG HỢP HIỆN ĐẠI</a>
-				<a href="./28" class="btn btn-primary">SINH: BÀI 28: LOÀI </a>
-				<a href="./2930" class="btn btn-primary">SINH: BÀI 29 - 30: SỰ HÌNH THÀNH LOÀI MỚI </a>
-
-				<a href="./3536" class="btn btn-primary">BÀI 35 36</a>
-				<a href="./3738" class="btn btn-primary"
-					>BÀI 37 38 CÁC ĐẶC TRƯNG CƠ BẢN CỦA QUẦN THỂ SINH VẬT</a
-				>
-				<a href="./39" class="btn btn-primary"
-					>BÀI 39 BIẾN ĐỘNG SỐ LƯỢNG CÁ THỂ CỦA QUẦN THỂ SINH VẬT</a
-				>
-				<a href="./40" class="btn btn-primary">BÀI 40 QUẦN XÃ SINH VẬT VÀ MỘT SỐ ĐẶC TRƯNG</a>
-
-				<a href="./2426282930353637383940" class="btn btn-primary"
-					>BÀI 24 26 28 29 30 35 36 37 38 39 40 (CUỐI KỲ 2)</a
-				>
-			{:else if data.subject === "gdcd"}
-				<a href="./6" class="btn btn-primary">BÀI 6 CÔNG DÂN VỚI CÁC QUYỀN TỰ DO CƠ BẢN </a>
-				<a href="./7" class="btn btn-primary">BÀI 7 CÔNG DÂN VỚI CÁC QUYỀN DÂN CHỦ </a>
-				<a href="./8" class="btn btn-primary">BÀI 8 PHÁP LUẬT VỚI SỰ PHÁT TRIỂN CỦA CÔNG DÂN </a>
-				<a href="./9" class="btn btn-primary"
-					>BÀI 9 PHÁP LUẬT VỚI SỰ PHÁT TRIỂN BỀN VỮNG CỦA ĐẤT NƯỚC</a
-				>
-				<a href="./6789" class="btn btn-primary">BÀI 6 7 8 9</a>
-			{/if}
+			{#each data.titles as title}
+				<a class="btn btn-primary" href="./{title.id}">{title.title}</a>
+			{/each}
 		</div>
 	</div>
 </div>

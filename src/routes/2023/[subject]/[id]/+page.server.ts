@@ -4,10 +4,7 @@ import { readFileSync } from "fs"
 
 export const load = (async ({ params }) => {
 	try {
-		const text = readFileSync(
-			`./src/routes/2023/[subject]/[id]/${params.subject}${params.id}.txt`,
-			"utf8"
-		)
+		const text = readFileSync(`./src/routes/2023/${params.subject}/${params.id}.txt`, "utf8")
 		const data = text.split("\n").map((text) => text.replace(/ +/, " ").trim())
 		while (data[0].startsWith("//") || data[0] === "") data.shift()
 		const title = data.shift()
