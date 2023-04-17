@@ -87,40 +87,40 @@
 
 		mounted = true
 
-		const question = localStorage.getItem(`question${data.subject}${data.title}`)
-		if (question) {
-			questions = []
-			const parsed = JSON.parse(question) as {
-				id: number
-				answers: [number, number, number, number]
-			}[]
-			parsed.forEach((obj) => {
-				const question = data.questions.find((question) => question.id === obj.id)!
-				const answers = [
-					question.answers.find((answer) => answer.id === obj.answers[0])!,
-					question.answers.find((answer) => answer.id === obj.answers[1])!,
-					question.answers.find((answer) => answer.id === obj.answers[2])!,
-					question.answers.find((answer) => answer.id === obj.answers[3])!
-				]
-				questions.push({ ...question, answers: answers })
-			})
-		} else {
-			const prequestions = data.questions.map((question) => ({
-				...question,
-				answers: shuffle(question.answers)
-			}))
+		// const question = localStorage.getItem(`question${data.subject}${data.title}`)
+		// if (question) {
+		// 	questions = []
+		// 	const parsed = JSON.parse(question) as {
+		// 		id: number
+		// 		answers: [number, number, number, number]
+		// 	}[]
+		// 	parsed.forEach((obj) => {
+		// 		const question = data.questions.find((question) => question.id === obj.id)!
+		// 		const answers = [
+		// 			question.answers.find((answer) => answer.id === obj.answers[0])!,
+		// 			question.answers.find((answer) => answer.id === obj.answers[1])!,
+		// 			question.answers.find((answer) => answer.id === obj.answers[2])!,
+		// 			question.answers.find((answer) => answer.id === obj.answers[3])!
+		// 		]
+		// 		questions.push({ ...question, answers: answers })
+		// 	})
+		// } else {
+		// const prequestions = data.questions.map((question) => ({
+		// 	...question,
+		// 	answers: shuffle(question.answers)
+		// }))
 
-			questions = shuffle(prequestions)
-			localStorage.setItem(
-				`question${data.subject}${data.title}`,
-				JSON.stringify(
-					questions.map((question) => ({
-						id: question.id,
-						answers: question.answers.map((answer) => answer.id)
-					}))
-				)
-			)
-		}
+		// questions = shuffle(prequestions)
+		// localStorage.setItem(
+		// 	`question${data.subject}${data.title}`,
+		// 	JSON.stringify(
+		// 		questions.map((question) => ({
+		// 			id: question.id,
+		// 			answers: question.answers.map((answer) => answer.id)
+		// 		}))
+		// 	)
+		// )
+		// }
 
 		themeChange(false)
 	})
@@ -346,5 +346,13 @@
 		In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)} / {data.title?.[0].toUpperCase()}{data.title
 			?.slice(1)
 			.toLowerCase()}</title
-	></svelte:head
->
+	>
+	{#if data.subject === "ly"}
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script
+			id="MathJax-script"
+			async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		></script>
+	{/if}
+</svelte:head>
