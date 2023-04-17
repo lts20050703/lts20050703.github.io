@@ -143,7 +143,7 @@
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
 	<div class="dark:text-white w-full lg:w-[48rem]">
-		<div class="text-center mt-12">
+		<div class="text-center mt-24 sm:mt-12">
 			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
 		</div>
 		<div class="text-center text-3xl font-bold my-4">
@@ -151,27 +151,27 @@
 		</div>
 		<div class="fixed top-0 left-0 right-0 flex justify-center">
 			<div class="m-1 p-1 rounded-md bg-base-100">
-				<div class="flex sm:hidden flex-row justify-center gap-4 m-1">
-					<a href="../" class="btn btn-primary btn-sm">Quay lại </a>
-					<button class="btn btn-error btn-sm" on:click={clear}>Xóa </button>
-					<div
-						class="fixed bottom-1 left-0 bg-base-100 m-1 p-1 rounded-md flex flex-row gap-2 items-center"
-					>
-						Kiểm tra: {live ? "Bật" : "Tắt"}
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+				<div class="flex sm:hidden flex-col m-1 gap-4">
+					<div class="flex flex-row flex-1 justify-center gap-4">
+						<a href="../" class="btn btn-primary btn-sm">Quay lại </a>
+						<button class="btn btn-error btn-sm" on:click={clear}>Xóa </button>
+						<a
+							class="btn btn-secondary btn-sm"
+							href={data.azota}
+							target="_blank"
+							rel="noopener noreferrer">AZOTA</a
+						>
 					</div>
-					<div
-						class="fixed bottom-1 right-0 bg-base-100 m-1 py-1 px-2 rounded-md flex flex-row gap-2 items-center"
-					>
-						Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
+					<div class="flex flex-row gap-4">
+						<div class="bg-base-100 flex flex-row gap-1 items-center">
+							Kiểm tra: {live ? "Bật" : "Tắt"}
+							<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+						</div>
+						<div class="bg-base-100 flex flex-row gap-1 items-center">
+							Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
+							<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
+						</div>
 					</div>
-					<a
-						class="btn btn-secondary btn-sm"
-						href={data.azota}
-						target="_blank"
-						rel="noopener noreferrer">AZOTA</a
-					>
 				</div>
 				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
 					<a href="../" class="btn btn-primary btn-sm">Quay lại</a>
