@@ -46,44 +46,36 @@
 	>
 </svelte:head>
 
-<div class="absolute top-0 left-0 right-0 flex items-center flex-col px-4 pt-1 pb-10">
-	<div class=" w-full lg:w-[48rem]">
-		<div class="text-center mt-12">In Real Xperience / Openclozes {v}</div>
+<div class="absolute top-0 left-0 right-0 flex flex-col items-center">
+	<div class="fixed m-1 p-1 rounded-md bg-base-100">
+		<div class="flex flex-row gap-4">
+			<div class="flex flex-row gap-1">
+				Check: {live ? "On" : "Off"}
+				<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+			</div>
+			<div class="flex flex-row gap-1">
+				Answers: {show_answer ? "Show" : "Hide"}
+				<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
+			</div>
+		</div>
+	</div>
+
+	<div class=" w-full max-w-[48rem] p-4 mt-8">
+		<div class="flex flex-row justify-center gap-1">
+			<a href="../" class="btn btn-primary">Back</a>
+			<button class="btn btn-error" on:click={clear}>Clear </button>
+		</div>
+		<div class="flex flex-row justify-center items-center gap-1 mt-1">
+			Theme: <select class="select select-primary select-sm" data-choose-theme>
+				<option value="">System</option>
+				<option value="dark">Dark</option>
+				<option value="light">Light</option>
+			</select>
+		</div>
+
+		<div class="text-center mt-4">In Real Xperience / Openclozes {v}</div>
 		<div class="text-center text-3xl font-bold my-4">
 			{data.title[0] + data.title.slice(1).toLowerCase()}
-		</div>
-		<div class="fixed top-0 left-0 right-0 flex justify-center">
-			<div class="m-1 p-1 rounded-md bg-base-100">
-				<div class="flex sm:hidden flex-row justify-center gap-4 m-1">
-					<a href="../" class="btn btn-primary btn-sm">Back</a>
-					<button class="btn btn-error btn-sm" on:click={clear}>Clear </button>
-					<div
-						class="fixed bottom-0 right-0 bg-base-100 m-1 p-1 rounded-md flex flex-row gap-2 items-center"
-					>
-						Answer: {show_answer ? "Show" : "Hide"}
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
-					</div>
-					<div
-						class="fixed bottom-0 left-0 bg-base-100 m-1 p-1 rounded-md flex flex-row gap-2 items-center"
-					>
-						Check: {live ? "On" : "Off"}
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
-					</div>
-				</div>
-				<div class="hidden text-center sm:flex sm:flex-row gap-4 justify-center m-1 items-center">
-					<a href="../" class="btn btn-primary btn-sm">Back</a>
-					<div class="flex flex-row gap-2 items-center">
-						<span>Check: {live ? "On" : "Off"}</span>
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
-					</div>
-					<div class="flex flex-row gap-2 items-center">
-						<span>Answer: {show_answer ? "Show" : "Hide"}</span>
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
-					</div>
-
-					<button class="btn btn-error btn-sm" on:click={clear}>Clear</button>
-				</div>
-			</div>
 		</div>
 		<div class="leading-loose">
 			{#each data.text.split(/{|}/) as text, i}
