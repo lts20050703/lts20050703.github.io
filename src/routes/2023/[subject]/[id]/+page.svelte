@@ -15,111 +15,118 @@
 	function clear() {
 		inputs = []
 
-		const prequestions = data.questions.map((question) => ({
-			...question,
-			answers: shuffle(question.answers)
-		}))
+		shuffle_question()
 
-		questions = shuffle(prequestions)
-
-		localStorage.setItem(
-			`question${data.subject}${data.title}`,
-			JSON.stringify(
-				questions.map((question) => ({
-					id: question.id,
-					answers: question.answers.map((answer) => answer.id)
-				}))
-			)
-		)
+		save_question()
 	}
-
-	let stored: string[] = []
 
 	let mounted = false
 
 	let marked: boolean[] = []
 
-	let first: string[] = []
+	let first: number[] = []
+
+	function save_question() {
+		const mini_questions: { id: number; answers: number[] }[] = []
+
+		for (let i = 0; i < questions.length; i += 1) {
+			const question = questions[i]
+			const qanswers = question.answers
+			const answers: number[] = []
+			for (let j = 0; j < qanswers.length; j += 1) {
+				answers.push(qanswers[j].id)
+			}
+			mini_questions.push({ id: question.id, answers })
+		}
+
+		localStorage.setItem(`question${data.subject}${data.id}`, JSON.stringify(mini_questions))
+	}
+
+	function shuffle_question() {
+		const prequestions: typeof data.questions = []
+
+		for (let i = 0; i < data.questions.length; i += 1) {
+			const question = structuredClone(data.questions[i])
+			question.answers = shuffle_array(question.answers)
+			prequestions.push(question)
+		}
+
+		questions = shuffle_array(prequestions)
+	}
 
 	function save() {
 		if (live) {
-			inputs.forEach((input, i) => {
-				if (first[i] === "" && input !== "" && input !== `${i}${data.questions[i].right}`) {
+			for (let i = 0; i < inputs.length; i += 1) {
+				const input = inputs[i]
+				if (first[i] === -1 && input !== -1 && input !== data.questions[i].right) {
 					first[i] = input
 					marked[i] = true
 				}
-			})
+			}
 		}
-		localStorage.setItem(`inputs${data.subject}${data.title}`, inputs.join(","))
-		localStorage.setItem(`marked${data.subject}${data.title}`, marked.join(","))
+		localStorage.setItem(`inputs${data.subject}${data.id}`, inputs.join(","))
+		localStorage.setItem(`marked${data.subject}${data.id}`, marked.join(","))
 		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
 	}
 
-	let inputs: string[] = []
+	let inputs: number[] = []
 
 	$: inputs, live, marked, mounted && save()
 
 	function uncheck(question: number, answer: number) {
-		if (inputs[question] === `${question}${answer}`) inputs[question] = ""
+		if (inputs[question] === answer) inputs[question] = -1
 	}
 
-	let questions = data.questions
+	let questions: typeof data.questions = []
 
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
 
-		stored = (localStorage.getItem(`inputs${data.subject}${data.title}`) ?? "").split(",")
+		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "").split(",")
 
 		if (stored.length < data.questions.length)
-			stored.push(...Array(data.questions.length - stored.length).fill(""))
+			stored.push(...Array(data.questions.length - stored.length).fill("-1"))
 
-		inputs = stored
-		first = JSON.parse(JSON.stringify(stored))
+		inputs = []
 
-		let stored_mark = (localStorage.getItem(`marked${data.subject}${data.title}`) ?? "")
-			.split(",")
-			.map((marked) => marked === "true")
+		for (let i = 0; i < stored.length; i += 1) {
+			inputs.push(parseInt(stored[i]))
+		}
+
+		first = structuredClone(inputs)
+
+		let stored_mark = (localStorage.getItem(`marked${data.subject}${data.id}`) ?? "").split(",")
 
 		if (stored_mark.length < data.questions.length)
 			stored_mark.push(...Array(data.questions.length - stored_mark.length).fill(""))
 
-		marked = stored_mark
+		for (let i = 0; i < stored_mark.length; i += 1) {
+			marked.push(stored_mark[i] === "true")
+		}
+
+		marked = []
 
 		mounted = true
 
-		const question = localStorage.getItem(`question${data.subject}${data.title}`)
+		const question = localStorage.getItem(`question${data.subject}${data.id}`)
 		if (question) {
 			questions = []
 			const parsed = JSON.parse(question) as {
 				id: number
 				answers: [number, number, number, number]
 			}[]
-			parsed.forEach((obj) => {
-				const question = data.questions.find((question) => question.id === obj.id)!
-				const answers = [
-					question.answers.find((answer) => answer.id === obj.answers[0])!,
-					question.answers.find((answer) => answer.id === obj.answers[1])!,
-					question.answers.find((answer) => answer.id === obj.answers[2])!,
-					question.answers.find((answer) => answer.id === obj.answers[3])!
-				]
-				questions.push({ ...question, answers: answers })
-			})
+			for (let i = 0; i < parsed.length; i += 1) {
+				const obj = parsed[i]
+				const question = structuredClone(data.questions[obj.id])
+				question.answers = []
+				for (let j = 0; j < obj.answers.length; j += 1) {
+					question.answers.push(data.questions[obj.id].answers[obj.answers[j]])
+				}
+				questions.push(question)
+			}
 		} else {
-			const prequestions = data.questions.map((question) => ({
-				...question,
-				answers: shuffle(question.answers)
-			}))
-
-			questions = shuffle(prequestions)
-			localStorage.setItem(
-				`question${data.subject}${data.title}`,
-				JSON.stringify(
-					questions.map((question) => ({
-						id: question.id,
-						answers: question.answers.map((answer) => answer.id)
-					}))
-				)
-			)
+			shuffle_question()
+			save_question()
 		}
 
 		themeChange(false)
@@ -129,8 +136,7 @@
 		}
 	})
 
-	function shuffle<T>(arr: T[]): T[] {
-		let array = structuredClone(arr)
+	function shuffle_array<T>(array: T[]): T[] {
 		let currentIndex = array.length,
 			randomIndex
 
@@ -233,11 +239,11 @@
 			{#each questions as question, i}
 				<div
 					class={filter === "wrong"
-						? inputs[question.id] && inputs[question.id] !== `${question.id}${question.right}`
+						? inputs[question.id] !== -1 && inputs[question.id] !== question.right
 							? ""
 							: "hidden"
 						: filter === "unanswered"
-						? inputs[question.id]
+						? inputs[question.id] !== -1
 							? "hidden"
 							: ""
 						: filter === "marked"
@@ -272,7 +278,7 @@
 								? answer.id === question.right
 									? 'text-success'
 									: ''
-								: ''} {(live || show_answer) && inputs[question.id] === `${question.id}${answer.id}`
+								: ''} {(live || show_answer) && inputs[question.id] === answer.id
 								? answer.id === question.right
 									? 'text-success'
 									: 'text-error'
@@ -284,7 +290,7 @@
 								class="input input-primary input-xs"
 								type="radio"
 								name={`${question.id}`}
-								value={`${question.id}${answer.id}`}
+								value={answer.id}
 								id={`${question.id}${answer.id}`}
 							/>
 							<label for={`${question.id}${answer.id}`}
@@ -294,76 +300,6 @@
 					{/each}
 				</div>
 			{/each}
-			<br />
-			<div class="">Tổng cộng: {questions.length} Câu</div>
-			<div
-				class="{inputs.some((input) => input) ? '' : 'hidden'} {inputs.every((input) => input)
-					? 'text-success'
-					: 'text-warning'}"
-			>
-				Đã làm: {inputs.filter((input) => input).length} Câu
-			</div>
-			<div class={live || show_answer ? "" : "hidden"}>
-				<div
-					class="text-success {questions.some(
-						(question) =>
-							inputs[question.id] && inputs[question.id] === `${question.id}${question.right}`
-					)
-						? ''
-						: 'hidden'}"
-				>
-					Đúng: {questions.filter(
-						(question) => `${question.id}${question.right}` === inputs[question.id]
-					).length} Câu
-				</div>
-				<div
-					class="text-error {questions.some(
-						(question) =>
-							inputs[question.id] && inputs[question.id] !== `${question.id}${question.right}`
-					)
-						? ''
-						: 'hidden'}"
-				>
-					Sai: {questions
-						.map((question, i) =>
-							inputs[question.id] && inputs[question.id] !== `${question.id}${question.right}`
-								? `Câu ${i + 1}`
-								: undefined
-						)
-						.filter((question) => question)
-						.join(", ")}
-				</div>
-			</div>
-
-			<div
-				class="{inputs.every((input) => input) ? 'text-success' : 'text-error'} {inputs.some(
-					(input) => !input
-				)
-					? ''
-					: 'hidden'}"
-			>
-				Chưa làm: {questions
-					.map((question, i) => (inputs[question.id] ? undefined : `Câu ${i + 1}`))
-					.filter((question) => question)
-					.join(", ")}
-			</div>
-			<div
-				class="{live || show_answer ? '' : 'hidden'} {questions.length ===
-				questions.filter((question) => `${question.id}${question.right}` === inputs[question.id])
-					.length
-					? 'text-success'
-					: 'text-warning'}"
-			>
-				<div>
-					Điểm: {(
-						(questions.filter(
-							(question) => `${question.id}${question.right}` === inputs[question.id]
-						).length /
-							questions.length) *
-						10
-					).toFixed(1)}
-				</div>
-			</div>
 			<div
 				class={filter === "wrong" || filter === "unanswered"
 					? "text-error"

@@ -14,8 +14,16 @@
 		inputs = []
 	}
 
-	let answers = data.text.split(/{|}/).filter((_, i) => i % 2 === 1)
 	let stored: string[] = []
+
+	let text = data.text.split(/{|}/)
+
+	let answers: string[] = []
+
+	for (let i = 0; i < text.length; i += 1) {
+		if (i % 2 === 0) continue
+		answers.push(text[i])
+	}
 
 	let mounted = false
 
@@ -35,7 +43,7 @@
 		if (stored.length < answers.length)
 			stored.push(...Array(answers.length - stored.length).fill(""))
 
-		inputs = stored ?? answers.map((_) => "")
+		inputs = stored
 
 		mounted = true
 
