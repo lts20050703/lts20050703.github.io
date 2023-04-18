@@ -2,6 +2,12 @@
 	import v from "$lib/v"
 	export let data: PageData
 	import type { PageData } from "./$types"
+
+	import { onMount } from "svelte"
+	import { themeChange } from "theme-change"
+	onMount(() => {
+		themeChange(false)
+	})
 </script>
 
 <svelte:head

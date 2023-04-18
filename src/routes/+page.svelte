@@ -1,5 +1,10 @@
 <script lang="ts">
 	import v from "$lib/v"
+	import { onMount } from "svelte"
+	import { themeChange } from "theme-change"
+	onMount(() => {
+		themeChange(false)
+	})
 </script>
 
 <svelte:head>
