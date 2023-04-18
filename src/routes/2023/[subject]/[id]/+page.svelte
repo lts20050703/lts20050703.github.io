@@ -82,7 +82,7 @@
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
 
-		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "").split(",")
+		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "-1").split(",")
 
 		if (stored.length < data.questions.length)
 			stored.push(...Array(data.questions.length - stored.length).fill("-1"))
