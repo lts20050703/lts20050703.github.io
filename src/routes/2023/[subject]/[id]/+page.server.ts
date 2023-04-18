@@ -14,6 +14,11 @@ export const load = (async ({ params }) => {
 		}
 		const title = data.shift()
 		const azota = data.shift()
+		let word = ""
+		if (data[0].startsWith("/")) {
+			word = data[0]
+			data.shift()
+		}
 		const questions: {
 			question: string
 			id: number
@@ -94,7 +99,7 @@ export const load = (async ({ params }) => {
 				}
 			}
 		}
-		return { subject: params.subject, title, questions, azota, id: params.id }
+		return { subject: params.subject, title, questions, azota, id: params.id, word }
 	} catch {
 		return {
 			subject: "404 Not Found",

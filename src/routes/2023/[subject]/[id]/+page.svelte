@@ -187,10 +187,10 @@
 						rel="noopener noreferrer"
 						>AZOTA
 					</a>
-					{#if data.questions[0]?.question}
+					{#if data.word}
 						<a
 							class="btn btn-primary btn-lg"
-							href={data.questions[0].question.replace("<br>", "")}
+							href={data.word}
 							target="_blank"
 							rel="noopener noreferrer"
 							>WORD
