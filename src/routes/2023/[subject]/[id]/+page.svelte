@@ -224,7 +224,7 @@
 			>
 				Lọc:
 				<select class="select select-primary select-sm" bind:value={filter}>
-					<option class="text-white" value="">Hiện tất cả</option>
+					<option class="text-base-content" value="">Hiện tất cả</option>
 					<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
 					<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
 					<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>

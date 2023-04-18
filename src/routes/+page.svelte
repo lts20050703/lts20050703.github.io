@@ -23,7 +23,7 @@
 		class="btn btn-link btn-lg gap-2 text-3xl flex-1 items-center"
 		><img src="./mastodon.ico" alt="" class="h-12" />Mastodon</a
 	>
-	<div class="gap-2 text-3xl flex-1 flex flex-row pt-10 text-white items-center">
+	<div class="gap-2 text-3xl flex-1 flex flex-row pt-10 items-center">
 		<img src="./irx.png" alt="" class="h-12" />In Real Xperience
 	</div>
 	<a href="./openclozes" class="btn btn-link btn-lg gap-2 text-3xl flex-1">Openclozes</a>
