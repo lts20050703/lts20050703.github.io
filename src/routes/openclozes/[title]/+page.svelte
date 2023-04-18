@@ -2,6 +2,7 @@
 	import { onMount } from "svelte"
 	import type { PageData } from "./$types"
 	import v from "$lib/v"
+	import { themeChange } from "theme-change"
 
 	export let data: PageData
 
@@ -37,6 +38,8 @@
 		inputs = stored ?? answers.map((_) => "")
 
 		mounted = true
+
+		themeChange(false)
 	})
 </script>
 
