@@ -1,1 +1,1 @@
-{"type":"data","nodes":[null,{"type":"data","data":[{"subject":1,"title":2,"questions":3,"azota":8},"lý","ĐỀ SỐ 1",[4],{"question":5,"answers":6,"id":7},"\u003Cbr\u003E\u002F2023\u002Flý\u002FLÝ ĐỀ 1.docx",[],0,"https:\u002F\u002Fazota.vn\u002Fde-thi\u002Fd2ywip"],"uses":{"params":["subject","id"]}}]}
+{"type":"data","nodes":[null,{"type":"data","data":[{"subject":1,"title":2,"questions":3,"azota":4,"id":5},"lý","ĐỀ SỐ 1",[],"https:\u002F\u002Fazota.vn\u002Fde-thi\u002Fd2ywip","1"],"uses":{"params":["subject","id"]}}]}
