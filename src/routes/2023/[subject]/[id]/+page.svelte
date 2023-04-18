@@ -124,7 +124,7 @@
 
 		themeChange(false)
 
-		if (questions.length === 0) {
+		if (questions.length < 2) {
 			azota = true
 		}
 	})
