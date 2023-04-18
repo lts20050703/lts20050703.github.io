@@ -100,11 +100,11 @@
 		if (stored_mark.length < data.questions.length)
 			stored_mark.push(...Array(data.questions.length - stored_mark.length).fill(""))
 
+		marked = []
+
 		for (let i = 0; i < stored_mark.length; i += 1) {
 			marked.push(stored_mark[i] === "true")
 		}
-
-		marked = []
 
 		mounted = true
 
