@@ -8,16 +8,19 @@ export const load = (async ({ params }) => {
 		const raw = text.split("\n")
 		const data: string[] = []
 		for (let i = 0; i < raw.length; i += 1) {
-			const line = raw[i].replace(/ +/, " ").trim()
+			const line = raw[i].replace(/[ \t]+/g, " ").trim()
 			if (line === "" || line.startsWith("//")) continue
 			data.push(
-				line
-					.replace(/_{3,}/g, "...")
-					.replace(/__(.+?)__/g, "<u>$1</u>")
-					.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+				line.startsWith("/")
+					? `<img src="${line}">`
+					: line
+							.replace(/_{3,}/g, "...")
+							.replace(/__(.+?)__/g, "<u>$1</u>")
+							.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+							.replace(/_(.)/g, "<sub>$1</sub>")
+							.replace(/\^(.)/g, "<sup>$1</sup>")
 			)
 		}
-		console.log(data)
 		const title = data.shift()
 		const azota = data.shift()
 		let word = ""
@@ -40,9 +43,6 @@ export const load = (async ({ params }) => {
 		let section_id = 0
 		let prev: "question" | "a" | "b" | "c" | "d" | "section" = "section"
 		for (let i = 0; i < data.length; i += 1) {
-			// console.log(prev, "|", data[i])
-			// await new Promise((r) => setTimeout(r, 500))
-
 			const words = data[i].split(" ")
 			for (let j = 0; j < words.length; j += 1) {
 				const word = words[j]

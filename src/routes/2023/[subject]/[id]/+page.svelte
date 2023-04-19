@@ -328,7 +328,13 @@
 									</span>
 								{:else}
 									<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-										{@html line.replace("*", "")}
+										{#if line.trim().startsWith("<table>")}
+											<table class="px-4 border-spacing-x-4 text-center border-separate">
+												{@html line.trim().slice(7, -8)}
+											</table>
+										{:else}
+											{@html line.replace("*", "")}
+										{/if}
 									</div>
 								{/if}
 							{/each}
@@ -363,11 +369,11 @@
 				{/each}
 			{/each}
 			<div
-				class={filter === "wrong" || filter === "unanswered"
-					? "text-error"
-					: filter === "marked"
-					? "text-warning"
-					: ""}
+				class="flex {filter === 'wrong' || filter === 'unanswered'
+					? 'text-error'
+					: filter === 'marked'
+					? 'text-warning'
+					: ''}"
 			>
 				Lọc:
 				<select class="select select-primary select-sm" bind:value={filter}>
