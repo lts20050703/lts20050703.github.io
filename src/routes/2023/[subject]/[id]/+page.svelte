@@ -15,9 +15,9 @@
 	function clear() {
 		inputs = []
 
-		shuffle_question()
+		shuffle_section()
 
-		save_question()
+		save_section()
 	}
 
 	let mounted = false
@@ -26,41 +26,66 @@
 
 	let first: number[] = []
 
-	function save_question() {
-		const mini_questions: { id: number; answers: number[] }[] = []
+	function save_section() {
+		const mini_sections: {
+			id: number
+			questions: { id: number; answers: number[] }[]
+		}[] = []
 
-		for (let i = 0; i < questions.length; i += 1) {
-			const question = questions[i]
-			const qanswers = question.answers
-			const answers: number[] = []
-			for (let j = 0; j < qanswers.length; j += 1) {
-				answers.push(qanswers[j].id)
+		for (let i = 0; i < sections.length; i += 1) {
+			const questions: { id: number; answers: number[] }[] = []
+			const section = sections[i]
+			for (let j = 0; j < section.questions.length; j += 1) {
+				const question = section.questions[j]
+				const answers: number[] = []
+				for (let k = 0; k < question.answers.length; k += 1) {
+					answers.push(question.answers[k].id)
+				}
+				questions.push({ id: question.id, answers })
 			}
-			mini_questions.push({ id: question.id, answers })
+			mini_sections.push({ id: section.id, questions })
 		}
 
-		localStorage.setItem(`question${data.subject}${data.id}`, JSON.stringify(mini_questions))
+		localStorage.setItem(`section${data.subject}${data.id}`, JSON.stringify(mini_sections))
 	}
 
-	function shuffle_question() {
-		const prequestions: typeof data.questions = []
+	function shuffle_section() {
+		const pre_sections: typeof data.sections = []
 
-		for (let i = 0; i < data.questions.length; i += 1) {
-			const question = structuredClone(data.questions[i])
-			question.answers = shuffle_array(question.answers)
-			prequestions.push(question)
+		for (let i = 0; i < data.sections.length; i += 1) {
+			const section = structuredClone(data.sections[i])
+
+			if (section.shuffle) {
+				section.questions = shuffle_array(section.questions)
+			}
+
+			for (let j = 0; j < data.sections[i].questions.length; j += 1) {
+				section.questions[j].answers = shuffle_array(section.questions[j].answers)
+			}
+
+			pre_sections.push(section)
 		}
 
-		questions = shuffle_array(prequestions)
+		sections = shuffle_array(pre_sections)
 	}
 
 	function save() {
 		if (live) {
-			for (let i = 0; i < inputs.length; i += 1) {
-				const input = inputs[i]
-				if (first[i] === -1 && input !== -1 && input !== data.questions[i].right) {
-					first[i] = input
-					marked[i] = true
+			for (let id = 0; id < inputs.length; id += 1) {
+				const input = inputs[id]
+
+				let right: number = -1
+
+				for (let i = 0; i < data.sections.length; i += 1) {
+					const section = data.sections[i]
+					for (let j = 0; j < section.questions.length; j += 1) {
+						if (section.questions[j].id === id) right = section.questions[j].right!
+					}
+				}
+
+				if (first[id] === -1 && input !== -1 && input !== right) {
+					first[id] = input
+					marked[id] = true
 				}
 			}
 		}
@@ -77,15 +102,20 @@
 		if (inputs[question] === answer) inputs[question] = -1
 	}
 
-	let questions: typeof data.questions = []
+	let sections: typeof data.sections = []
 
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
 
 		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "-1").split(",")
 
-		if (stored.length < data.questions.length)
-			stored.push(...Array(data.questions.length - stored.length).fill("-1"))
+		let length = 0
+
+		for (let i = 0; i < data.sections.length; i += 1) {
+			length += data.sections[i].questions.length
+		}
+
+		if (stored.length < length) stored.push(...Array(length - stored.length).fill("-1"))
 
 		inputs = []
 
@@ -97,8 +127,8 @@
 
 		let stored_mark = (localStorage.getItem(`marked${data.subject}${data.id}`) ?? "").split(",")
 
-		if (stored_mark.length < data.questions.length)
-			stored_mark.push(...Array(data.questions.length - stored_mark.length).fill(""))
+		if (stored_mark.length < length)
+			stored_mark.push(...Array(length - stored_mark.length).fill(""))
 
 		marked = []
 
@@ -108,30 +138,50 @@
 
 		mounted = true
 
-		const question = localStorage.getItem(`question${data.subject}${data.id}`)
-		if (question) {
-			questions = []
-			const parsed = JSON.parse(question) as {
+		const section = localStorage.getItem(`section${data.subject}${data.id}`)
+
+		if (section) {
+			const parsed = JSON.parse(section) as {
 				id: number
-				answers: [number, number, number, number]
+				questions: { id: number; answers: number[] }[]
 			}[]
+
 			for (let i = 0; i < parsed.length; i += 1) {
 				const obj = parsed[i]
-				const question = structuredClone(data.questions[obj.id])
-				question.answers = []
-				for (let j = 0; j < obj.answers.length; j += 1) {
-					question.answers.push(data.questions[obj.id].answers[obj.answers[j]])
+				const section = structuredClone(data.sections[obj.id])
+				section.questions = []
+				for (let j = 0; j < obj.questions.length; j += 1) {
+					const obj2 = obj.questions[j]
+
+					let question: (typeof data.sections)[number]["questions"][number] | undefined
+
+					for (let k = 0; k < data.sections[obj.id].questions.length; k += 1) {
+						if (data.sections[obj.id].questions[k].id === obj2.id)
+							question = structuredClone(data.sections[obj.id].questions[k])
+					}
+
+					if (!question) continue
+
+					const answers = structuredClone(question.answers)
+
+					question.answers = []
+					for (let k = 0; k < obj2.answers.length; k += 1) {
+						const id = obj2.answers[k]
+						question.answers.push(answers[id])
+					}
+
+					section.questions.push(question)
 				}
-				questions.push(question)
+				sections.push(section)
 			}
 		} else {
-			shuffle_question()
-			save_question()
+			shuffle_section()
+			save_section()
 		}
 
 		themeChange(false)
 
-		if (questions.length < 2) {
+		if (sections.length === 0) {
 			azota = true
 		}
 	})
@@ -236,69 +286,81 @@
 					<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
 				</select>
 			</div>
-			{#each questions as question, i}
-				<div
-					class={filter === "wrong"
-						? inputs[question.id] !== -1 && inputs[question.id] !== question.right
-							? ""
-							: "hidden"
-						: filter === "unanswered"
-						? inputs[question.id] !== -1
-							? "hidden"
-							: ""
-						: filter === "marked"
-						? marked[question.id]
-							? ""
-							: "hidden"
-						: ""}
-				>
-					<br />
-					<div class={marked[question.id] ? "text-warning" : ""}>
-						<input
-							type="checkbox"
-							class="toggle toggle-warning"
-							bind:checked={marked[question.id]}
-						/>
-						{#each question.question.split("<br>") as line, j}
-							{#if j === 0}
-								Câu {i + 1}:
-								<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-									{@html line.replace("*", "")}
-								</span>
-							{:else}
-								<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-									{@html line.replace("*", "")}
-								</div>
-							{/if}
+			{#each sections as section}
+				<br />
+				{#if section.title}
+					<div>{@html section.title}</div>
+				{/if}
+				{#each section.questions as question, i}
+					<div
+						class={filter === "wrong"
+							? inputs[question.id] !== -1 && inputs[question.id] !== question.right
+								? ""
+								: "hidden"
+							: filter === "unanswered"
+							? inputs[question.id] !== -1
+								? "hidden"
+								: ""
+							: filter === "marked"
+							? marked[question.id]
+								? ""
+								: "hidden"
+							: ""}
+					>
+						<br />
+						<div class={marked[question.id] ? "text-warning" : ""}>
+							<input
+								type="checkbox"
+								class="toggle toggle-warning"
+								bind:checked={marked[question.id]}
+							/>
+							{#each question.question.split("<br>") as line, j}
+								{#if j === 0}
+									{#if data.subject === "anh"}
+										Question
+									{:else}
+										Câu
+									{/if}
+
+									{i + 1}:
+									<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+										{@html line.replace("*", "")}
+									</span>
+								{:else}
+									<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+										{@html line.replace("*", "")}
+									</div>
+								{/if}
+							{/each}
+						</div>
+						{#each question.answers as answer, j}
+							<div
+								class="flex flex-row gap-4 m-3 items-center {show_answer
+									? answer.id === question.right
+										? 'text-success'
+										: ''
+									: ''} {(live || show_answer) && inputs[question.id] === answer.id
+									? answer.id === question.right
+										? 'text-success'
+										: 'text-error'
+									: ''}"
+							>
+								<input
+									on:click={() => uncheck(question.id, answer.id)}
+									bind:group={inputs[question.id]}
+									class="input input-primary input-xs"
+									type="radio"
+									name={`${question.id}`}
+									value={answer.id}
+									id={`${question.id}${answer.id}`}
+								/>
+								<label for={`${question.id}${answer.id}`}
+									>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
+								>
+							</div>
 						{/each}
 					</div>
-					{#each question.answers as answer, j}
-						<div
-							class="flex flex-row gap-4 m-3 items-center {show_answer
-								? answer.id === question.right
-									? 'text-success'
-									: ''
-								: ''} {(live || show_answer) && inputs[question.id] === answer.id
-								? answer.id === question.right
-									? 'text-success'
-									: 'text-error'
-								: ''}"
-						>
-							<input
-								on:click={() => uncheck(question.id, answer.id)}
-								bind:group={inputs[question.id]}
-								class="input input-primary input-xs"
-								type="radio"
-								name={`${question.id}`}
-								value={answer.id}
-								id={`${question.id}${answer.id}`}
-							/>
-							<label for={`${question.id}${answer.id}`}
-								>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
-							>
-						</div>
-					{/each}
-				</div>
+				{/each}
 			{/each}
 			<div
 				class={filter === "wrong" || filter === "unanswered"
