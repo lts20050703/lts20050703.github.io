@@ -102,9 +102,9 @@ C. Al_2(SO_4)_3, Ba(AlO_2)_2. 	D. Al(OH)_3, BaSO_4.
 Câu 38. Cho các phát biểu sau:  
 (a)	Kim loại Fe tan hoàn toàn trong dung dịch HNO_3 đặc, nguội. 
 (b)	Các kim loại kiềm và kiềm thổ đều tác dụng với nước ở điều kiện thường. 
-(c)	Nhúng thanh kim loại Zn vào dung dịch Cu(NO_3)_2 có xảy ra ăn mòn điện hóa học. 
+*(c)	Nhúng thanh kim loại Zn vào dung dịch Cu(NO_3)_2 có xảy ra ăn mòn điện hóa học. 
 (d)	Cho dung dịch Na_2SO_4 loãng vào dung dịch BaCl_2 thu được kết tủa gồm hai chất. 
-(e)	Cho a mol P_2O_5 vào dung dịch chứa 5a mol NaOH thu được dung dịch chứa hỗn hợp muối. 
+*(e)	Cho a mol P_2O_5 vào dung dịch chứa 5a mol NaOH thu được dung dịch chứa hỗn hợp muối. 
 (f)	Cu tan trong dung dịch FeCl_2 dư. 
 Số phát biểu đúng là 
  	A. 3.  	*B. 2. 	C. 5. 	D. 4. 
