@@ -378,7 +378,9 @@
 								{:else}
 									<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
 										{#if line.trim().startsWith("<table>")}
-											<table class="px-4 border-spacing-x-4 border-spacing-y-2 py-2">
+											<table
+												class="px-4 border-spacing-x-4 py-2 border-spacing-y-2 text-center border-separate"
+											>
 												{@html line.trim().slice(7, -8)}
 											</table>
 										{:else}
