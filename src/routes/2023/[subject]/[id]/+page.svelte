@@ -154,34 +154,7 @@
 			shuffle_section()
 			save_section()
 		} else {
-			for (let i = 0; i < parsed.length; i += 1) {
-				const obj = parsed[i]
-				const section = structuredClone(data.sections[obj.id])
-				section.questions = []
-				for (let j = 0; j < obj.questions.length; j += 1) {
-					const obj2 = obj.questions[j]
-
-					let question: (typeof data.sections)[number]["questions"][number] | undefined
-
-					for (let k = 0; k < data.sections[obj.id].questions.length; k += 1) {
-						if (data.sections[obj.id].questions[k].id === obj2.id)
-							question = structuredClone(data.sections[obj.id].questions[k])
-					}
-
-					if (!question) continue
-
-					const answers = structuredClone(question.answers)
-
-					question.answers = []
-					for (let k = 0; k < obj2.answers.length; k += 1) {
-						const id = obj2.answers[k]
-						question.answers.push(answers[id])
-					}
-
-					section.questions.push(question)
-				}
-				sections.push(section)
-			}
+			parse(parsed)
 		}
 
 		if (data.subject === "lý") {
@@ -206,6 +179,42 @@
 		}
 
 		return array
+	}
+
+	function parse(
+		parsed: {
+			id: number
+			questions: { id: number; answers: number[] }[]
+		}[]
+	) {
+		for (let i = 0; i < parsed.length; i += 1) {
+			const obj = parsed[i]
+			const section = structuredClone(data.sections[obj.id])
+			section.questions = []
+			for (let j = 0; j < obj.questions.length; j += 1) {
+				const obj2 = obj.questions[j]
+
+				let question: (typeof data.sections)[number]["questions"][number] | undefined
+
+				for (let k = 0; k < data.sections[obj.id].questions.length; k += 1) {
+					if (data.sections[obj.id].questions[k].id === obj2.id)
+						question = structuredClone(data.sections[obj.id].questions[k])
+				}
+
+				if (!question) continue
+
+				const answers = structuredClone(question.answers)
+
+				question.answers = []
+				for (let k = 0; k < obj2.answers.length; k += 1) {
+					const id = obj2.answers[k]
+					question.answers.push(answers[id])
+				}
+
+				section.questions.push(question)
+			}
+			sections.push(section)
+		}
 	}
 </script>
 
@@ -274,86 +283,104 @@
 			</select>
 		</div>
 		{#each sections as section}
-			<br />
-			{#if section.title}
-				<div>{@html section.title}</div>
-			{/if}
-			{#each section.questions as question, i}
-				<div
-					class={filter === "wrong"
-						? inputs[question.id] !== -1 && inputs[question.id] !== question.right
-							? ""
-							: "hidden"
-						: filter === "unanswered"
-						? inputs[question.id] !== -1
-							? "hidden"
-							: ""
-						: filter === "marked"
-						? marked[question.id]
-							? ""
-							: "hidden"
-						: ""}
-				>
-					<br />
-					<div class={marked[question.id] ? "text-warning" : ""}>
-						<input
-							type="checkbox"
-							class="toggle toggle-warning"
-							bind:checked={marked[question.id]}
-						/>
-						{#each question.question.split("<br>") as line, j}
-							{#if j === 0}
-								{#if data.subject === "anh"}
-									Question
-								{:else}
-									Câu
-								{/if}
-
-								{i + 1}:
-								<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-									{@html line.replace("*", "")}
-								</span>
-							{:else}
-								<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-									{#if line.trim().startsWith("<table>")}
-										<table class="px-4 border-spacing-x-4 border-spacing-y-2 py-2">
-											{@html line.trim().slice(7, -8)}
-										</table>
+			<div
+				class={filter === "wrong"
+					? section.questions.some(
+							(question) => inputs[question.id] !== -1 && inputs[question.id] !== question.right
+					  )
+						? ""
+						: "hidden"
+					: filter === "unanswered"
+					? section.questions.some((question) => inputs[question.id] === -1)
+						? ""
+						: "hidden"
+					: filter === "marked"
+					? section.questions.some((question) => marked[question.id])
+						? ""
+						: "hidden"
+					: ""}
+			>
+				<br />
+				{#if section.title}
+					<div>{@html section.title}</div>
+				{/if}
+				{#each section.questions as question, i}
+					<div
+						class={filter === "wrong"
+							? inputs[question.id] !== -1 && inputs[question.id] !== question.right
+								? ""
+								: "hidden"
+							: filter === "unanswered"
+							? inputs[question.id] === -1
+								? ""
+								: "hidden"
+							: filter === "marked"
+							? marked[question.id]
+								? ""
+								: "hidden"
+							: ""}
+					>
+						<br />
+						<div class={marked[question.id] ? "text-warning" : ""}>
+							<input
+								type="checkbox"
+								class="toggle toggle-warning"
+								bind:checked={marked[question.id]}
+							/>
+							{#each question.question.split("<br>") as line, j}
+								{#if j === 0}
+									{#if data.subject === "anh"}
+										Question
 									{:else}
-										{@html line.replace("*", "")}
+										Câu
 									{/if}
-								</div>
-							{/if}
+
+									{i + 1}:
+									<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+										{@html line.replace("*", "")}
+									</span>
+								{:else}
+									<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+										{#if line.trim().startsWith("<table>")}
+											<table class="px-4 border-spacing-x-4 border-spacing-y-2 py-2">
+												{@html line.trim().slice(7, -8)}
+											</table>
+										{:else}
+											{@html line.replace("*", "")}
+										{/if}
+									</div>
+								{/if}
+							{/each}
+						</div>
+						{#each question.answers as answer, j}
+							<div
+								class="flex flex-row gap-4 m-3 items-center {show_answer
+									? answer.id === question.right
+										? 'text-success'
+										: ''
+									: ''} {(live || show_answer) && inputs[question.id] === answer.id
+									? answer.id === question.right
+										? 'text-success'
+										: 'text-error'
+									: ''}"
+							>
+								<input
+									on:click={() => uncheck(question.id, answer.id)}
+									bind:group={inputs[question.id]}
+									class="input input-primary input-xs"
+									type="radio"
+									name={`${question.id}`}
+									value={answer.id}
+									id={`${question.id}${answer.id}`}
+								/>
+								<label for={`${question.id}${answer.id}`}
+									>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
+								>
+							</div>
 						{/each}
 					</div>
-					{#each question.answers as answer, j}
-						<div
-							class="flex flex-row gap-4 m-3 items-center {show_answer
-								? answer.id === question.right
-									? 'text-success'
-									: ''
-								: ''} {(live || show_answer) && inputs[question.id] === answer.id
-								? answer.id === question.right
-									? 'text-success'
-									: 'text-error'
-								: ''}"
-						>
-							<input
-								on:click={() => uncheck(question.id, answer.id)}
-								bind:group={inputs[question.id]}
-								class="input input-primary input-xs"
-								type="radio"
-								name={`${question.id}`}
-								value={answer.id}
-								id={`${question.id}${answer.id}`}
-							/>
-							<label for={`${question.id}${answer.id}`}
-								>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
-							>
-						</div>
-					{/each}
-				</div>
-			{/each}
+				{/each}
+			</div>
 		{/each}
 		<div
 			class="flex {filter === 'wrong' || filter === 'unanswered'
