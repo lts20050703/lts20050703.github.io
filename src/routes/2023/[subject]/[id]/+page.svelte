@@ -54,26 +54,12 @@
 	}
 
 	function shuffle_section() {
-		let fake_id = 0
 		const pre_sections: typeof sections = []
 
 		for (let i = 0; i < data.sections.length; i += 1) {
 			const section = structuredClone(data.sections[i]) as (typeof sections)[number]
 
-			let arr: string[] | null = null
-
-			if (section.shuffle) {
-				section.questions = shuffle_array(section.questions)
-			} else {
-				arr = section.title.match(/(\(\d+\))/g)
-				console.log(arr)
-			}
-
-			for (let j = 0; j < section.questions.length; j += 1) {
-				section.questions[j].fake_id = fake_id
-				if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
-				fake_id += 1
-			}
+			if (section.shuffle) section.questions = shuffle_array(section.questions)
 
 			for (let j = 0; j < data.sections[i].questions.length; j += 1) {
 				section.questions[j].answers = shuffle_array(section.questions[j].answers)
@@ -83,6 +69,19 @@
 		}
 
 		sections = shuffle_array(pre_sections)
+
+		let fake_id = 0
+
+		for (let i = 0; i < sections.length; i += 1) {
+			const section = sections[i]
+			let arr: string[] | null = null
+			if (!section.shuffle) arr = section.title.match(/(\(\d+\))/g)
+			for (let j = 0; j < section.questions.length; j += 1) {
+				section.questions[j].fake_id = fake_id
+				if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
+				fake_id += 1
+			}
+		}
 	}
 
 	function save() {
@@ -220,7 +219,6 @@
 
 			if (!section.shuffle) {
 				arr = section.title.match(/(\(\d+\))/g)
-				console.log(arr)
 			}
 
 			for (let j = 0; j < obj.questions.length; j += 1) {
@@ -234,7 +232,7 @@
 							data.sections[obj.id].questions[k]
 						) as (typeof sections)[number]["questions"][number]
 						question.fake_id = fake_id
-						if (arr) section.title = section.title.replace(arr[j], `(${fake_id})`)
+						if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
 						fake_id += 1
 					}
 				}
