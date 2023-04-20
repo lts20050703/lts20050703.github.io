@@ -13,6 +13,8 @@ export const load = (async ({ params }) => {
 			data.push(
 				line.startsWith("/")
 					? `<img src="${line}">`
+					: params.subject === "lý"
+					? line
 					: line
 							.replace(/_{3,}/g, "...")
 							.replace(/__(.+?)__/g, "<u>$1</u>")
@@ -53,7 +55,7 @@ export const load = (async ({ params }) => {
 					prev = "section"
 					continue
 				}
-				if (word.startsWith("$")) {
+				if (params.subject !== "lý" && word.startsWith("$")) {
 					sections.push({ title: word.slice(1), shuffle: false, questions: [], id: section_id })
 					section_id += 1
 					prev = "section"

@@ -104,7 +104,7 @@
 
 	let sections: typeof data.sections = []
 
-	onMount(() => {
+	onMount(async () => {
 		live = localStorage.getItem("live") !== null
 
 		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "-1").split(",")
@@ -184,6 +184,10 @@
 		if (sections.length === 0) {
 			azota = true
 		}
+
+		let script = document.createElement("script")
+		script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+		document.head.append(script)
 	})
 
 	function shuffle_array<T>(array: T[]): T[] {
@@ -205,6 +209,28 @@
 
 	let azota = false
 </script>
+
+<svelte:head>
+	<title>
+		In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)} / {data.title?.[0].toUpperCase()}{data.title
+			?.slice(1)
+			.toLowerCase()}
+	</title>
+	<script>
+		MathJax = {
+			tex: {
+				inlineMath: [
+					["$", "$"],
+					["\\(", "\\)"]
+				]
+			}
+		}
+	</script>
+	<script>
+		window.MathJax = { tex: { inlineMath: [["$", "$"]] } }
+	</script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+</svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex flex-col items-center">
 	{#if !azota}
@@ -386,11 +412,3 @@
 		{/if}
 	</div>
 </div>
-
-<svelte:head
-	><title>
-		In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)} / {data.title?.[0].toUpperCase()}{data.title
-			?.slice(1)
-			.toLowerCase()}</title
-	></svelte:head
->
