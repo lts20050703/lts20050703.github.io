@@ -5,13 +5,15 @@ A. K B. Fe C. Al *D. Ag
 Câu 2. Oxit nào sau đây là oxit axit?
 *A. CrO<sub>3</sub>. B. FeO. C. Cr<sub>2</sub>O<sub>3</sub>. D. Fe<sub>2</sub>O<sub>3</sub>.
 Câu 3. Nguyên tử Al có Z = 13, cấu hình electron của Al là 
-        A. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>2</sup>. 	*B. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>1</sup>. 
+        A. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>2</sup>. 	B. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>1</sup>. 
         *C. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>3</sup>. 	D. 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>3</sup>. 
 Câu 4. Ở nhiệt độ thường, kim loại sắt tan được trong dung dịch nào sau đây? 
         A. NaNO<sub>3</sub>. 	*B. Fe(NO<sub>3</sub>)<sub>3</sub>. 	C. Al(NO<sub>3</sub>)<sub>3</sub>. 	D. Fe(NO<sub>3</sub>)<sub>2</sub>. 
 Câu 5. Hợp chất nào của canxi được dùng để đúc tượng, bó bột khi gãy xương? 
-        *A. Thạch cao nung (CaSO<sub>4</sub>.H<sub>2</sub>O). 	B. Đá vôi (CaCO<sub>3</sub>). 
-        C. Thạch cao khan (CaSO<sub>4</sub>). 	*D. Thach cao sống (CaSO<sub>4</sub>.2H<sub>2</sub>O). 
+*A. Thạch cao nung (CaSO<sub>4</sub>.H<sub>2</sub>O).
+B. Đá vôi (CaCO<sub>3</sub>). 
+C. Thạch cao khan (CaSO<sub>4</sub>).
+D. Thach cao sống (CaSO<sub>4</sub>.2H<sub>2</sub>O). 
 Câu 6. Nhỏ từ từ dung dịch H<sub>2</sub>SO<sub>4</sub> loãng vào dung dịch K<sub>2</sub>CrO<sub>4</sub> thì màu của dung dịch chuyển từ 
 	*A. màu vàng sang màu da cam. 	B. không màu sang màu da cam. 
 	C. không màu sang màu vàng. 	D. màu da cam sang màu vàng. 
@@ -60,7 +62,7 @@ Câu 26. Dung dịch chất nào sau đây làm quỳ tím chuyển thành màu 
         A. NaCl. 	B. NaOH. 	C. KOH. 	*D. H<sub>2</sub>SO<sub>4</sub>. 
 Câu 27. Cho 4,6 gam kim loại Na tác dụng hết với H<sub>2</sub>O dư, thu được V lít khí H<sub>2</sub>. Giá trị của V là 
         A. 3,36. 	*B. 2,24. 	C. 4,48. 	D. 1,12. 
-Câu 28. Cho m gam Al vào 100ml dd hỗn hợp Cu(NO<sub>3</sub>)<sub>2</sub> 0,3M và AgNO<sub>3</sub> 0,3M thu đựơc chất rắn A. Cho A tác dụng với dd HCl dư thu được 0,336 lít H<sub>2</sub> (đktc). Tính m và khối lượng chất rắn A? 
+Câu 28. Cho m gam Al vào 100ml dd hỗn hợp Cu(NO<sub>3</sub>)<sub>2</sub> 0,3M và AgNO<sub>3</sub> 0,3M thu đựơc chất rắn A; Cho A tác dụng với dd HCl dư thu được 0,336 lít H<sub>2</sub> (đktc). Tính m và khối lượng chất rắn A? 
 A. 1,08 và 5,16g 	*B. 1,08 và 5,43g 	C. 0,54 và 5,16g 	D. 8,1 và 5,24g 
 Câu 29. Cho 2,7 gam kim loại Al tác dụng với dung dịch NaOH dư, sau phản ứng hoàn toàn thu được V lít khí H<sub>2</sub> (đktc). Giá trị của V là 
         *A. 3,36. 	B. 4,48. 	C. 1,12. 	D. 2,24. 

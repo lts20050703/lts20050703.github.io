@@ -18,6 +18,10 @@
 		shuffle_section()
 
 		save_section()
+
+		if (data.subject === "lý") {
+			location.reload()
+		}
 	}
 
 	let mounted = false
@@ -185,9 +189,11 @@
 			azota = true
 		}
 
-		let script = document.createElement("script")
-		script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-		document.head.append(script)
+		if (data.subject === "lý") {
+			let script = document.createElement("script")
+			script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+			document.head.append(script)
+		}
 	})
 
 	function shuffle_array<T>(array: T[]): T[] {
@@ -216,20 +222,12 @@
 			?.slice(1)
 			.toLowerCase()}
 	</title>
-	<script>
-		MathJax = {
-			tex: {
-				inlineMath: [
-					["$", "$"],
-					["\\(", "\\)"]
-				]
-			}
-		}
-	</script>
-	<script>
-		window.MathJax = { tex: { inlineMath: [["$", "$"]] } }
-	</script>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	{#if data.subject === "lý"}
+		<script>
+			window.MathJax = { tex: { inlineMath: [["$", "$"]] } }
+		</script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	{/if}
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex flex-col items-center">
