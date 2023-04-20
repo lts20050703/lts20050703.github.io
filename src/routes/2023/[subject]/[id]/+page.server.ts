@@ -10,18 +10,7 @@ export const load = (async ({ params }) => {
 		for (let i = 0; i < raw.length; i += 1) {
 			const line = raw[i].replace(/[ \t]+/g, " ").trim()
 			if (line === "" || line.startsWith("//")) continue
-			data.push(
-				line.startsWith("/")
-					? `<img src="${line}">`
-					: params.subject === "lý"
-					? line
-					: line
-							.replace(/_{3,}/g, "...")
-							.replace(/__(.+?)__/g, "<u>$1</u>")
-							.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
-							.replace(/_(.)/g, "<sub>$1</sub>")
-							.replace(/\^(.)/g, "<sup>$1</sup>")
-			)
+			data.push(line.startsWith("/") && line.endsWith(".png") ? `<img src="${line}">` : line)
 		}
 		const title = data.shift()
 		const azota = data.shift()
@@ -55,8 +44,8 @@ export const load = (async ({ params }) => {
 					prev = "section"
 					continue
 				}
-				if (params.subject !== "lý" && word.startsWith("$")) {
-					sections.push({ title: word.slice(1), shuffle: false, questions: [], id: section_id })
+				if (word.startsWith("📌")) {
+					sections.push({ title: word.slice(2), shuffle: false, questions: [], id: section_id })
 					section_id += 1
 					prev = "section"
 					continue
