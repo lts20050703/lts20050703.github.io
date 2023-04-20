@@ -54,13 +54,25 @@
 	}
 
 	function shuffle_section() {
-		const pre_sections: typeof data.sections = []
+		let fake_id = 0
+		const pre_sections: typeof sections = []
 
 		for (let i = 0; i < data.sections.length; i += 1) {
-			const section = structuredClone(data.sections[i])
+			const section = structuredClone(data.sections[i]) as (typeof sections)[number]
+
+			let arr: string[] | null = null
 
 			if (section.shuffle) {
 				section.questions = shuffle_array(section.questions)
+			} else {
+				arr = section.title.match(/(\(\d+\))/g)
+				console.log(arr)
+			}
+
+			for (let j = 0; j < section.questions.length; j += 1) {
+				section.questions[j].fake_id = fake_id
+				if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
+				fake_id += 1
 			}
 
 			for (let j = 0; j < data.sections[i].questions.length; j += 1) {
@@ -106,7 +118,18 @@
 		if (inputs[question] === answer) inputs[question] = -1
 	}
 
-	let sections: typeof data.sections = []
+	let sections: {
+		id: number
+		title: string
+		shuffle: boolean
+		questions: {
+			question: string
+			id: number
+			answers: { answer: string; id: number }[]
+			right?: number
+			fake_id: number
+		}[]
+	}[] = []
 
 	onMount(async () => {
 		live = localStorage.getItem("live") !== null
@@ -187,18 +210,33 @@
 			questions: { id: number; answers: number[] }[]
 		}[]
 	) {
+		let fake_id = 0
 		for (let i = 0; i < parsed.length; i += 1) {
 			const obj = parsed[i]
-			const section = structuredClone(data.sections[obj.id])
+			const section = structuredClone(data.sections[obj.id]) as (typeof sections)[number]
 			section.questions = []
+
+			let arr: string[] | null = null
+
+			if (!section.shuffle) {
+				arr = section.title.match(/(\(\d+\))/g)
+				console.log(arr)
+			}
+
 			for (let j = 0; j < obj.questions.length; j += 1) {
 				const obj2 = obj.questions[j]
 
-				let question: (typeof data.sections)[number]["questions"][number] | undefined
+				let question: (typeof sections)[number]["questions"][number] | undefined
 
 				for (let k = 0; k < data.sections[obj.id].questions.length; k += 1) {
-					if (data.sections[obj.id].questions[k].id === obj2.id)
-						question = structuredClone(data.sections[obj.id].questions[k])
+					if (data.sections[obj.id].questions[k].id === obj2.id) {
+						question = structuredClone(
+							data.sections[obj.id].questions[k]
+						) as (typeof sections)[number]["questions"][number]
+						question.fake_id = fake_id
+						if (arr) section.title = section.title.replace(arr[j], `(${fake_id})`)
+						fake_id += 1
+					}
 				}
 
 				if (!question) continue
@@ -335,7 +373,7 @@
 										Câu
 									{/if}
 
-									{i + 1}:
+									{question.fake_id + 1}:
 									<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
 										{@html line.replace("*", "")}
 									</span>
