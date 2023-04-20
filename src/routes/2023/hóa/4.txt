@@ -8,7 +8,7 @@ Câu 3: 	Cấu hình electron của Ca (Z = 20)
 A. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>4</sup> 3p<sup>4</sup> 4s<sup>2</sup> 
 B. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup>
 *C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup>
-C. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>2</sup> 4s<sup>2</sup>
+D. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 3d<sup>2</sup> 4s<sup>2</sup>
 Câu 4: 	Để khử chua cho đất có thể dùng chất gì rẻ tiền và tiện lợi nhất? 
  	A. MgO. 	B. HCl. 	*C. CaO. 	D. Na 
 Câu 5: 	Nhiệt phân hoàn toàn m gam NaHCO<sub>3</sub>; thu được Na<sub>2</sub>CO<sub>3</sub>, H<sub>2</sub>O và 3,36 lít CO<sub>2</sub> (đktc). Giá trị của m là 
@@ -39,7 +39,7 @@ Câu 14: Hỗn hợp A gồm FeO, Fe<sub>3</sub>O<sub>4</sub>, Fe<sub>2</sub>O<s
 Câu 15: Cho 22,8 gam hỗn hợp MgCO<sub>3</sub>, Na<sub>2</sub>CO<sub>3</sub>, K<sub>2</sub>CO<sub>3</sub> và CaCO<sub>3</sub> tác dụng hoàn toàn với dung dịch HCl dư thấy có 8,8 gam khí cacbonic thoát ra. Đem cô cạn dung dịch sau phản ứng thì thu được bao nhiêu gam muối khan. 
 	A. 33,8 gam. 	B. 31,6 gam.  	*C. 25,0 gam. 	D. 14,0 gam. 
 Câu 16: Cho m (g) Al phản ứng hoàn toàn với 28,8 g sắt từ oxit thu được hỗn hợp X. Cho X tác dụng với dd HCl dư thu 6,72 lít H<sub>2</sub> (đktc). Tìm m?
-A. 14.4g B. 3.6g C. *7.2g D. 10.8g
+A. 14.4g B. 3.6g *C. 7.2g D. 10.8g
 Câu 17: Số oxi hóa của Fe là +3 trong hợp chất nào? 
 	A. FeSO<sub>4</sub>.  	B. Fe(OH)<sub>2</sub>  	*C. Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>. 	D. FeCO<sub>3</sub>. 
 Câu 18: Kim loại Al tan hết trong lượng dư dung dịch nào sau đây sinh ra khí H<sub>2</sub>? 
