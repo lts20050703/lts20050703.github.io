@@ -142,14 +142,18 @@
 
 		mounted = true
 
-		const section = localStorage.getItem(`section${data.subject}${data.id}`)
+		themeChange(false)
 
-		if (section) {
-			const parsed = JSON.parse(section) as {
-				id: number
-				questions: { id: number; answers: number[] }[]
-			}[]
+		const section = localStorage.getItem(`section${data.subject}${data.id}`) ?? "[]"
+		const parsed = JSON.parse(section) as {
+			id: number
+			questions: { id: number; answers: number[] }[]
+		}[]
 
+		if (parsed.length < data.sections.length) {
+			shuffle_section()
+			save_section()
+		} else {
 			for (let i = 0; i < parsed.length; i += 1) {
 				const obj = parsed[i]
 				const section = structuredClone(data.sections[obj.id])
@@ -178,15 +182,6 @@
 				}
 				sections.push(section)
 			}
-		} else {
-			shuffle_section()
-			save_section()
-		}
-
-		themeChange(false)
-
-		if (sections.length === 0) {
-			azota = true
 		}
 
 		if (data.subject === "lý") {
@@ -212,8 +207,6 @@
 
 		return array
 	}
-
-	let azota = false
 </script>
 
 <svelte:head>
@@ -231,182 +224,151 @@
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex flex-col items-center">
-	{#if !azota}
-		<div class="fixed m-1 p-1 rounded-md bg-base-100">
-			<div class="flex flex-row gap-4">
-				<div class="flex flex-row gap-1">
-					Kiểm tra: {live ? "Bật" : "Tắt"}
-					<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
-				</div>
-				<div class="flex flex-row gap-1">
-					Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
-					<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
-				</div>
+	<div class="fixed m-1 p-1 rounded-md bg-base-100">
+		<div class="flex flex-row gap-4">
+			<div class="flex flex-row gap-1">
+				Kiểm tra: {live ? "Bật" : "Tắt"}
+				<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+			</div>
+			<div class="flex flex-row gap-1">
+				Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
+				<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
 			</div>
 		</div>
-	{/if}
+	</div>
 
-	<div class="w-full max-w-[48rem] p-4 {azota ? '' : 'mt-8'}">
-		{#if azota}
+	<div class="w-full max-w-[48rem] p-4 mt-8">
+		<div class="flex flex-row justify-center gap-1">
 			<a href="../" class="btn btn-primary">Quay lại</a>
-			<div class="text-center text-3xl font-bold my-4">
-				{data.title}
-			</div>
-			{#if data.azota}
-				<div class="flex justify-center gap-1">
-					<a
-						class="btn btn-secondary btn-lg"
-						href={data.azota}
-						target="_blank"
-						rel="noopener noreferrer"
-						>AZOTA
-					</a>
-					{#if data.word}
-						<a
-							class="btn btn-primary btn-lg"
-							href={data.word}
-							target="_blank"
-							rel="noopener noreferrer"
-							>WORD
-						</a>
-					{/if}
-				</div>
-			{:else}
-				<div class="text-3xl text-center">HIỆN TẠI CHƯA CÓ AZOTA, QUAY LẠI SAU!</div>
-			{/if}
-		{:else}
-			<div class="flex flex-row justify-center gap-1">
-				<a href="../" class="btn btn-primary">Quay lại</a>
-				<button class="btn btn-error" on:click={clear}>Xóa </button>
-				<a class="btn btn-secondary" href={data.azota} target="_blank" rel="noopener noreferrer"
-					>AZOTA</a
-				>
-			</div>
-			<div class="flex flex-row justify-center items-center gap-1 mt-1">
-				Chủ đề: <select class="select select-primary select-sm" data-choose-theme>
-					<option value="">Hệ thống</option>
-					<option value="dark">Tối</option>
-					<option value="light">Sáng</option>
-				</select>
-			</div>
-			<div class="text-center mt-4">
-				In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
-			</div>
-			<div class="text-center text-3xl font-bold my-4">
-				{data.title}
-			</div>
-			<div
-				class={filter === "wrong" || filter === "unanswered"
-					? "text-error"
-					: filter === "marked"
-					? "text-warning"
-					: ""}
+			<button class="btn btn-error" on:click={clear}>Xóa </button>
+			<a class="btn btn-secondary" href={data.azota} target="_blank" rel="noopener noreferrer"
+				>AZOTA</a
 			>
-				Lọc:
-				<select class="select select-primary select-sm" bind:value={filter}>
-					<option class="text-base-content" value="">Hiện tất cả</option>
-					<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
-					<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
-					<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
-				</select>
-			</div>
-			{#each sections as section}
-				<br />
-				{#if section.title}
-					<div>{@html section.title}</div>
-				{/if}
-				{#each section.questions as question, i}
-					<div
-						class={filter === "wrong"
-							? inputs[question.id] !== -1 && inputs[question.id] !== question.right
-								? ""
-								: "hidden"
-							: filter === "unanswered"
-							? inputs[question.id] !== -1
-								? "hidden"
-								: ""
-							: filter === "marked"
-							? marked[question.id]
-								? ""
-								: "hidden"
-							: ""}
-					>
-						<br />
-						<div class={marked[question.id] ? "text-warning" : ""}>
-							<input
-								type="checkbox"
-								class="toggle toggle-warning"
-								bind:checked={marked[question.id]}
-							/>
-							{#each question.question.split("<br>") as line, j}
-								{#if j === 0}
-									{#if data.subject === "anh"}
-										Question
-									{:else}
-										Câu
-									{/if}
-
-									{i + 1}:
-									<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-										{@html line.replace("*", "")}
-									</span>
+		</div>
+		<div class="flex flex-row justify-center items-center gap-1 mt-1">
+			Chủ đề: <select class="select select-primary select-sm" data-choose-theme>
+				<option value="">Hệ thống</option>
+				<option value="dark">Tối</option>
+				<option value="light">Sáng</option>
+			</select>
+		</div>
+		<div class="text-center mt-4">
+			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
+		</div>
+		<div class="text-center text-3xl font-bold my-4">
+			{data.title}
+		</div>
+		<div
+			class={filter === "wrong" || filter === "unanswered"
+				? "text-error"
+				: filter === "marked"
+				? "text-warning"
+				: ""}
+		>
+			Lọc:
+			<select class="select select-primary select-sm" bind:value={filter}>
+				<option class="text-base-content" value="">Hiện tất cả</option>
+				<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
+				<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
+				<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
+			</select>
+		</div>
+		{#each sections as section}
+			<br />
+			{#if section.title}
+				<div>{@html section.title}</div>
+			{/if}
+			{#each section.questions as question, i}
+				<div
+					class={filter === "wrong"
+						? inputs[question.id] !== -1 && inputs[question.id] !== question.right
+							? ""
+							: "hidden"
+						: filter === "unanswered"
+						? inputs[question.id] !== -1
+							? "hidden"
+							: ""
+						: filter === "marked"
+						? marked[question.id]
+							? ""
+							: "hidden"
+						: ""}
+				>
+					<br />
+					<div class={marked[question.id] ? "text-warning" : ""}>
+						<input
+							type="checkbox"
+							class="toggle toggle-warning"
+							bind:checked={marked[question.id]}
+						/>
+						{#each question.question.split("<br>") as line, j}
+							{#if j === 0}
+								{#if data.subject === "anh"}
+									Question
 								{:else}
-									<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
-										{#if line.trim().startsWith("<table>")}
-											<table class="px-4 border-spacing-x-4 border-spacing-y-2 py-2">
-												{@html line.trim().slice(7, -8)}
-											</table>
-										{:else}
-											{@html line.replace("*", "")}
-										{/if}
-									</div>
+									Câu
 								{/if}
-							{/each}
-						</div>
-						{#each question.answers as answer, j}
-							<div
-								class="flex flex-row gap-4 m-3 items-center {show_answer
-									? answer.id === question.right
-										? 'text-success'
-										: ''
-									: ''} {(live || show_answer) && inputs[question.id] === answer.id
-									? answer.id === question.right
-										? 'text-success'
-										: 'text-error'
-									: ''}"
-							>
-								<input
-									on:click={() => uncheck(question.id, answer.id)}
-									bind:group={inputs[question.id]}
-									class="input input-primary input-xs"
-									type="radio"
-									name={`${question.id}`}
-									value={answer.id}
-									id={`${question.id}${answer.id}`}
-								/>
-								<label for={`${question.id}${answer.id}`}
-									>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
-								>
-							</div>
+
+								{i + 1}:
+								<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+									{@html line.replace("*", "")}
+								</span>
+							{:else}
+								<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
+									{#if line.trim().startsWith("<table>")}
+										<table class="px-4 border-spacing-x-4 border-spacing-y-2 py-2">
+											{@html line.trim().slice(7, -8)}
+										</table>
+									{:else}
+										{@html line.replace("*", "")}
+									{/if}
+								</div>
+							{/if}
 						{/each}
 					</div>
-				{/each}
+					{#each question.answers as answer, j}
+						<div
+							class="flex flex-row gap-4 m-3 items-center {show_answer
+								? answer.id === question.right
+									? 'text-success'
+									: ''
+								: ''} {(live || show_answer) && inputs[question.id] === answer.id
+								? answer.id === question.right
+									? 'text-success'
+									: 'text-error'
+								: ''}"
+						>
+							<input
+								on:click={() => uncheck(question.id, answer.id)}
+								bind:group={inputs[question.id]}
+								class="input input-primary input-xs"
+								type="radio"
+								name={`${question.id}`}
+								value={answer.id}
+								id={`${question.id}${answer.id}`}
+							/>
+							<label for={`${question.id}${answer.id}`}
+								>{["A", "B", "C", "D"][j]}. {@html answer.answer}</label
+							>
+						</div>
+					{/each}
+				</div>
 			{/each}
-			<div
-				class="flex {filter === 'wrong' || filter === 'unanswered'
-					? 'text-error'
-					: filter === 'marked'
-					? 'text-warning'
-					: ''}"
-			>
-				Lọc:
-				<select class="select select-primary select-sm" bind:value={filter}>
-					<option class="text-base-content" value="">Hiện tất cả</option>
-					<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
-					<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
-					<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
-				</select>
-			</div>
-		{/if}
+		{/each}
+		<div
+			class="flex {filter === 'wrong' || filter === 'unanswered'
+				? 'text-error'
+				: filter === 'marked'
+				? 'text-warning'
+				: ''}"
+		>
+			Lọc:
+			<select class="select select-primary select-sm" bind:value={filter}>
+				<option class="text-base-content" value="">Hiện tất cả</option>
+				<option class="text-error" value="wrong">Chỉ hiện câu sai</option>
+				<option class="text-error" value="unanswered">Chỉ hiện câu chưa làm</option>
+				<option class="text-warning" value="marked">Chỉ hiện câu đã đánh dấu xem lại</option>
+			</select>
+		</div>
 	</div>
 </div>
