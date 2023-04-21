@@ -19,6 +19,8 @@
 
 		save_section()
 
+		first = structuredClone(inputs)
+
 		if (data.subject === "lý") {
 			location.reload()
 		}
