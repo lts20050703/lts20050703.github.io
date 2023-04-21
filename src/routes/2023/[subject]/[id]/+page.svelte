@@ -13,7 +13,19 @@
 	let live = false
 
 	function clear() {
+		let length = 0
+
+		for (let i = 0; i < data.sections.length; i += 1) {
+			length += data.sections[i].questions.length
+		}
+
 		inputs = []
+		first = []
+
+		for (let i = 0; i < length; i += 1) {
+			inputs.push(-1)
+			first.push(-1)
+		}
 
 		shuffle_section()
 
