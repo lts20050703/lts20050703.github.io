@@ -266,6 +266,39 @@
 			sections.push(section)
 		}
 	}
+
+	function keep_section(
+		filter: "" | "wrong" | "unanswered" | "marked",
+		section: (typeof sections)[number]
+	) {
+		switch (filter) {
+			case "":
+				return true
+			case "wrong":
+				for (let i = 0; i < section.questions.length; i += 1) {
+					const question = section.questions[i]
+					if (inputs[question.id] === -1 || inputs[question.id] === question.right) continue
+					return true
+				}
+				return false
+
+			case "unanswered":
+				for (let i = 0; i < section.questions.length; i += 1) {
+					const question = section.questions[i]
+					if (inputs[question.id] !== -1) continue
+					return true
+				}
+				return false
+
+			case "marked":
+				for (let i = 0; i < section.questions.length; i += 1) {
+					const question = section.questions[i]
+					if (!marked[question.id]) continue
+					return true
+				}
+				return false
+		}
+	}
 </script>
 
 <svelte:head>
@@ -333,23 +366,7 @@
 			</select>
 		</div>
 		{#each sections as section}
-			<div
-				class={filter === "wrong"
-					? section.questions.some(
-							(question) => inputs[question.id] !== -1 && inputs[question.id] !== question.right
-					  )
-						? ""
-						: "hidden"
-					: filter === "unanswered"
-					? section.questions.some((question) => inputs[question.id] === -1)
-						? ""
-						: "hidden"
-					: filter === "marked"
-					? section.questions.some((question) => marked[question.id])
-						? ""
-						: "hidden"
-					: ""}
-			>
+			<div class={keep_section(filter, section) ? "" : "hidden"}>
 				<br />
 				{#if section.title}
 					<div>{@html section.title}</div>
