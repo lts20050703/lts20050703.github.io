@@ -20,18 +20,14 @@
 		}
 
 		inputs = []
-		first = []
 
 		for (let i = 0; i < length; i += 1) {
 			inputs.push(-1)
-			first.push(-1)
 		}
 
 		shuffle_section()
 
 		save_section()
-
-		first = structuredClone(inputs)
 
 		if (data.subject === "lý") {
 			location.reload()
@@ -41,8 +37,6 @@
 	let mounted = false
 
 	let marked: boolean[] = []
-
-	let first: number[] = []
 
 	function save_section() {
 		const mini_sections: {
@@ -71,7 +65,7 @@
 		const pre_sections: typeof sections = []
 
 		for (let i = 0; i < data.sections.length; i += 1) {
-			const section = structuredClone(data.sections[i]) as (typeof sections)[number]
+			const section = data.sections[i] as (typeof sections)[number]
 
 			if (section.shuffle) section.questions = shuffle_array(section.questions)
 
@@ -112,8 +106,7 @@
 					}
 				}
 
-				if (first[id] === -1 && input !== -1 && input !== right) {
-					first[id] = input
+				if (input !== -1 && input !== right) {
 					marked[id] = true
 				}
 			}
@@ -162,8 +155,6 @@
 		for (let i = 0; i < stored.length; i += 1) {
 			inputs.push(parseInt(stored[i]))
 		}
-
-		first = structuredClone(inputs)
 
 		let stored_mark = (localStorage.getItem(`marked${data.subject}${data.id}`) ?? "").split(",")
 
@@ -226,8 +217,13 @@
 		let fake_id = 0
 		for (let i = 0; i < parsed.length; i += 1) {
 			const obj = parsed[i]
-			const section = structuredClone(data.sections[obj.id]) as (typeof sections)[number]
-			section.questions = []
+			//
+			const section: (typeof sections)[number] = {
+				id: obj.id,
+				shuffle: data.sections[obj.id].shuffle,
+				title: data.sections[obj.id].title,
+				questions: []
+			}
 
 			let arr: string[] | null = null
 
@@ -242,9 +238,9 @@
 
 				for (let k = 0; k < data.sections[obj.id].questions.length; k += 1) {
 					if (data.sections[obj.id].questions[k].id === obj2.id) {
-						question = structuredClone(
-							data.sections[obj.id].questions[k]
-						) as (typeof sections)[number]["questions"][number]
+						question = data.sections[obj.id].questions[
+							k
+						] as (typeof sections)[number]["questions"][number]
 						question.fake_id = fake_id
 						if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
 						fake_id += 1
@@ -253,7 +249,7 @@
 
 				if (!question) continue
 
-				const answers = structuredClone(question.answers)
+				const answers = question.answers
 
 				question.answers = []
 				for (let k = 0; k < obj2.answers.length; k += 1) {
