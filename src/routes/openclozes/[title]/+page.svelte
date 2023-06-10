@@ -52,9 +52,7 @@
 </script>
 
 <svelte:head>
-	<title
-		>In Real Xperience / Openclozes {v} / {data.title[0] + data.title.slice(1).toLowerCase()}</title
-	>
+	<title>LTS20050703 / Openclozes {v} / {data.title[0] + data.title.slice(1).toLowerCase()}</title>
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex flex-col items-center">
@@ -84,7 +82,7 @@
 			</select>
 		</div>
 
-		<div class="text-center mt-4">In Real Xperience / Openclozes {v}</div>
+		<div class="text-center mt-4">LTS20050703 / Openclozes {v}</div>
 		<div class="text-center text-3xl font-bold my-4">
 			{data.title[0] + data.title.slice(1).toLowerCase()}
 		</div>

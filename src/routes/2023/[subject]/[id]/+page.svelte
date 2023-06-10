@@ -299,7 +299,7 @@
 
 <svelte:head>
 	<title>
-		In Real Xperience / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)} / {data.title?.[0].toUpperCase()}{data.title
+		LTS20050703 / 2023 / {data.subject[0].toUpperCase() + data.subject.slice(1)} / {data.title?.[0].toUpperCase()}{data.title
 			?.slice(1)
 			.toLowerCase()}
 	</title>
@@ -341,7 +341,7 @@
 			</select>
 		</div>
 		<div class="text-center mt-4">
-			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
+			LTS20050703 / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
 		</div>
 		<div class="text-center text-3xl font-bold my-4">
 			{data.title}

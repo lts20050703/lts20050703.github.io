@@ -8,12 +8,12 @@
 </script>
 
 <svelte:head>
-	<title>In Real Xperience / Openclozes {v}</title>
+	<title>LTS20050703 / Openclozes {v}</title>
 </svelte:head>
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col p-4">
 	<div class=" leading-loose w-full">
-		<div class="text-center mt-16 mb-5">In Real Xperience / Openclozes {v}</div>
+		<div class="text-center mt-16 mb-5">LTS20050703 / Openclozes {v}</div>
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4">
 			<a href="./an-old-man-looked-back-on-his-life" class="btn btn-primary flex-1"
 				>AN OLD MAN LOOKED BACK ON HIS LIFE</a

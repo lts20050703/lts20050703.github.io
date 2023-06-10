@@ -12,14 +12,14 @@
 
 <svelte:head
 	><title>
-		In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}</title
+		LTS20050703 / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}</title
 	></svelte:head
 >
 
 <div class="absolute top-0 left-0 right-0 flex items-center flex-col p-4">
 	<div class=" leading-loose w-full">
 		<div class="text-center mb-5 mt-16">
-			In Real Xperience / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
+			LTS20050703 / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
 		</div>
 		{#if data.subject === "sinh"}
 			<div class="flex justify-center mb-4">
