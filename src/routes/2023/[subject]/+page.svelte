@@ -23,7 +23,7 @@
 		</div>
 		{#if data.subject === "sinh"}
 			<div class="flex justify-center mb-4">
-				<img class="max-w-lg min-w-0" src="/2023/sinh.jpg" alt="" />
+				<img class="max-w-lg min-w-0" src="/img/2023/sinh.jpg" alt="" />
 			</div>
 		{/if}
 		<div class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

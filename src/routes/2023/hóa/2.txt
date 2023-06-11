@@ -28,7 +28,7 @@ Cô cạn dd sau phản ứng thu được 23,6 gam muối khan. Tìm m?
 Câu 13: Hòa tan hoàn toàn 12 gam hỗn hợp muối khan FeSO<sub>4</sub> và Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> thu được dd A; dung dịch A có thể phản ứng hoàn toàn với 2,212 gam KMnO<sub>4</sub> trong môi trường H<sub>2</sub>SO<sub>4</sub>. Thành phần % (m) của Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> gần nhất với giá trị: 
 	A. 22,0. 	B. 10,0. 	*C. 12,0. 	D. 7,6. 
 Câu 14: Cho từ từ dung dịch HCl vào dung dịch chứa hỗn hợp KOH và KAlO<sub>2</sub>, sự biến thiên lượng kết tủa Al(OH)<sub>3</sub> tạo thành trong thí nghiệm được biểu diễn trên đồ thị sau: 
-/2023/hoa214.png
+/img/2023/hoa214.png
 Dựa vào đồ thị trên. Phát biểu nào đúng. 
 A. Số mol KOH trong dung dịch là (4a+b) mol. 
 B. Sau khi kết tủa tan hết, trong dung dịch có 3 muối. 

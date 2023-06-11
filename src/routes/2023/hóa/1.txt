@@ -3,7 +3,7 @@ https://azota.vn/de-thi/gew5ul
 Câu 1. Chất nào sau đây tan hết trong dung dịch NaOH loãng, dư? 
  	*A. Al<sub>2</sub>O<sub>3</sub>. 	B. MgO. 	C. FeO. 	D. Fe<sub>2</sub>O<sub>3</sub>. 
 Câu 2. Hình vẽ bên dưới minh họa cho sự khử oxit kim loại bởi chất khử là H<sub>2</sub>. X là oxit nào phù hợp cho thí nghiệm đó?  
-/2023/hoa12.png
+/img/2023/hoa12.png
   	*A. CuO. 	B. K<sub>2</sub>O. 	C. Al<sub>2</sub>O<sub>3</sub>. 	D. CaO. 
  Câu 3. Phèn chua có công thức nào? 
   	A. (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>.Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>.24H<sub>2</sub>O. 	*B. K<sub>2</sub>SO<sub>4</sub>.Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>.24H<sub>2</sub>O. 
@@ -63,7 +63,7 @@ Câu 26. Khi nung hỗn hợp các chất Fe(NO<sub>3</sub>)<sub>2</sub>, Fe(OH)
 Câu 27. Hợp chất nào sau đây là thành phần chính của thạch cao? 
 	A. Na<sub>2</sub>CO<sub>3</sub>.10H<sub>2</sub>O. 	*B. CaSO<sub>4</sub>.2H<sub>2</sub>O. 	 C. CuSO<sub>4</sub>.5H<sub>2</sub>O. 	 D. CaCl<sub>2</sub>.6H<sub>2</sub>O. 
 Câu 28. Cho từ từ chất X vào dung dịch Y, sự biến thiên lượng kết tủa Z tạo thành trong thí nghiệm được biểu diễn trên đồ thị sau: 
-/2023/hoa128.png
+/img/2023/hoa128.png
 Thí nghiệm nào sau đây ứng với thí nghiệm trên? 
 A. Cho từ từ đến dư dung dịch NaOH vào dung dịch hỗn hợp gồm HCl và Zn(NO<sub>3</sub>)<sub>2</sub>. 
 B. Cho từ từ đến dư dung dịch HCl vào dung dịch hỗn hợp gồm NaOH và Na<sub>2</sub>ZnO<sub>2</sub>. 
