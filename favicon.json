@@ -1,0 +1,67 @@
+{
+	"masterPicture": "./favicon.png",
+	"iconsPath": "/",
+	"design": {
+		"ios": {
+			"pictureAspect": "noChange",
+			"assets": {
+				"ios6AndPriorIcons": true,
+				"ios7AndLaterIcons": true,
+				"precomposedIcons": true,
+				"declareOnlyDefaultIcon": true
+			},
+			"appName": "LTS20050703"
+		},
+		"desktopBrowser": {
+			"design": "raw"
+		},
+		"windows": {
+			"pictureAspect": "noChange",
+			"backgroundColor": "#e6a720",
+			"onConflict": "override",
+			"assets": {
+				"windows80Ie10Tile": true,
+				"windows10Ie11EdgeTiles": {
+					"small": true,
+					"medium": true,
+					"big": true,
+					"rectangle": true
+				}
+			},
+			"appName": "LTS20050703"
+		},
+		"androidChrome": {
+			"pictureAspect": "noChange",
+			"themeColor": "#e6a720",
+			"manifest": {
+				"name": "LTS20050703",
+				"startUrl": "https://lts20050703.codeberg.page",
+				"display": "standalone",
+				"orientation": "notSet",
+				"onConflict": "override",
+				"declared": true
+			},
+			"assets": {
+				"legacyIcon": true,
+				"lowResolutionIcons": true
+			}
+		},
+		"safariPinnedTab": {
+			"pictureAspect": "blackAndWhite",
+			"threshold": 50,
+			"themeColor": "#e6a720"
+		}
+	},
+	"settings": {
+		"compression": 5,
+		"scalingAlgorithm": "Spline",
+		"errorOnImageTooSmall": false,
+		"readmeFile": true,
+		"htmlCodeFile": true,
+		"usePathAsIs": false
+	},
+	"versioning": {
+		"paramName": "v",
+		"paramValue": "2023.06.11.2"
+	}
+}
