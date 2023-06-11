@@ -44,10 +44,10 @@
 <div
 	class="flex flex-col items-center mt-4 gap-1 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 >
-	<img src="./bg.jpg" class="h-32" alt="" />
+	<img src="./img/bg.jpg" class="h-32" alt="" />
 
 	<div class="flex flex-row items-center gap-1">
-		<img src="./favicon.png" class="h-16" alt="" />
+		<img src="./android-chrome-512x512.png" class="h-16" alt="" />
 		<div class="font-bold">LTS20050703</div>
 	</div>
 
