@@ -7,7 +7,7 @@
 	})
 
 	function discord() {
-		navigator.clipboard.writeText("@lts20050703#2195")
+		navigator.clipboard.writeText("@lts20050703")
 		alert("Copied discord username to clipboard!")
 	}
 
@@ -208,7 +208,7 @@
 		on:click={discord}
 	>
 		<img src="./img/discord.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Discord @lts20050703#2195 (Click to copy)</div></button
+		<div class="flex-1">Discord @lts20050703 (Click to copy)</div></button
 	>
 
 	<a
