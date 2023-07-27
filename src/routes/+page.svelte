@@ -56,11 +56,21 @@
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		href="https://codeberg.org/lts20050703/e5y"
+		href="https://codeberg.org/lts20050703/entropy-qualifier"
 		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 	>
 		<img src="./img/e5y.png" class="h-8 lg:h-12" alt="" />
-		<div class="flex-1">Entropy</div>
+		<div class="flex-1">WIP: Entropy Qualifier</div>
+	</a>
+
+	<a
+		target="_blank"
+		rel="noopener noreferrer"
+		href="https://codeberg.org/lts20050703/entropy-final"
+		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+	>
+		<img src="./img/e5y.png" class="h-8 lg:h-12" alt="" />
+		<div class="flex-1">Entropy Final</div>
 	</a>
 
 	<a
