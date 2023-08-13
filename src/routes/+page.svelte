@@ -1,38 +1,91 @@
 <script lang="ts">
-	import v from "$lib/v"
 	import { onMount } from "svelte"
 	import { themeChange } from "theme-change"
 	onMount(() => {
 		themeChange(false)
 	})
-
-	function discord() {
-		navigator.clipboard.writeText("@lts20050703")
-		alert("Copied discord username to clipboard!")
-	}
-
-	function element() {
-		navigator.clipboard.writeText("@lts20050703:matrix.org")
-		alert("Copied element username to clipboard!")
-	}
-
-	function revolt() {
-		navigator.clipboard.writeText("@lts20050703")
-		alert("Copied revolt username to clipboard!")
-	}
-
-	function minecraft() {
-		navigator.clipboard.writeText("@lts20050703")
-		alert("Copied minecraft username to clipboard!")
-	}
 </script>
 
 <svelte:head>
-	<title>LTS20050703 {v}</title>
+	<title>LTS20050703</title>
 </svelte:head>
 
-<div class="fixed top-0 left-0 right-0 flex flex-row justify-center">
-	<div class="m-1 p-1 rounded-md bg-base-100">
+<div
+	class="my-4 flex flex-col items-center gap-1 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+>
+	<img src="/img/bg.jpg" class="h-32" alt="" />
+
+	<div class="flex flex-row items-center gap-1">
+		<img src="/android-chrome-512x512.png" class="h-16" alt="" />
+		<div class="font-bold">LTS20050703</div>
+	</div>
+
+	<div class="tweet-embed">
+		<div class="timeline-item">
+			<div class="tweet-body">
+				<div>
+					<div class="tweet-header">
+						<a class="tweet-avatar link-hover" href="https://nitter.net/fireship_dev"
+							><img
+								class="round avatar"
+								src="https://nitter.net/pic/profile_images%2F1436819851566219267%2FHEffZjvP_bigger.jpg"
+								alt=""
+							/></a
+						>
+						<div class="tweet-name-row">
+							<div class="fullname-and-username">
+								<a
+									class="fullname link-hover"
+									href="https://nitter.net/fireship_dev"
+									title="Fireship"
+									>Fireship
+								</a>
+								<a
+									class="username link-hover"
+									href="https://nitter.net/fireship_dev"
+									title="@fireship_dev">@fireship_dev</a
+								>
+							</div>
+							<span class="tweet-date link-hover"
+								><a
+									href="https://nitter.net/fireship_dev/status/1567936669529305088#m"
+									title="Sep 8, 2022 · 6:03 PM UTC">8 Sep 2022</a
+								></span
+							>
+						</div>
+					</div>
+				</div>
+				<pre class="tweet-content media-body" dir="auto">Be careful using any of these tools:
+
+- TypeScript 
+- Tailwind 
+- Svelte 
+
+They make it really hard to go back to whatever thing you were using before.</pre>
+				<p class="tweet-published text-gray-500">Sep 8, 2022 · 6:03 PM UTC</p>
+			</div>
+		</div>
+	</div>
+
+	<a
+		href="/projects"
+		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+		>Projects</a
+	>
+	<a
+		href="/gaming"
+		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+		>Gaming™</a
+	>
+	<a
+		href="/social"
+		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+		>Social accounts</a
+	>
+</div>
+
+<div class="fixed left-0 right-0 top-0 flex flex-row justify-center">
+	<div class="m-1 rounded-md bg-base-100 p-1">
 		Theme: <select class="select select-primary select-sm" data-choose-theme>
 			<option value="">System</option>
 			<option value="dark">Dark</option>
@@ -41,204 +94,131 @@
 	</div>
 </div>
 
-<div
-	class="flex flex-col items-center mt-4 gap-1 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
->
-	<img src="./img/bg.jpg" class="h-32" alt="" />
+<style>
+	.media-body {
+		flex: 1;
+		padding: 0;
+		white-space: pre-wrap;
+	}
 
-	<div class="flex flex-row items-center gap-1">
-		<img src="./android-chrome-512x512.png" class="h-16" alt="" />
-		<div class="font-bold">LTS20050703</div>
-	</div>
+	.tweet-body {
+		flex: 1;
+		min-width: 0;
+		margin-left: 58px;
+		pointer-events: none;
+	}
 
-	<div class="font-bold mb-4">Projects</div>
+	.tweet-content {
+		font-family: sans-serif;
+		line-height: 1.3em;
+		pointer-events: all;
+		display: inline;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://codeberg.org/lts20050703/entropy-qualifier"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-	>
-		<img src="./img/e5y.png" class="h-8 lg:h-12" alt="" />
-		<div class="flex-1">WIP: Entropy Qualifier</div>
-	</a>
+	.tweet-header {
+		padding: 0;
+		vertical-align: bottom;
+		flex-basis: 100%;
+		margin-bottom: 0.2em;
+	}
+	.tweet-header a {
+		display: inline-block;
+		word-break: break-all;
+		max-width: 100%;
+		pointer-events: all;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://codeberg.org/lts20050703/entropy-final"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-	>
-		<img src="./img/e5y.png" class="h-8 lg:h-12" alt="" />
-		<div class="flex-1">Entropy Final</div>
-	</a>
+	.tweet-name-row {
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://wist.lts20050703.repl.co"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/wist.png" class="h-8 lg:h-12" alt="" />
-		<div class="flex-1">WIST</div>
-	</a>
+	.fullname-and-username {
+		display: flex;
+		min-width: 0;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="./2023"
-		class="btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		>2023</a
-	>
+	.fullname {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		flex-shrink: 2;
+		max-width: 80%;
+		font-size: 14px;
+		font-weight: 700;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="./openclozes"
-		class="btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		>Openclozes</a
-	>
+	.username {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		min-width: 1.6em;
+		margin-left: 0.4em;
+		word-wrap: normal;
 
-	<div class="font-bold my-4">Gaming™</div>
+		font-size: 14px;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://ch.tetr.io/u/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/tetr.io.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">TETR.IO @LTS20050703</div>
-	</a>
+	.tweet-date {
+		display: flex;
+		flex-shrink: 0;
+		margin-left: 4px;
 
-	<button
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={minecraft}
-		><img src="./img/minecraft.webp" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Minecraft @lts20050703 (Click to copy)</div>
-	</button>
+		font-size: 14px;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://steamcommunity.com/id/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/steam.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">STEAM @LTS20050703</div>
-	</a>
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://lts20050703.itch.io"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/itch.io.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Itch.io @lts20050703</div>
-	</a>
+	.tweet-published {
+		margin: 0;
+		margin-top: 5px;
+		pointer-events: all;
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://speedrun.com/user/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/speedrun.com.png" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">SPEEDRUN.COM @lts20050703</div>
-	</a>
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://splits.io/users/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/splits.io.png" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Splits.io @lts20050703</div>
-	</a>
+		font-size: 14px;
+	}
 
-	<div class="font-bold my-4">Social accounts</div>
+	.tweet-avatar {
+		display: contents;
+	}
+	.tweet-avatar img {
+		float: left;
+		margin-top: 3px;
+		margin-left: -58px;
+		width: 48px;
+		height: 48px;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://cohost.org/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/cohost.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">cohost! @lts20050703</div>
-	</a>
-	<a
-		target="_blank"
-		rel="noopener noreferrer me"
-		href="https://mastodon.social/@lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/mastodon.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Mastodon @lts20050703@mastodon.social</div>
-	</a>
+	.avatar.round {
+		border-radius: 50%;
+		user-select: none;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://youtube.com/@lts0703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/youtube.png" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">YouTube @lts0703</div>
-	</a>
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://twitch.com/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/twitch.png" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Twitch @lts20050703</div>
-	</a>
+	.tweet-embed {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+	.tweet-embed .tweet-content {
+		font-size: 18px;
+	}
+	.tweet-embed .tweet-body {
+		display: flex;
+		flex-direction: column;
+		max-height: calc(100vh - 0.75em * 2);
+	}
+	.tweet-embed .card-image img {
+		height: auto;
+	}
+	.tweet-embed .avatar {
+		position: absolute;
+	}
 
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://codeberg.org/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/codeberg.svg" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">CodeBerg @lts20050703</div>
-	</a>
-
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://github.com/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/github.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">GitHub @lts20050703</div></a
-	>
-
-	<a
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://wakatime.com/@lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/wakatime.png" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Wakatime @lts20050703</div>
-	</a>
-
-	<button
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={discord}
-	>
-		<img src="./img/discord.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Discord @lts20050703 (Click to copy)</div></button
-	>
-
-	<a
-		href="https://www.guilded.gg/u/lts20050703"
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		><img src="./img/guilded.png" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Guilded @lts20050703</div></a
-	>
-
-	<button
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={revolt}
-		><img src="./img/revolt.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Revolt @lts20050703 (Click to copy)</div></button
-	>
-
-	<button
-		class="flex flex-row items-center gap-1 btn lg:btn-lg btn-primary sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={element}
-		><img src="./img/element.ico" alt="" class="h-8 lg:h-12" />
-		<div class="flex-1">Element @lts20050703:matrix.org (Click to copy)</div></button
-	>
-</div>
+	.timeline-item {
+		overflow-wrap: break-word;
+		border-left-width: 0;
+		min-width: 0;
+		padding: 0.75em;
+		display: flex;
+		position: relative;
+	}
+</style>

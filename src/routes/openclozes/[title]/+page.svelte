@@ -55,26 +55,22 @@
 	<title>LTS20050703 / Openclozes {v} / {data.title[0] + data.title.slice(1).toLowerCase()}</title>
 </svelte:head>
 
-<div class="absolute top-0 left-0 right-0 flex flex-col items-center">
-	<div class="fixed m-1 p-1 rounded-md bg-base-100">
-		<div class="flex flex-row gap-4">
-			<div class="flex flex-row gap-1">
+<div class="absolute left-0 right-0 top-0 flex flex-col items-center">
+	<div class="fixed m-1 rounded-md bg-base-100 p-1">
+		<div class="flex flex-row items-center gap-4">
+			<div class="flex flex-row items-center gap-1">
 				Check: {live ? "On" : "Off"}
 				<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
 			</div>
-			<div class="flex flex-row gap-1">
+			<div class="flex flex-row items-center gap-1">
 				Answers: {show_answer ? "Show" : "Hide"}
 				<input type="checkbox" class="toggle toggle-primary" bind:checked={show_answer} />
 			</div>
 		</div>
 	</div>
 
-	<div class=" w-full max-w-[48rem] p-4 mt-8">
-		<div class="flex flex-row justify-center gap-1">
-			<a href="../" class="btn btn-primary">Back</a>
-			<button class="btn btn-error" on:click={clear}>Clear </button>
-		</div>
-		<div class="flex flex-row justify-center items-center gap-1 mt-1">
+	<div class="mt-6 w-full max-w-[48rem] p-4">
+		<div class="mb-2 flex flex-row items-center justify-center gap-2">
 			Theme: <select class="select select-primary select-sm" data-choose-theme>
 				<option value="">System</option>
 				<option value="dark">Dark</option>
@@ -82,8 +78,12 @@
 			</select>
 		</div>
 
-		<div class="text-center mt-4">LTS20050703 / Openclozes {v}</div>
-		<div class="text-center text-3xl font-bold my-4">
+		<div class="flex flex-row justify-center gap-1">
+			<a href="../" class="btn btn-primary">Back</a>
+			<button class="btn btn-error" on:click={clear}>Clear </button>
+		</div>
+
+		<div class="my-4 text-center text-3xl font-bold">
 			{data.title[0] + data.title.slice(1).toLowerCase()}
 		</div>
 		<div class="leading-loose">
@@ -99,7 +99,7 @@
 				{:else if show_answer}
 					<input
 						type="text"
-						class="input input-info h-7 mx-1 p-1"
+						class="input input-info mx-1 h-7 p-1"
 						size={answers[(i - 1) / 2].length}
 						value={answers[(i - 1) / 2]}
 						readonly
@@ -107,7 +107,7 @@
 				{:else}
 					<input
 						type="text"
-						class="input h-7 mx-1 p-1 lowercase {inputs[(i - 1) / 2] === '' || !live
+						class="input mx-1 h-7 p-1 lowercase {inputs[(i - 1) / 2] === '' || !live
 							? 'input-primary'
 							: inputs[(i - 1) / 2].toLowerCase().split(/ +/).join(' ').trim() ===
 							  answers[(i - 1) / 2]

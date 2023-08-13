@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte"
 	import type { PageData } from "./$types"
-	import v from "$lib/v"
 	import { themeChange } from "theme-change"
 
 	export let data: PageData
@@ -311,8 +310,8 @@
 	{/if}
 </svelte:head>
 
-<div class="absolute top-0 left-0 right-0 flex flex-col items-center">
-	<div class="fixed m-1 p-1 rounded-md bg-base-100">
+<div class="absolute left-0 right-0 top-0 flex flex-col items-center">
+	<div class="fixed m-1 rounded-md bg-base-100 p-1">
 		<div class="flex flex-row gap-4">
 			<div class="flex flex-row gap-1">
 				Kiểm tra: {live ? "Bật" : "Tắt"}
@@ -325,7 +324,15 @@
 		</div>
 	</div>
 
-	<div class="w-full max-w-[48rem] p-4 mt-8">
+	<div class="mt-6 w-full max-w-[48rem] p-4">
+		<div class="mb-2 flex flex-row items-center justify-center gap-1">
+			Chủ đề: <select class="select select-primary select-sm" data-choose-theme>
+				<option value="">Hệ thống</option>
+				<option value="dark">Tối</option>
+				<option value="light">Sáng</option>
+			</select>
+		</div>
+
 		<div class="flex flex-row justify-center gap-1">
 			<a href="../" class="btn btn-primary">Quay lại</a>
 			<button class="btn btn-error" on:click={clear}>Xóa </button>
@@ -333,25 +340,16 @@
 				>AZOTA</a
 			>
 		</div>
-		<div class="flex flex-row justify-center items-center gap-1 mt-1">
-			Chủ đề: <select class="select select-primary select-sm" data-choose-theme>
-				<option value="">Hệ thống</option>
-				<option value="dark">Tối</option>
-				<option value="light">Sáng</option>
-			</select>
-		</div>
-		<div class="text-center mt-4">
-			LTS20050703 / 2023 {v} / {data.subject[0].toUpperCase() + data.subject.slice(1)}
-		</div>
-		<div class="text-center text-3xl font-bold my-4">
+
+		<div class="my-4 text-center text-3xl font-bold">
 			{data.title}
 		</div>
 		<div
-			class={filter === "wrong" || filter === "unanswered"
-				? "text-error"
-				: filter === "marked"
-				? "text-warning"
-				: ""}
+			class="flex flex-row items-center gap-2 {filter === 'wrong' || filter === 'unanswered'
+				? 'text-error'
+				: filter === 'marked'
+				? 'text-warning'
+				: ''}"
 		>
 			Lọc:
 			<select class="select select-primary select-sm" bind:value={filter}>
@@ -367,7 +365,7 @@
 				{#if section.title}
 					<div>{@html section.title}</div>
 				{/if}
-				{#each section.questions as question, i}
+				{#each section.questions as question}
 					<div
 						class={filter === "wrong"
 							? inputs[question.id] !== -1 && inputs[question.id] !== question.right
@@ -406,7 +404,7 @@
 									<div class={line.startsWith("*") && show_answer ? "text-success" : ""}>
 										{#if line.trim().startsWith("<table>")}
 											<table
-												class="px-4 border-spacing-x-4 py-2 border-spacing-y-2 text-center border-separate"
+												class="border-separate border-spacing-x-4 border-spacing-y-2 px-4 py-2 text-center"
 											>
 												{@html line.trim().slice(7, -8)}
 											</table>
@@ -419,7 +417,7 @@
 						</div>
 						{#each question.answers as answer, j}
 							<div
-								class="flex flex-row gap-4 m-3 items-center {show_answer
+								class="m-3 flex flex-row items-center gap-4 {show_answer
 									? answer.id === question.right
 										? 'text-success'
 										: ''
