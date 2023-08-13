@@ -31,7 +31,7 @@
 	</div>
 
 	{#if data.subject === "sinh"}
-		<div class="mb-4 flex justify-center">
+		<div class="mx-4 mb-4 flex w-full justify-center">
 			<img class="min-w-0 max-w-lg" src="/img/2023/sinh.jpg" alt="" />
 		</div>
 	{/if}
