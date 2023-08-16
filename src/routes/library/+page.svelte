@@ -352,8 +352,16 @@
 		on:keydown={update}
 		cols="100"
 		rows="10"
+		placeholder="Tên sách (mỗi dòng 1 tên sách)"
 	/>
-	<textarea class="textarea textarea-primary" readonly value={output} cols="100" rows="10" />
+	<textarea
+		placeholder="Mã hóa sách (mỗi dòng 1 sách)"
+		class="textarea textarea-primary"
+		readonly
+		value={output}
+		cols="100"
+		rows="10"
+	/>
 </div>
 
 <a href="/projects" class="btn btn-primary absolute left-0 top-0 m-4">Quay lại</a>
