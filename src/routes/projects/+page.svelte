@@ -66,6 +66,14 @@
 		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		>Openclozes</a
 	>
+
+	<a
+		target="_blank"
+		rel="noopener noreferrer"
+		href="/library"
+		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+		>Library</a
+	>
 </div>
 
 <div class="fixed left-0 right-0 top-0 flex flex-row justify-center">
