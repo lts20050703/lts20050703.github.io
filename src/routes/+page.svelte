@@ -48,7 +48,7 @@
 							</div>
 							<span class="tweet-date link-hover"
 								><a
-									href="https://nitter.net/fireship_dev/status/1567936669529305088#m"
+									href="https://nitter.net/fireship_dev/status/1567936669529305088"
 									title="Sep 8, 2022 · 6:03 PM UTC">8 Sep 2022</a
 								></span
 							>

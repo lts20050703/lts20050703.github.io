@@ -1,4 +1,5 @@
 <script lang="ts">
+	import v from "$lib/v"
 	import { onMount } from "svelte"
 	import { themeChange } from "theme-change"
 
@@ -336,6 +337,10 @@
 		update()
 	})
 </script>
+
+<svelte:head>
+	<title>LTS20050703 / Library {v}</title>
+</svelte:head>
 
 <div class="flex flex-col items-center justify-center">
 	<div class="m-1 rounded-md bg-base-100 p-1">
