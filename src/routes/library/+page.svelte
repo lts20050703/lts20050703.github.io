@@ -6,7 +6,7 @@
 	let mounted = false
 	let input = ""
 	let output = ""
-	const map = new Map([
+	const vowel_to_number = new Map([
 		["a", "100"],
 		["ac", "101"],
 		["ach", "102"],
@@ -181,6 +181,80 @@
 		["yp", "610"]
 	])
 
+	const remove_diacritics_1 = new Map([
+		["á", "a"],
+		["à", "a"],
+		["ả", "a"],
+		["ã", "a"],
+		["ạ", "a"],
+		["ắ", "ă"],
+		["ằ", "ă"],
+		["ẳ", "ă"],
+		["ẵ", "ă"],
+		["ặ", "ă"],
+		["ấ", "â"],
+		["ầ", "â"],
+		["ẩ", "â"],
+		["ẫ", "â"],
+		["ậ", "â"],
+		["é", "e"],
+		["è", "e"],
+		["ẻ", "e"],
+		["ẽ", "e"],
+		["ẹ", "e"],
+		["ế", "ê"],
+		["ề", "ê"],
+		["ể", "ê"],
+		["ễ", "ê"],
+		["ệ", "ê"],
+		["ẹ", "e"],
+		["í", "i"],
+		["ì", "i"],
+		["ỉ", "i"],
+		["ĩ", "i"],
+		["ị", "i"],
+		["ó", "o"],
+		["ò", "o"],
+		["ỏ", "o"],
+		["õ", "o"],
+		["ọ", "o"],
+		["ố", "ô"],
+		["ồ", "ô"],
+		["ổ", "ô"],
+		["ỗ", "ô"],
+		["ộ", "ô"],
+		["ớ", "ơ"],
+		["ờ", "ơ"],
+		["ở", "ơ"],
+		["ỡ", "ơ"],
+		["ợ", "ơ"],
+		["ú", "u"],
+		["ù", "u"],
+		["ủ", "u"],
+		["ũ", "u"],
+		["ụ", "u"],
+		["ứ", "ư"],
+		["ừ", "ư"],
+		["ử", "ư"],
+		["ữ", "ư"],
+		["ự", "ư"],
+		["ý", "y"],
+		["ỳ", "y"],
+		["ỷ", "y"],
+		["ỹ", "y"],
+		["ỵ", "y"]
+	])
+
+	const remove_diacritics_2 = new Map([
+		["ă", "a"],
+		["â", "a"],
+		["đ", "d"],
+		["ê", "e"],
+		["ô", "o"],
+		["ơ", "o"],
+		["ư", "u"]
+	])
+
 	function update() {
 		if (mounted) localStorage.setItem("library", input)
 		const arr = input.split("\n")
@@ -188,8 +262,8 @@
 		for (let i = 0; i < arr.length; i += 1) {
 			const line = arr[i]
 			if (line === "") continue
-			let first = line.toLowerCase().split(" ")[0]
-			if (["gi", "gim", "gin", "ginh", "gip", "git"].includes(first)) {
+			let first_word = line.toLowerCase().split(" ")[0]
+			if (["gi", "gim", "gin", "ginh", "gip", "git"].includes(first_word)) {
 				output += {
 					gi: "gi300",
 					gim: "gi310",
@@ -197,133 +271,87 @@
 					ginh: "gi312",
 					gip: "gi313",
 					git: "gi314"
-				}[first]
-			} else if (first.startsWith("qu")) {
-				output += "qu" + map.get(first.slice(2))
+				}[first_word]
+			} else if (first_word.startsWith("qu")) {
+				output += "qu" + vowel_to_number.get(first_word.slice(2))
 			} else {
-				let found = false
-				for (let i = 0; i < first.length; i += 1) {
-					if (map.get(first.slice(i))) {
-						if (i === 0) output += first[0]
-						else output += first.slice(0, i)
-						output += map.get(first.slice(i))
-						found = true
+				for (let i = 0; i < first_word.length; i += 1) {
+					if (vowel_to_number.get(first_word.slice(i))) {
+						if (i === 0) output += first_word[0]
+						else output += first_word.slice(0, i)
+						output += vowel_to_number.get(first_word.slice(i))
 						break
 					}
-				}
-				if (!found) {
-					const one = new Map([
-						["á", "a"],
-						["à", "a"],
-						["ả", "a"],
-						["ã", "a"],
-						["ạ", "a"],
-						["ắ", "ă"],
-						["ằ", "ă"],
-						["ẳ", "ă"],
-						["ẵ", "ă"],
-						["ặ", "ă"],
-						["ấ", "â"],
-						["ầ", "â"],
-						["ẩ", "â"],
-						["ẫ", "â"],
-						["ậ", "â"],
-						["é", "e"],
-						["è", "e"],
-						["ẻ", "e"],
-						["ẽ", "e"],
-						["ẹ", "e"],
-						["ế", "ê"],
-						["ề", "ê"],
-						["ể", "ê"],
-						["ễ", "ê"],
-						["ệ", "ê"],
-						["ẹ", "e"],
-						["í", "i"],
-						["ì", "i"],
-						["ỉ", "i"],
-						["ĩ", "i"],
-						["ị", "i"],
-						["ó", "o"],
-						["ò", "o"],
-						["ỏ", "o"],
-						["õ", "o"],
-						["ọ", "o"],
-						["ố", "ô"],
-						["ồ", "ô"],
-						["ổ", "ô"],
-						["ỗ", "ô"],
-						["ộ", "ô"],
-						["ớ", "ơ"],
-						["ờ", "ơ"],
-						["ở", "ơ"],
-						["ỡ", "ơ"],
-						["ợ", "ơ"],
-						["ú", "u"],
-						["ù", "u"],
-						["ủ", "u"],
-						["ũ", "u"],
-						["ụ", "u"],
-						["ứ", "ư"],
-						["ừ", "ư"],
-						["ử", "ư"],
-						["ữ", "ư"],
-						["ự", "ư"],
-						["ý", "y"],
-						["ỳ", "y"],
-						["ỷ", "y"],
-						["ỹ", "y"],
-						["ỵ", "y"]
-					])
 
-					for (let i = 0; i < first.length; i += 1) {
-						const value = one.get(first[i])
-						if (value) {
-							console.log("BEFORE", first)
-							first = first.slice(0, i) + value + first.slice(i + 1)
-							console.log("AFTER", first)
-						}
+					let _first_word = first_word
+
+					for (let i = 0; i < _first_word.length; i += 1) {
+						const char = remove_diacritics_1.get(_first_word[i])
+						if (char) _first_word = _first_word.slice(0, i) + char + _first_word.slice(i + 1)
 					}
 
-					for (let i = 0; i < first.length; i += 1) {
-						if (map.get(first.slice(i))) {
-							if (i === 0) output += first[0]
-							else output += first.slice(0, i)
-							output += map.get(first.slice(i))
-							found = true
-							break
-						}
+					if (vowel_to_number.get(_first_word.slice(i))) {
+						if (i === 0) output += _first_word[0]
+						else output += _first_word.slice(0, i)
+						output += vowel_to_number.get(_first_word.slice(i))
+						break
 					}
-					if (!found) {
-						const two = new Map([
-							["ă", "a"],
-							["â", "a"],
-							["đ", "d"],
-							["ê", "e"],
-							["ô", "o"],
-							["ơ", "o"],
-							["ư", "u"]
-						])
 
-						for (let i = 0; i < first.length; i += 1) {
-							const value = two.get(first[i])
-							if (value) first = first.slice(0, i + 1) + value + first.slice(i + 2)
-						}
+					for (let i = 0; i < _first_word.length; i += 1) {
+						const char = remove_diacritics_2.get(_first_word[i])
+						if (char) first_word = _first_word.slice(0, i + 1) + char + _first_word.slice(i + 2)
+					}
 
-						for (let i = 0; i < first.length; i += 1) {
-							if (map.get(first.slice(i))) {
-								if (i === 0) output += first[0]
-								else output += first.slice(0, i)
-								output += map.get(first.slice(i))
-								found = true
-								break
-							}
-						}
+					if (vowel_to_number.get(_first_word.slice(i))) {
+						if (i === 0) output += _first_word[0]
+						else output += _first_word.slice(0, i)
+						output += vowel_to_number.get(_first_word.slice(i))
+						break
 					}
 				}
 			}
 
-			output += line.toLowerCase().split(" ")[1]?.[0] ?? ""
+			let second_word = line.toLowerCase().split(" ")[1]
+			if (!second_word) continue
+
+			if (["gi", "gim", "gin", "ginh", "gip", "git"].includes(second_word)) {
+				output += "gi"
+			} else if (second_word.startsWith("qu")) {
+				output += "qu"
+			} else {
+				for (let i = 0; i < second_word.length; i += 1) {
+					if (vowel_to_number.get(second_word.slice(i))) {
+						if (i === 0) output += second_word[0]
+						else output += second_word.slice(0, i)
+						break
+					}
+
+					let _second_word = second_word
+
+					for (let i = 0; i < _second_word.length; i += 1) {
+						const char = remove_diacritics_1.get(_second_word[i])
+						if (char) _second_word = _second_word.slice(0, i) + char + _second_word.slice(i + 1)
+					}
+
+					if (vowel_to_number.get(_second_word.slice(i))) {
+						if (i === 0) output += _second_word[0]
+						else output += _second_word.slice(0, i)
+						break
+					}
+
+					for (let i = 0; i < _second_word.length; i += 1) {
+						const char = remove_diacritics_2.get(_second_word[i])
+						if (char) first_word = _second_word.slice(0, i + 1) + char + _second_word.slice(i + 2)
+					}
+
+					if (vowel_to_number.get(_second_word.slice(i))) {
+						if (i === 0) output += _second_word[0]
+						else output += _second_word.slice(0, i)
+						break
+					}
+				}
+			}
+
 			output += "\n"
 		}
 		output = output.toUpperCase()
