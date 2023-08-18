@@ -299,7 +299,7 @@
 
 					for (let i = 0; i < _first_word.length; i += 1) {
 						const char = remove_diacritics_2.get(_first_word[i])
-						if (char) first_word = _first_word.slice(0, i + 1) + char + _first_word.slice(i + 2)
+						if (char) _first_word = _first_word.slice(0, i + 1) + char + _first_word.slice(i + 2)
 					}
 
 					if (vowel_to_number.get(_first_word.slice(i))) {
