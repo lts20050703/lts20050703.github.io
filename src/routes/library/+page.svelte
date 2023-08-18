@@ -312,7 +312,10 @@
 			}
 
 			let second_word = line.toLowerCase().split(" ")[1]
-			if (!second_word) continue
+			if (!second_word) {
+				output += "\n"
+				continue
+			}
 
 			if (["gi", "gim", "gin", "ginh", "gip", "git"].includes(second_word)) {
 				output += "gi"
