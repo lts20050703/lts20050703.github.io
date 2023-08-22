@@ -25,21 +25,21 @@
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		href="https://codeberg.org/lts20050703/entropy-qualifier"
+		href="https://codeberg.org/lts20050703/e5y-qualifier"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 	>
 		<img src="/img/e5y.png" class="h-8 lg:h-12" alt="" />
-		<div class="flex-1">WIP: Entropy Qualifier</div>
+		<div class="flex-1">E5Y Qualifier</div>
 	</a>
 
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		href="https://codeberg.org/lts20050703/entropy-final"
+		href="https://codeberg.org/lts20050703/e5y-final"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 	>
 		<img src="/img/e5y.png" class="h-8 lg:h-12" alt="" />
-		<div class="flex-1">Entropy Final</div>
+		<div class="flex-1">E5Y Final</div>
 	</a>
 
 	<a
