@@ -31,7 +31,11 @@
 	}
 
 	function shuffle_section() {
-		const pre_sections: typeof sections = []
+		const pre_sections = data.sections.map((section) => {
+			if (section.shuffle) section.questions = shuffle_array(section.questions)
+			section.questions.forEach((question) => (question.answers = shuffle_array(question.answers)))
+			return section
+		})
 
 		data.sections.forEach((section) => {
 			if (section.shuffle) section.questions = shuffle_array(section.questions)
@@ -68,14 +72,14 @@
 			id: number
 			answers: { answer: string; id: number }[]
 			right?: number
-			fake_id: number
+			fake_id?: number
 		}[]
 	}[] = []
 
 	onMount(async () => {
 		live = localStorage.getItem("live") !== null
 
-		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "-1").split(",")
+		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "").split(",")
 
 		let length = data.sections
 			.map((section) => section.questions.length)
@@ -322,7 +326,7 @@
 										Câu
 									{/if}
 
-									{question.fake_id + 1}:
+									{(question.fake_id ?? 0) + 1}:
 									<span class={line.startsWith("*") && show_answer ? "text-success" : ""}>
 										{@html line.replace("*", "")}
 									</span>
