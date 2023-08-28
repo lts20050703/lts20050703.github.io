@@ -1,13 +1,9 @@
-import type { PageServerLoad } from "./$types"
 import { readdirSync } from "fs"
+import type { PageServerLoad } from "./$types"
 export const load = (async () => {
-	const dirents = readdirSync("./src/routes/2023", { withFileTypes: true })
-	const subjects: string[] = []
-	for (let i = 0; i < dirents.length; i += 1) {
-		const dirent = dirents[i]
-		const name = dirent.name
-		if (!dirent.isDirectory() || name[0] === "[") continue
-		subjects.push(name)
+	return {
+		subjects: readdirSync("./src/routes/2023", { withFileTypes: true })
+			.filter((dirent) => dirent.isDirectory() && dirent.name[0] !== "[")
+			.map((dirent) => dirent.name)
 	}
-	return { subjects }
 }) satisfies PageServerLoad

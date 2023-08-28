@@ -4,11 +4,6 @@
 	onMount(() => {
 		themeChange(false)
 	})
-
-	function minecraft() {
-		navigator.clipboard.writeText("@lts20050703")
-		alert("Copied minecraft username to clipboard!")
-	}
 </script>
 
 <svelte:head>
@@ -38,7 +33,10 @@
 
 	<button
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={minecraft}
+		on:click={() => {
+			navigator.clipboard.writeText("@lts20050703")
+			alert("Copied minecraft username to clipboard!")
+		}}
 		><img src="/img/minecraft.webp" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">Minecraft @lts20050703 (Click to copy)</div>
 	</button>

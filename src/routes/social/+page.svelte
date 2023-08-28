@@ -4,21 +4,6 @@
 	onMount(() => {
 		themeChange(false)
 	})
-
-	function discord() {
-		navigator.clipboard.writeText("@lts20050703")
-		alert("Copied discord username to clipboard!")
-	}
-
-	function element() {
-		navigator.clipboard.writeText("@lts20050703:matrix.org")
-		alert("Copied element username to clipboard!")
-	}
-
-	function revolt() {
-		navigator.clipboard.writeText("@lts20050703")
-		alert("Copied revolt username to clipboard!")
-	}
 </script>
 
 <svelte:head>
@@ -100,7 +85,10 @@
 
 	<button
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={discord}
+		on:click={() => {
+			navigator.clipboard.writeText("@lts20050703")
+			alert("Copied discord username to clipboard!")
+		}}
 	>
 		<img src="/img/discord.ico" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">Discord @lts20050703 (Click to copy)</div></button
@@ -115,14 +103,20 @@
 
 	<button
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={revolt}
+		on:click={() => {
+			navigator.clipboard.writeText("@lts20050703")
+			alert("Copied revolt username to clipboard!")
+		}}
 		><img src="/img/revolt.ico" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">Revolt @lts20050703 (Click to copy)</div></button
 	>
 
 	<button
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-		on:click={element}
+		on:click={() => {
+			navigator.clipboard.writeText("@lts20050703:matrix.org")
+			alert("Copied element username to clipboard!")
+		}}
 		><img src="/img/element.ico" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">Element @lts20050703:matrix.org (Click to copy)</div></button
 	>

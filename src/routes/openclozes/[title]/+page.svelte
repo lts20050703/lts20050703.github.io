@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { onMount } from "svelte"
-	import type { PageData } from "./$types"
 	import v from "$lib/v"
+	import { onMount } from "svelte"
 	import { themeChange } from "theme-change"
+	import type { PageData } from "./$types"
 
 	export let data: PageData
 
@@ -10,31 +10,15 @@
 
 	let show_answer = false
 
-	function clear() {
-		inputs = []
-	}
-
 	let stored: string[] = []
 
 	let text = data.text.split(/{|}/)
 
-	let answers: string[] = []
-
-	for (let i = 0; i < text.length; i += 1) {
-		if (i % 2 === 0) continue
-		answers.push(text[i])
-	}
+	let answers = text.filter((_, i) => i % 2 === 1)
 
 	let mounted = false
 
-	function save() {
-		localStorage.setItem(`inputs${data.title}`, inputs.join())
-		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
-	}
-
 	let inputs: string[] = []
-
-	$: inputs, live, mounted && save()
 
 	onMount(() => {
 		live = localStorage.getItem("live") !== null
@@ -60,7 +44,16 @@
 		<div class="flex flex-row items-center gap-4">
 			<div class="flex flex-row items-center gap-1">
 				Check: {live ? "On" : "Off"}
-				<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+				<input
+					type="checkbox"
+					class="toggle toggle-primary"
+					bind:checked={live}
+					on:change={() => {
+						if (!mounted) return
+						if (live) localStorage.setItem("live", "true")
+						else localStorage.removeItem("live")
+					}}
+				/>
 			</div>
 			<div class="flex flex-row items-center gap-1">
 				Answers: {show_answer ? "Show" : "Hide"}
@@ -80,7 +73,13 @@
 
 		<div class="flex flex-row justify-center gap-1">
 			<a href="../" class="btn btn-primary">Back</a>
-			<button class="btn btn-error" on:click={clear}>Clear </button>
+			<button
+				class="btn btn-error"
+				on:click={() => {
+					inputs = []
+				}}
+				>Clear
+			</button>
 		</div>
 
 		<div class="my-4 text-center text-3xl font-bold">
@@ -115,6 +114,10 @@
 							: 'input-error'}"
 						size={answers[(i - 1) / 2].length}
 						bind:value={inputs[(i - 1) / 2]}
+						on:change={() => {
+							if (!mounted) return
+							localStorage.setItem(`inputs${data.title}`, inputs.join())
+						}}
 					/>
 				{/if}
 			{/each}

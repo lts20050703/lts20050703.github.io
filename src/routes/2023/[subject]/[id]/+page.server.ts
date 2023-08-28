@@ -6,12 +6,13 @@ export const load = (async ({ params }) => {
 	try {
 		const text = readFileSync(`./src/routes/2023/${params.subject}/${params.id}.txt`, "utf8")
 		const raw = text.split("\n")
-		const data: string[] = []
-		for (let i = 0; i < raw.length; i += 1) {
-			const line = raw[i].replace(/[ \t]+/g, " ").trim()
-			if (line === "" || line.startsWith("//")) continue
-			data.push(line.startsWith("/") && line.endsWith(".png") ? `<img src="${line}">` : line)
-		}
+		const data = raw
+			.filter((line) => {
+				line = line.replace(/[ \t]+/g, " ").trim()
+				return line !== "" && !line.startsWith("//")
+			})
+			.map((line) => (line.startsWith("/") && line.endsWith(".png") ? `<img src="${line}">` : line))
+
 		const title = data.shift()
 		const azota = data.shift()
 		let word = ""
@@ -27,28 +28,31 @@ export const load = (async ({ params }) => {
 				question: string
 				id: number
 				answers: { answer: string; id: number }[]
-				right?: number
+				right: number
 			}[]
 		}[] = []
 		let question_id = 0
 		let section_id = 0
 		let prev: "question" | "a" | "b" | "c" | "d" | "section" = "section"
-		for (let i = 0; i < data.length; i += 1) {
-			const words = data[i].split(" ")
-			for (let j = 0; j < words.length; j += 1) {
-				const word = words[j]
-
+		data.forEach((line) => {
+			let skip = false
+			const words = line.split(" ")
+			words.forEach((word, i) => {
+				if (skip) {
+					skip = false
+					return
+				}
 				if (word.startsWith("#")) {
 					sections.push({ title: word.slice(1), shuffle: true, questions: [], id: section_id })
 					section_id += 1
 					prev = "section"
-					continue
+					return
 				}
 				if (word.startsWith("📌")) {
 					sections.push({ title: word.slice(2), shuffle: false, questions: [], id: section_id })
 					section_id += 1
 					prev = "section"
-					continue
+					return
 				}
 
 				if (sections.length === 0) {
@@ -57,24 +61,24 @@ export const load = (async ({ params }) => {
 				}
 
 				const section = sections.at(-1)
-				if (!section) continue
+				if (!section) return
 
 				if (
 					(word.toLowerCase().startsWith("câu") || word.toLowerCase().startsWith("question")) &&
-					!isNaN(parseInt(words[j + 1]))
+					!isNaN(parseInt(words[i + 1]))
 				) {
 					section.questions.push({
 						question: "",
 						answers: [],
-						id: question_id
+						id: question_id,
+						right: -1
 					})
 
 					question_id += 1
 					prev = "question"
 
-					// skip the number
-					j += 1
-					continue
+					skip = true
+					return
 				}
 
 				const question = section.questions.at(-1)
@@ -88,32 +92,32 @@ export const load = (async ({ params }) => {
 				) {
 					switch (prev) {
 						case "question":
-							if (!question) continue
+							if (!question) return
 							question.question += ` ${word}`
 							break
 						case "a":
-							if (!question) continue
+							if (!question) return
 							question.answers[0].answer += ` ${word}`
 							break
 						case "b":
-							if (!question) continue
+							if (!question) return
 							question.answers[1].answer += ` ${word}`
 							break
 						case "c":
-							if (!question) continue
+							if (!question) return
 							question.answers[2].answer += ` ${word}`
 							break
 						case "d":
-							if (!question) continue
+							if (!question) return
 							question.answers[3].answer += ` ${word}`
 							break
 						case "section":
 							section.title += ` ${word}`
 							break
 					}
-					continue
+					return
 				}
-				if (!question) continue
+				if (!question) return
 				switch (word[word.startsWith("*") ? 1 : 0].toLowerCase()) {
 					case "a":
 						question.answers[0] = { answer: word.slice(word.startsWith("*") ? 3 : 2), id: 0 }
@@ -132,7 +136,7 @@ export const load = (async ({ params }) => {
 						prev = "d"
 						break
 				}
-				if (!word.startsWith("*")) continue
+				if (!word.startsWith("*")) return
 				switch (prev) {
 					case "a":
 						question.right = 0
@@ -147,38 +151,38 @@ export const load = (async ({ params }) => {
 						question.right = 3
 						break
 				}
-			}
+			})
 
 			const section = sections.at(-1)
-			if (!section) continue
+			if (!section) return
 			const question = section.questions.at(-1)
 
 			switch (prev) {
 				case "question":
-					if (!question) continue
+					if (!question) return
 					question.question += "<br>"
 					break
 				case "a":
-					if (!question) continue
+					if (!question) return
 					question.answers[0].answer += "<br>"
 					break
 				case "b":
-					if (!question) continue
+					if (!question) return
 					question.answers[1].answer += "<br>"
 					break
 				case "c":
-					if (!question) continue
+					if (!question) return
 					question.answers[2].answer += "<br>"
 					break
 				case "d":
-					if (!question) continue
+					if (!question) return
 					question.answers[3].answer += "<br>"
 					break
 
 				case "section":
 					section.title += "<br>"
 			}
-		}
+		})
 		return { subject: params.subject, title, sections, azota, id: params.id, word }
 	} catch {
 		return {
@@ -192,7 +196,7 @@ export const load = (async ({ params }) => {
 					question: string
 					id: number
 					answers: { answer: string; id: number }[]
-					right?: number
+					right: number
 				}[]
 			}[],
 			azota: ""

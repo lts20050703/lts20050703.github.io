@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte"
-	import type { PageData } from "./$types"
 	import { themeChange } from "theme-change"
+	import type { PageData } from "./$types"
 
 	export let data: PageData
 
@@ -11,117 +11,53 @@
 
 	let live = false
 
-	function clear() {
-		let length = 0
-
-		for (let i = 0; i < data.sections.length; i += 1) {
-			length += data.sections[i].questions.length
-		}
-
-		inputs = []
-
-		for (let i = 0; i < length; i += 1) {
-			inputs.push(-1)
-		}
-
-		shuffle_section()
-
-		save_section()
-
-		if (data.subject === "lý") {
-			location.reload()
-		}
-	}
-
 	let mounted = false
 
 	let marked: boolean[] = []
 
 	function save_section() {
-		const mini_sections: {
-			id: number
-			questions: { id: number; answers: number[] }[]
-		}[] = []
-
-		for (let i = 0; i < sections.length; i += 1) {
-			const questions: { id: number; answers: number[] }[] = []
-			const section = sections[i]
-			for (let j = 0; j < section.questions.length; j += 1) {
-				const question = section.questions[j]
-				const answers: number[] = []
-				for (let k = 0; k < question.answers.length; k += 1) {
-					answers.push(question.answers[k].id)
-				}
-				questions.push({ id: question.id, answers })
-			}
-			mini_sections.push({ id: section.id, questions })
-		}
-
-		localStorage.setItem(`section${data.subject}${data.id}`, JSON.stringify(mini_sections))
+		localStorage.setItem(
+			`section${data.subject}${data.id}`,
+			JSON.stringify(
+				sections.map((section) => ({
+					id: section.id,
+					questions: section.questions.map((question) => ({
+						id: question.id,
+						answers: question.answers.map((answer) => answer.id)
+					}))
+				}))
+			)
+		)
 	}
 
 	function shuffle_section() {
 		const pre_sections: typeof sections = []
 
-		for (let i = 0; i < data.sections.length; i += 1) {
-			const section = data.sections[i] as (typeof sections)[number]
-
+		data.sections.forEach((section) => {
 			if (section.shuffle) section.questions = shuffle_array(section.questions)
 
-			for (let j = 0; j < data.sections[i].questions.length; j += 1) {
-				section.questions[j].answers = shuffle_array(section.questions[j].answers)
-			}
-
-			pre_sections.push(section)
-		}
+			section.questions.forEach((question) => {
+				question.answers = shuffle_array(question.answers)
+			})
+		})
 
 		sections = shuffle_array(pre_sections)
 
 		let fake_id = 0
 
-		for (let i = 0; i < sections.length; i += 1) {
-			const section = sections[i]
+		sections.forEach((section) => {
 			let arr: string[] | null = null
 			if (!section.shuffle) arr = section.title.match(/(\(\d+\))/g)
-			for (let j = 0; j < section.questions.length; j += 1) {
-				section.questions[j].fake_id = fake_id
+
+			section.questions.forEach((question, j) => {
+				question.fake_id = fake_id
 				if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
 				fake_id += 1
-			}
-		}
-	}
-
-	function save() {
-		if (live) {
-			for (let id = 0; id < inputs.length; id += 1) {
-				const input = inputs[id]
-
-				let right: number = -1
-
-				for (let i = 0; i < data.sections.length; i += 1) {
-					const section = data.sections[i]
-					for (let j = 0; j < section.questions.length; j += 1) {
-						if (section.questions[j].id === id) right = section.questions[j].right!
-					}
-				}
-
-				if (input !== -1 && input !== right) {
-					marked[id] = true
-				}
-			}
-		}
-		localStorage.setItem(`inputs${data.subject}${data.id}`, inputs.join(","))
-		localStorage.setItem(`marked${data.subject}${data.id}`, marked.join(","))
-		live ? localStorage.setItem("live", "true") : localStorage.removeItem("live")
+			})
+		})
 	}
 
 	let inputs: number[] = []
-
-	$: inputs, live, marked, mounted && save()
-
-	function uncheck(question: number, answer: number) {
-		if (inputs[question] === answer) inputs[question] = -1
-	}
 
 	let sections: {
 		id: number
@@ -141,30 +77,20 @@
 
 		const stored = (localStorage.getItem(`inputs${data.subject}${data.id}`) ?? "-1").split(",")
 
-		let length = 0
-
-		for (let i = 0; i < data.sections.length; i += 1) {
-			length += data.sections[i].questions.length
-		}
+		let length = data.sections
+			.map((section) => section.questions.length)
+			.reduce((prev, curr) => prev + curr, 0)
 
 		if (stored.length < length) stored.push(...Array(length - stored.length).fill("-1"))
 
-		inputs = []
-
-		for (let i = 0; i < stored.length; i += 1) {
-			inputs.push(parseInt(stored[i]))
-		}
+		inputs = stored.map((stored) => parseInt(stored))
 
 		let stored_mark = (localStorage.getItem(`marked${data.subject}${data.id}`) ?? "").split(",")
 
 		if (stored_mark.length < length)
 			stored_mark.push(...Array(length - stored_mark.length).fill(""))
 
-		marked = []
-
-		for (let i = 0; i < stored_mark.length; i += 1) {
-			marked.push(stored_mark[i] === "true")
-		}
+		marked = stored_mark.map((mark) => mark === "true")
 
 		mounted = true
 
@@ -180,7 +106,47 @@
 			shuffle_section()
 			save_section()
 		} else {
-			parse(parsed)
+			let fake_id = 0
+
+			parsed.forEach((obj) => {
+				const section: (typeof sections)[number] = {
+					id: obj.id,
+					shuffle: data.sections[obj.id].shuffle,
+					title: data.sections[obj.id].title,
+					questions: []
+				}
+
+				// Re-number paragraph text
+				let arr: string[] | null = null
+
+				if (!section.shuffle) {
+					arr = section.title.match(/(\(\d+\))/g)
+				}
+
+				obj.questions.forEach((obj2, j) => {
+					let question: (typeof sections)[number]["questions"][number] | undefined
+
+					data.sections[obj.id].questions.forEach((_question) => {
+						if (_question.id === obj2.id) {
+							question = { ..._question, fake_id }
+						}
+
+						// Re-number paragraph text
+						if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
+						fake_id += 1
+					})
+
+					if (!question) return
+
+					const answers = question.answers
+
+					question.answers = obj2.answers.map((answer) => answers[answer])
+
+					section.questions.push(question)
+				})
+
+				sections.push(section)
+			})
 		}
 
 		if (data.subject === "lý") {
@@ -206,94 +172,6 @@
 
 		return array
 	}
-
-	function parse(
-		parsed: {
-			id: number
-			questions: { id: number; answers: number[] }[]
-		}[]
-	) {
-		let fake_id = 0
-		for (let i = 0; i < parsed.length; i += 1) {
-			const obj = parsed[i]
-			//
-			const section: (typeof sections)[number] = {
-				id: obj.id,
-				shuffle: data.sections[obj.id].shuffle,
-				title: data.sections[obj.id].title,
-				questions: []
-			}
-
-			let arr: string[] | null = null
-
-			if (!section.shuffle) {
-				arr = section.title.match(/(\(\d+\))/g)
-			}
-
-			for (let j = 0; j < obj.questions.length; j += 1) {
-				const obj2 = obj.questions[j]
-
-				let question: (typeof sections)[number]["questions"][number] | undefined
-
-				for (let k = 0; k < data.sections[obj.id].questions.length; k += 1) {
-					if (data.sections[obj.id].questions[k].id === obj2.id) {
-						question = data.sections[obj.id].questions[
-							k
-						] as (typeof sections)[number]["questions"][number]
-						question.fake_id = fake_id
-						if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
-						fake_id += 1
-					}
-				}
-
-				if (!question) continue
-
-				const answers = question.answers
-
-				question.answers = []
-				for (let k = 0; k < obj2.answers.length; k += 1) {
-					const id = obj2.answers[k]
-					question.answers.push(answers[id])
-				}
-
-				section.questions.push(question)
-			}
-			sections.push(section)
-		}
-	}
-
-	function keep_section(
-		filter: "" | "wrong" | "unanswered" | "marked",
-		section: (typeof sections)[number]
-	) {
-		switch (filter) {
-			case "":
-				return true
-			case "wrong":
-				for (let i = 0; i < section.questions.length; i += 1) {
-					const question = section.questions[i]
-					if (inputs[question.id] === -1 || inputs[question.id] === question.right) continue
-					return true
-				}
-				return false
-
-			case "unanswered":
-				for (let i = 0; i < section.questions.length; i += 1) {
-					const question = section.questions[i]
-					if (inputs[question.id] !== -1) continue
-					return true
-				}
-				return false
-
-			case "marked":
-				for (let i = 0; i < section.questions.length; i += 1) {
-					const question = section.questions[i]
-					if (!marked[question.id]) continue
-					return true
-				}
-				return false
-		}
-	}
 </script>
 
 <svelte:head>
@@ -315,7 +193,17 @@
 		<div class="flex flex-row gap-4">
 			<div class="flex flex-row gap-1">
 				Kiểm tra: {live ? "Bật" : "Tắt"}
-				<input type="checkbox" class="toggle toggle-primary" bind:checked={live} />
+				<input
+					type="checkbox"
+					class="toggle toggle-primary"
+					bind:checked={live}
+					on:change={() => {
+						if (!mounted) return
+
+						if (live) localStorage.setItem("live", "true")
+						else localStorage.removeItem("live")
+					}}
+				/>
 			</div>
 			<div class="flex flex-row gap-1">
 				Đáp Án: {show_answer ? "Hiện" : "Ẩn"}
@@ -335,7 +223,25 @@
 
 		<div class="flex flex-row justify-center gap-1">
 			<a href="../" class="btn btn-primary">Quay lại</a>
-			<button class="btn btn-error" on:click={clear}>Xóa </button>
+			<button
+				class="btn btn-error"
+				on:click={() => {
+					inputs = new Array(
+						data.sections
+							.map((section) => section.questions.length)
+							.reduce((prev, curr) => prev + curr, 0)
+					).fill(-1)
+
+					shuffle_section()
+
+					save_section()
+
+					if (data.subject === "lý") {
+						location.reload()
+					}
+				}}
+				>Xóa
+			</button>
 			<a class="btn btn-secondary" href={data.azota} target="_blank" rel="noopener noreferrer"
 				>AZOTA</a
 			>
@@ -360,7 +266,22 @@
 			</select>
 		</div>
 		{#each sections as section}
-			<div class={keep_section(filter, section) ? "" : "hidden"}>
+			<div
+				class={section.questions.some((question) => {
+					switch (filter) {
+						case "":
+							return true
+						case "wrong":
+							return inputs[question.id] !== -1 && inputs[question.id] !== question.right
+						case "unanswered":
+							return inputs[question.id] === -1
+						case "marked":
+							return marked[question.id]
+					}
+				})
+					? ""
+					: "hidden"}
+			>
 				<br />
 				{#if section.title}
 					<div>{@html section.title}</div>
@@ -387,6 +308,11 @@
 								type="checkbox"
 								class="toggle toggle-warning"
 								bind:checked={marked[question.id]}
+								on:change={() => {
+									if (!mounted) return
+
+									localStorage.setItem(`marked${data.subject}${data.id}`, marked.join(","))
+								}}
 							/>
 							{#each question.question.split("<br>") as line, j}
 								{#if j === 0}
@@ -428,8 +354,27 @@
 									: ''}"
 							>
 								<input
-									on:click={() => uncheck(question.id, answer.id)}
+									on:click={() => {
+										if (inputs[question.id] === answer.id) inputs[question.id] = -1
+									}}
 									bind:group={inputs[question.id]}
+									on:change={() => {
+										if (!mounted) return
+										localStorage.setItem(`inputs${data.subject}${data.id}`, inputs.join(","))
+
+										if (!live) return
+
+										inputs.forEach((input, id) => {
+											let right = -1
+											data.sections.forEach((section) => {
+												section.questions.forEach((question) => {
+													if (question.id === id) right = question.right
+												})
+											})
+
+											if (input !== -1 && input !== right) marked[id] = true
+										})
+									}}
 									class="input input-primary input-xs"
 									type="radio"
 									name={`${question.id}`}

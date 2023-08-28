@@ -1,10 +1,8 @@
 {
+	"[svelte]": { "editor.codeActionsOnSave": { "source.organizeImports": true } },
+	"[typescript]": { "editor.codeActionsOnSave": { "source.organizeImports": true } },
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"files.autoSave": "onFocusChange",
-	"files.exclude": {
-		".svelte-kit": true,
-		"build": true,
-		"node_modules": true
-	}
+	"files.exclude": { ".svelte-kit": true, "build": true, "node_modules": true }
 }
