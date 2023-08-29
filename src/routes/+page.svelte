@@ -94,6 +94,8 @@ They make it really hard to go back to whatever thing you were using before.</pr
 	</div>
 </div>
 
+<a rel="me" href="https://mastodon.social/@lts20050703" class="hidden">Mastodon</a>
+
 <style>
 	.media-body {
 		flex: 1;

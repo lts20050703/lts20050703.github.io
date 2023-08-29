@@ -23,8 +23,6 @@
 	<div class="mb-4 font-bold">Gaming™</div>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://ch.tetr.io/u/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/tetr.io.ico" alt="" class="h-8 lg:h-12" />
@@ -42,16 +40,12 @@
 	</button>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://steamcommunity.com/id/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/steam.ico" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">STEAM @LTS20050703</div>
 	</a>
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://lts20050703.itch.io"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/itch.io.ico" alt="" class="h-8 lg:h-12" />
@@ -59,16 +53,12 @@
 	</a>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://speedrun.com/user/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/speedrun.com.png" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">SPEEDRUN.COM @lts20050703</div>
 	</a>
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://splits.io/users/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/splits.io.png" alt="" class="h-8 lg:h-12" />

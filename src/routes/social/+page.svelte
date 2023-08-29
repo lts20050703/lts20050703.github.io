@@ -23,16 +23,13 @@
 	<div class="mb-4 font-bold">Social Accounts</div>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://cohost.org/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/cohost.ico" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">cohost! @lts20050703</div>
 	</a>
 	<a
-		target="_blank"
-		rel="noopener noreferrer me"
+		rel="me"
 		href="https://mastodon.social/@lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/mastodon.ico" alt="" class="h-8 lg:h-12" />
@@ -40,16 +37,12 @@
 	</a>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://youtube.com/@lts0703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/youtube.png" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">YouTube @lts0703</div>
 	</a>
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://twitch.com/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/twitch.png" alt="" class="h-8 lg:h-12" />
@@ -57,8 +50,6 @@
 	</a>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://codeberg.org/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/codeberg.svg" alt="" class="h-8 lg:h-12" />
@@ -66,8 +57,6 @@
 	</a>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://github.com/lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/github.ico" alt="" class="h-8 lg:h-12" />
@@ -75,13 +64,18 @@
 	>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
 		href="https://wakatime.com/@lts20050703"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/wakatime.png" alt="" class="h-8 lg:h-12" />
 		<div class="flex-1">Wakatime @lts20050703</div>
 	</a>
+
+	<a
+		href="https://stackoverflow.com/users/16118261/lts20050703"
+		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+		><img src="/img/stackoverflow.ico" alt="" class="h-8 lg:h-12" />
+		<div class="flex-1">Stack Overflow @lts20050703</div></a
+	>
 
 	<button
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"

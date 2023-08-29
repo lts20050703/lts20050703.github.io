@@ -246,9 +246,7 @@
 				}}
 				>Xóa
 			</button>
-			<a class="btn btn-secondary" href={data.azota} target="_blank" rel="noopener noreferrer"
-				>AZOTA</a
-			>
+			<a class="btn btn-secondary" href={data.azota}>AZOTA</a>
 		</div>
 
 		<div class="my-4 text-center text-3xl font-bold">

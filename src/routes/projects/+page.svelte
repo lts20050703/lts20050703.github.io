@@ -23,8 +23,7 @@
 	<div class="mb-4 font-bold">Projects</div>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
+		
 		href="https://codeberg.org/lts20050703/e5y-qualifier"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 	>
@@ -33,8 +32,7 @@
 	</a>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
+		
 		href="https://codeberg.org/lts20050703/e5y-final"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 	>
@@ -43,8 +41,7 @@
 	</a>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
+		
 		href="https://wist.lts20050703.repl.co"
 		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		><img src="/img/wist.png" class="h-8 lg:h-12" alt="" />
@@ -52,24 +49,21 @@
 	</a>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
+		
 		href="/2023"
 		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		>2023</a
 	>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
+		
 		href="/openclozes"
 		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		>Openclozes</a
 	>
 
 	<a
-		target="_blank"
-		rel="noopener noreferrer"
+		
 		href="/library"
 		class="btn btn-primary lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 		>Library</a
