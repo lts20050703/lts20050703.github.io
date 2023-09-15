@@ -76,7 +76,8 @@
 			<button
 				class="btn btn-error"
 				on:click={() => {
-					inputs = []
+					inputs = answers.map(() => "")
+					localStorage.setItem(`inputs${data.title}`, inputs.join())
 				}}
 				>Clear
 			</button>
@@ -106,7 +107,7 @@
 				{:else}
 					<input
 						type="text"
-						class="input mx-1 h-7 p-1 lowercase {inputs[(i - 1) / 2] === '' || !live
+						class="input mx-1 h-7 p-1 lowercase {!inputs[(i - 1) / 2] || !live
 							? 'input-primary'
 							: inputs[(i - 1) / 2]?.toLowerCase().split(/ +/).join(' ').trim() ===
 							  answers[(i - 1) / 2]
