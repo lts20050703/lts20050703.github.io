@@ -115,7 +115,7 @@
 							: 'input-error'}"
 						size={answers[(i - 1) / 2].length}
 						bind:value={inputs[(i - 1) / 2]}
-						on:change={() => {
+						on:keydown={() => {
 							if (!mounted) return
 							localStorage.setItem(`inputs${data.title}`, inputs.join())
 						}}
