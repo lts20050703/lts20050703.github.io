@@ -374,7 +374,10 @@
 												})
 											})
 
-											if (input !== -1 && input !== right) marked[id] = true
+											if (input !== -1 && input !== right) {
+												marked[id] = true
+												localStorage.setItem(`marked${data.subject}${data.id}`, marked.join(","))
+											}
 										})
 									}}
 									class="input input-primary input-xs"
