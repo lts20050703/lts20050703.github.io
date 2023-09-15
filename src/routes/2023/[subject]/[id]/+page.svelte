@@ -357,7 +357,10 @@
 							>
 								<input
 									on:click={() => {
-										if (inputs[question.id] === answer.id) inputs[question.id] = -1
+										if (inputs[question.id] !== answer.id) return
+										inputs[question.id] = -1
+										if (!mounted) return
+										localStorage.setItem(`inputs${data.subject}${data.id}`, inputs.join(","))
 									}}
 									bind:group={inputs[question.id]}
 									on:change={() => {
