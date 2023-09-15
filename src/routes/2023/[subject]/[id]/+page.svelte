@@ -2,7 +2,6 @@
 	import { onMount } from "svelte"
 	import { themeChange } from "theme-change"
 	import type { PageData } from "./$types"
-
 	export let data: PageData
 
 	let filter: "" | "wrong" | "unanswered" | "marked" = ""
@@ -133,11 +132,12 @@
 					data.sections[obj.id].questions.forEach((_question) => {
 						if (_question.id === obj2.id) {
 							question = { ..._question, fake_id }
+							fake_id += 1
+
+							if (arr) section.title = section.title.replace(arr[j], `(${fake_id})`)
 						}
 
 						// Re-number paragraph text
-						if (arr) section.title = section.title.replace(arr[j], `(${fake_id + 1})`)
-						fake_id += 1
 					})
 
 					if (!question) return

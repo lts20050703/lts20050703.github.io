@@ -11,10 +11,8 @@
 </svelte:head>
 
 <div
-	class="my-4 flex flex-col items-center gap-1 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+	class="mt-12 flex flex-col items-center gap-1 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 >
-	<img src="/img/bg.jpg" class="h-32" alt="" />
-
 	<div class="flex flex-row items-center gap-1">
 		<img src="/android-chrome-512x512.png" class="h-16" alt="" />
 		<div class="font-bold">LTS20050703</div>

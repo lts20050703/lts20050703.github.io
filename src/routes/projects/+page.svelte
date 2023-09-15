@@ -11,16 +11,30 @@
 </svelte:head>
 
 <div
-	class="my-4 flex flex-col items-center gap-1 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+	class="mt-12 flex flex-col items-center gap-1 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
 >
-	<img src="/img/bg.jpg" class="h-32" alt="" />
-
 	<div class="flex flex-row items-center gap-1">
 		<img src="/android-chrome-512x512.png" class="h-16" alt="" />
 		<div class="font-bold">LTS20050703</div>
 	</div>
 
 	<div class="mb-4 font-bold">Projects</div>
+
+	<a
+		href="https://codeberg.org/lts20050703/e5y-qualifier"
+		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+	>
+		<img src="/img/e5y.png" class="h-8 lg:h-12" alt="" />
+		<div class="flex-1">E5Y Qualifier</div>
+	</a>
+
+	<a
+		href="https://codeberg.org/lts20050703/e5y-final"
+		class="btn btn-primary flex flex-row items-center gap-1 lg:btn-lg sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+	>
+		<img src="/img/e5y.png" class="h-8 lg:h-12" alt="" />
+		<div class="flex-1">E5Y Final</div>
+	</a>
 
 	<a
 		href="https://wist.lts20050703.repl.co"
