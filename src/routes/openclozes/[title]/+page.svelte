@@ -108,7 +108,7 @@
 						type="text"
 						class="input mx-1 h-7 p-1 lowercase {inputs[(i - 1) / 2] === '' || !live
 							? 'input-primary'
-							: inputs[(i - 1) / 2].toLowerCase().split(/ +/).join(' ').trim() ===
+							: inputs[(i - 1) / 2]?.toLowerCase().split(/ +/).join(' ').trim() ===
 							  answers[(i - 1) / 2]
 							? 'input-success'
 							: 'input-error'}"
