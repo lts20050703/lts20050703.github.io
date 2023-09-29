@@ -18,7 +18,7 @@
 		<div class="font-bold">LTS20050703</div>
 	</div>
 
-	<a class="link-hover link-primary link text-base" href="/hyah">Hyah</a>
+	<a class="link-hover link-primary link text-base" href="/deathlylonelinessattacks">Hyah</a>
 
 	<a
 		href="/projects"

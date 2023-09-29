@@ -45,7 +45,8 @@ const links: Record<string, { name: string; href: string; img?: string; username
 }
 
 const data: Record<string, { href?: string; username?: string; img?: string; back?: string }> = {
-	hyah: { href: "https://youtu.be/HZyOMZaOFRc" },
+	starfruitsupernova: { href: "https://youtu.be/RPLUiubenkQ?si=-tl9KP7c4Os3WtaK" },
+	deathlylonelinessattacks: { href: "https://youtu.be/HZyOMZaOFRc" },
 	fireship: { href: "https://nitter.net/fireship_dev/status/1567936669529305088" },
 	svelte: { href: "https://nitter.net/stolinski/status/1438173489479958536" },
 	// Projects
