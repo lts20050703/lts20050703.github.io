@@ -4,7 +4,7 @@ const links: Record<string, { name: string; href: string; img?: string; username
 	projects: [
 		{ name: "E5Y Qualifier", href: "/e5y-qualifier", img: "/img/e5y.png" },
 		{ name: "E5Y Final", href: "/e5y-final", img: "/img/e5y.png" },
-		{ name: "E5Y Wist", href: "/wist", img: "/img/wist.png" },
+		{ name: "Wist", href: "/wist", img: "/img/wist.png" },
 		{ name: "2023", href: "/2023" },
 		{ name: "Openclozes", href: "/openclozes" },
 		{ name: "Library", href: "/library" }
