@@ -46,8 +46,8 @@
 	</div>
 </div>
 
-<div>
-	<a rel="me" href="https://mastodon.social/@lts20050703" class="hidden">Mastodon</a>
+<div class="hidden">
+	<a rel="me" href="https://mastodon.social/@lts20050703">Mastodon</a>
 	<a href="/starfruitsupernova">Starfruit Supernova</a>
 	<a href="/deathlylonelinessattacks">Deathly Loneliness Attacks</a>
 	<a href="/fireship">Fireship</a>
