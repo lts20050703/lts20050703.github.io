@@ -1,9 +1,30 @@
 <script lang="ts">
+	import { page } from "$app/stores"
 	import v from "$lib/v"
 	import { onMount } from "svelte"
 	import { themeChange } from "theme-change"
-	import type { PageData } from "./$types"
-	export let data: PageData
+
+	const start_hours = $page.url.searchParams.get("start_hours")
+	const start_minutes = $page.url.searchParams.get("start_minutes")
+	const start_seconds = $page.url.searchParams.get("start_seconds")
+	const time_hours = $page.url.searchParams.get("time_hours")
+	const time_minutes = $page.url.searchParams.get("time_minutes")
+	const time_seconds = $page.url.searchParams.get("time_seconds")
+
+	const data = {
+		countdown:
+			start_hours && start_minutes && start_seconds && time_hours && time_minutes && time_seconds,
+		start: {
+			hours: parseInt(start_hours ?? ""),
+			minutes: parseInt(start_minutes ?? ""),
+			seconds: parseInt(start_seconds ?? "")
+		},
+		time: {
+			hours: parseInt(time_hours ?? ""),
+			minutes: parseInt(time_minutes ?? ""),
+			seconds: parseInt(time_seconds ?? "")
+		}
+	}
 
 	const date = new Date()
 	const input_start = {
