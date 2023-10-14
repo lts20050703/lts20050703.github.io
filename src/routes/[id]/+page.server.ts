@@ -7,7 +7,8 @@ const links: Record<string, { name: string; href: string; img?: string; username
 		{ name: "Wist", href: "/wist", img: "/img/wist.png" },
 		{ name: "2023", href: "/2023" },
 		{ name: "Openclozes", href: "/openclozes" },
-		{ name: "Library", href: "/library" }
+		{ name: "Library", href: "/library" },
+		{ name: "Countdown", href: "/countdown" }
 	],
 	gaming: [
 		{ name: "TETR.IO", href: "/tetr", img: "/img/tetr.ico", username: "@lts20050703" },
