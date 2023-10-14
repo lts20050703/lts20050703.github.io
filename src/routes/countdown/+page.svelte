@@ -4,25 +4,29 @@
 	import { onMount } from "svelte"
 	import { themeChange } from "theme-change"
 
-	const start_hours = $page.url.searchParams.get("start_hours")
-	const start_minutes = $page.url.searchParams.get("start_minutes")
-	const start_seconds = $page.url.searchParams.get("start_seconds")
-	const time_hours = $page.url.searchParams.get("time_hours")
-	const time_minutes = $page.url.searchParams.get("time_minutes")
-	const time_seconds = $page.url.searchParams.get("time_seconds")
-
-	const data = {
-		countdown:
-			start_hours && start_minutes && start_seconds && time_hours && time_minutes && time_seconds,
+	let data: {
+		countdown: string | null
 		start: {
-			hours: parseInt(start_hours ?? ""),
-			minutes: parseInt(start_minutes ?? ""),
-			seconds: parseInt(start_seconds ?? "")
+			hours: number
+			minutes: number
+			seconds: number
+		}
+		time: {
+			hours: number
+			minutes: number
+			seconds: number
+		}
+	} = {
+		countdown: null,
+		start: {
+			hours: NaN,
+			minutes: NaN,
+			seconds: NaN
 		},
 		time: {
-			hours: parseInt(time_hours ?? ""),
-			minutes: parseInt(time_minutes ?? ""),
-			seconds: parseInt(time_seconds ?? "")
+			hours: NaN,
+			minutes: NaN,
+			seconds: NaN
 		}
 	}
 
@@ -44,7 +48,7 @@
 		location.href = `./?start_hours=${input_start.hours}&start_minutes=${input_start.minutes}&start_seconds=${input_start.seconds}&time_hours=${input_time.hours}&time_minutes=${input_time.minutes}&time_seconds=${input_time.seconds}`
 	}
 
-	const start = new Date(
+	let start = new Date(
 		date.getFullYear(),
 		date.getMonth(),
 		date.getDate(),
@@ -52,7 +56,7 @@
 		data.start.minutes,
 		data.start.seconds
 	).getTime()
-	const time = ((data.time.hours * 60 + data.time.minutes) * 60 + data.time.seconds) * 1000
+	let time = ((data.time.hours * 60 + data.time.minutes) * 60 + data.time.seconds) * 1000
 
 	let left = {
 		hours: data.time.hours.toString().padStart(2, "0"),
@@ -68,6 +72,45 @@
 
 	onMount(() => {
 		themeChange(false)
+
+		const start_hours = $page.url.searchParams.get("start_hours")
+		const start_minutes = $page.url.searchParams.get("start_minutes")
+		const start_seconds = $page.url.searchParams.get("start_seconds")
+		const time_hours = $page.url.searchParams.get("time_hours")
+		const time_minutes = $page.url.searchParams.get("time_minutes")
+		const time_seconds = $page.url.searchParams.get("time_seconds")
+
+		data = {
+			countdown:
+				start_hours && start_minutes && start_seconds && time_hours && time_minutes && time_seconds,
+			start: {
+				hours: parseInt(start_hours ?? ""),
+				minutes: parseInt(start_minutes ?? ""),
+				seconds: parseInt(start_seconds ?? "")
+			},
+			time: {
+				hours: parseInt(time_hours ?? ""),
+				minutes: parseInt(time_minutes ?? ""),
+				seconds: parseInt(time_seconds ?? "")
+			}
+		}
+
+		start = new Date(
+			date.getFullYear(),
+			date.getMonth(),
+			date.getDate(),
+			data.start.hours,
+			data.start.minutes,
+			data.start.seconds
+		).getTime()
+
+		time = ((data.time.hours * 60 + data.time.minutes) * 60 + data.time.seconds) * 1000
+
+		left = {
+			hours: data.time.hours.toString().padStart(2, "0"),
+			minutes: data.time.minutes.toString().padStart(2, "0"),
+			seconds: data.time.seconds.toString().padStart(2, "0")
+		}
 
 		requestAnimationFrame(callback)
 
