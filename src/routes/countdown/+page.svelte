@@ -132,14 +132,28 @@
 							.padStart(2, "0")
 					}
 				}
+
+				const date = new Date()
+				now = {
+					hours: date.getHours().toString().padStart(2, "0"),
+					minutes: date.getMinutes().toString().padStart(2, "0"),
+					seconds: date.getSeconds().toString().padStart(2, "0")
+				}
+			} else {
+				const time_left = start - Date.now() + 1000
+				now = {
+					hours: Math.floor(time_left / 3600000)
+						.toString()
+						.padStart(2, "0"),
+					minutes: Math.floor((time_left % 3600000) / 60000)
+						.toString()
+						.padStart(2, "0"),
+					seconds: Math.floor((time_left % 60000) / 1000)
+						.toString()
+						.padStart(2, "0")
+				}
 			}
 
-			const date = new Date()
-			now = {
-				hours: date.getHours().toString().padStart(2, "0"),
-				minutes: date.getMinutes().toString().padStart(2, "0"),
-				seconds: date.getSeconds().toString().padStart(2, "0")
-			}
 			requestAnimationFrame(callback)
 		}
 	})
@@ -163,7 +177,7 @@
 			<div class="font-bold">LTS20050703</div>
 		</div>
 
-		<div class="mb-4 font-bold">Openclozes {v}</div>
+		<div class="mb-4 font-bold">Countdown {v}</div>
 
 		<div class="flex items-center justify-center gap-3">
 			START
