@@ -1,0 +1,23 @@
+image: debian/buster
+packages:
+  - nodejs
+repositories:
+  # https://github.com/nodesource/distributions/blob/master/README.md#debmanual
+  nodesource.com: >-
+    https://deb.nodesource.com/node_14.x buster main
+    9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280
+oauth: pages.sr.ht/PAGES:RW
+environment:
+  site: lts20050703.srht.site
+  # https://docs.npmjs.com/cli/v6/using-npm/config#progress
+  CI: "TRUE"
+tasks:
+  - install: |
+    cd $site
+    npm install
+  - package: |
+      cd $site
+      npx vite build
+      tar -C build -cvz > ../site.tar.gz
+  - upload: |
+      acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
