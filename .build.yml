@@ -13,11 +13,11 @@ environment:
   CI: "TRUE"
 tasks:
   - install: |
-    cd $site
-    npm install
+      cd $site
+      npm install
   - package: |
       cd $site
       npx vite build
-      tar -C build -cvz > ../site.tar.gz
+      tar -C build -cvz . > ../site.tar.gz
   - upload: |
       acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
