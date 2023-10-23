@@ -51,8 +51,8 @@ const data: Record<string, { href?: string; username?: string; img?: string; bac
 	fireship: { href: "https://nitter.net/fireship_dev/status/1567936669529305088" },
 	svelte: { href: "https://nitter.net/stolinski/status/1438173489479958536" },
 	// Projects
-	"e5y-qualifier": { href: "https://codeberg.org/lts20050703/e5y-qualifier", back: "/projects" },
-	"e5y-final": { href: "https://codeberg.org/lts20050703/e5y-final", back: "/projects" },
+	"e5y-qualifier": { href: "https://sr.ht/~lts20050703/e5y-qualifier", back: "/projects" },
+	"e5y-final": { href: "https://sr.ht/~lts20050703/e5y-final", back: "/projects" },
 	wist: { href: "https://wist.lts20050703.repl.co", back: "/projects" },
 	// Gaming™
 	tetr: { href: "https://ch.tetr.io/u/lts20050703", back: "/gaming" },
