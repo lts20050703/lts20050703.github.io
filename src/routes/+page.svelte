@@ -52,4 +52,5 @@
 	<a href="/deathlylonelinessattacks">Deathly Loneliness Attacks</a>
 	<a href="/fireship">Fireship</a>
 	<a href="/svelte">Svelte</a>
+	<a href="/sourcehut">SourceHut</a>
 </div>
