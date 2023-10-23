@@ -1,6 +1,7 @@
 image: debian/stable
 packages:
   - nodejs
+  - npm
 repositories:
   # https://github.com/nodesource/distributions/blob/master/README.md#debmanual
   nodesource.com: >-
