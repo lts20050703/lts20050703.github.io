@@ -1,0 +1,113 @@
+﻿ĐỀ SỐ 3
+https://azota.vn/de-thi/pflxyd
+Câu 1.	Trong nguyên tử Hidro, bán kính Bohr là r$_0$ = 5,3.10$^{-11}$ m, bán kính quỹ đạo dừng M là:
+A. 15,9.10$^{-11}$ m.	B. 21,2.10$^{-11}$ m.	*C. 47,7.10$^{-11}$ m.	D. 8,48.10$^{-11}$ m.
+Câu 2.	 Chất phóng xạ X có hằng số phóng xạ λ, ở thời điểm đầu t$_0$ = 0 có N$_0$ hạt X, số hạt nhân X bị phân rã trong khoảng thời gian t được tính bởi:
+A. N$_0$.e$^{-λt}$	B. N$_0$.(1-λt)	*C. N$_0$.(1-e$^{-λt}$)	D. N$_0$.(1-e$^{λt}$)
+Câu 3.	 Cho phản ứng hạt nhân $_Z^A$X+$_4^9$Be→$_6^{12}$C+$_0^1$n. Hạt $_Z^A$Xtrong phản ứng này là:
+A. hạt electron.	*B. hạt α.	C. hạt β$^+$.	D. hạt proton.
+Câu 4.	 Chọn phát biểu đúng, khi nói về hiện tượng quang điện trong:
+A. là hiện tượng giải phóng electron khỏi một khối chất bằng cách bắn phá ion vào chất đó.
+*B. là hiện tượng giải phóng electron liên kết thành elctron tự do trong chất bán dẫn khi có ánh sáng thích hợp chiếu vào.
+C. là hiện tượng giải phóng electron khỏi kim loại bằng cách đốt nóng.
+D. là hiện tượng bứt electron ra khỏi bề mặt kim loại khi bị chiếu sáng.
+Câu 5.	 Bức xạ nào sau đây không do các vật nung nóng phát ra:
+*A. Tia X.	B. Tia tử ngoại.	C. Ánh sáng nhìn thấy.	D. Tia hồng ngoại.
+Câu 6.	 Sau 2 giờ kể từ lúc bắt đầu phóng xạ, khối lượng chất phóng xạ giảm đi 4 lần. Hỏi sau 3 giờ kể từ thời điểm đầu thì lượng chất đó sẽ giảm đi:
+A. 9	*B. 8	C. 16	D. 12
+Câu 7.	 Số notron có trong 1,6g $_8^{17}$Olà:
+A. 4,084.10$^{24}$ hạt.	B. 5,418.10$^{23}$ hạt.	*C. 5,099.10$^{23}$ hạt.	D. 6,632. 10$^{23}$ hạt.
+Câu 8.	 Cho phản ứng hạt nhân $_1^1$H+$_3^7$Li→$_2^4$He+X. Xác định hạt nhân X trong phản ứng trên 
+A. hạt proton.	*B. hạt α.	C. hạt notron.	D. hạt electron.
+Câu 9.	 Ban đầu một mẫu chất phóng xạ nguyên chất có N$_0$ hạt nhân. Biết chu kì bán rã của chất phóng xạ này là T. Sau thời gian 4T kể từ thời điểm ban đầu, số hạt nhân đã phân rã của mẫu chất phóng xạ này là:
+*A.$\frac{15}{16}N_0$  	B.$\frac{1}{4}N_0$  	C. $\frac{1}{16}N_0$	D.  $\frac{1}{8}N_0$
+Câu 10.	 Ký hiệu của hạt nhân X có 27 proton và 33 notron là:
+A. $_{27}^{33}$X	B. $_{33}^{27}$X	*C. $_{27}^{60}$X	D. $_{60}^{27}$X
+Câu 11.	 Hiện tượng quang điện ngoài là hiện tượng:
+*A. các electron bật ra khỏi bề mặt kim loại khi có ánh sáng thích hợp chiếu vào.
+B. ánh sáng giải phóng các electron liên kết để chúng trở thành electron dẫn.
+C. phát xạ nhiệt electron trên bề mặt kim loại.
+D. các electron bật ra khỏi bề mặt kim loại khi bị nung nóng.
+Câu 12.	 Theo mẫu nguyên tử Bohr, trạng thái dừng của nguyên tử:
+*A. có thể là trạng thái cơ bản hay kích thích.	B. là trạng thái mà các electron dừng chuyển động.
+C. chỉ là trạng thái kích thích.	D. chỉ là trạng thái cơ bản.
+Câu 13.	 Đồng vị là các nguyên tử mà hạt nhân của chúng có:
+A. số khối bằng nhau.		*B. số proton bằng nhau, số notron khác nhau.
+C. số notron bằng nhau, số proton khác nhau.	D. khối lượng bằng nhau.
+Câu 14.	 Tia Rơn-ghen (tia X) có tần số:
+A. lớn hơn tần số tia gamma.	B. nhỏ hơn tần số tia hồng ngoại.
+C. nhỏ hơn tần số tia màu đỏ.	*D. lớn hơn tần số tia màu tím.
+Câu 15.	 Một vật có khối lượng nghỉ 50 kg chuyển động với tốc độ 0,6c (c là tốc độ ánh sáng trong chân không) thì khối lượng tương đối tính của nó là:
+A. 50 kg.	B. 40 kg.	C. 83,3 kg.	*D. 62,5 kg.
+Câu 16.	 Khi có ánh sáng kích thích, chọn phát biểu không đúng khi nói về sự phát quang:
+A. Chất huỳnh quang thường xảy ra đối với các chất lỏng và khí.
+B. Chất lân quang thường xảy ra với chất rắn.
+*C. Chất lân quang thường xảy ra đối với các chất rắn, lỏng, khí.
+D. Ánh sáng lân quang tồn tại trong thời gian dài hơn 10$^{-8}$ s sau khi tắt ánh sáng kích thích.
+Câu 17.	 Khi nói về ánh sáng đơn sắc, chọn phát biểu không đúng:
+A. Tần số của ánh sáng đỏ nhỏ hơn tần số ánh sáng lục.
+B. Chiết suất của một môi trường trong suốt đối với các ánh sáng đơn sắc khác nhau là khác nhau.
+C. Ánh sáng đơn sắc không bị tán sắc khi truyền qua lăng kính.
+*D. Chiết suất của thủy tinh đối với ánh sáng đỏ lớn hơn chiết suất của nó đối với ánh sáng lục.
+Câu 18.	 Hạt nhân $_{94}^{239}$Pu có số notron nhiều hơn số proton bao nhiêu hạt ?
+*A. 51 hạt.	B. 145 hạt.	C. 43 hạt.	D. 94 hạt.
+Câu 19.	 Tính chất chung của tia hồng ngoại, ánh sáng nhìn thấy, tia tử ngoại, tia X là:
+A. có tác dụng nhiệt mạnh.	B. có khả năng đâm xuyên mạnh.
+C. làm phát quang nhiều chất.	*D. truyền được trong chân không.
+Câu 20.	 Đại lượng đặc trưng cho mức độ bền vững của hạt nhân là:
+A. năng lượng liên kết.		B. độ hụt khối. 
+C. khối lượng hạt nhân.		*D. năng lượng liên kết riêng.
+Câu 21.	 Trong thí nghiệm Young về giao thoa ánh sáng đơn sắc, khi dùng ánh sáng có bước sóng 540 nm thì ta đo được khoảng vân i$_1$ = 0,2 mm. Để có khoảng vân i$_2$ = 0,24 mm, nếu không thay đổi các yếu tố khác, thì phải dùng ánh sáng đơn sắc có bước sóng là:
+*A. 648 nm.	B. 750 nm.	C. 480 nm.	D. 450 nm.
+Câu 22.	 Trong không khí, tia phóng xạ nào sau đây có khả năng ion hóa mạnh nhất:
+*A. tia α	B. tia β$^-$	C. tia β$^+$	D. tia γ
+Câu 23.	 Đồng vị phóng xạ $_{15}^{32}$P phóng xạ β$^-$ với chu kỳ bán rã T = 14,2 ngày. Sau 42,6 ngày kể từ thời điểm ban đầu, khối lượng của chất phóng xạ $_{15}^{32}$P còn lại là 2,5g. Tính khối lượng ban đầu của nó.
+*A. 20g.	B. 30g.	C. 22,5g.	D. 25g
+Câu 24.	 Năng lượng của photon ứng với bức xạ có bước sóng 662,5 nm trong chân không là:
+A. 3.10$^{-13}$ J.	*B. 3.10$^{-19}$ J.	C. 3.10$^{-18}$ J.	D. 3.10$^{-20}$ J.
+Câu 25.	 Khi nguyên tử hidro chuyển từ trạng thái dừng có năng lượng E$_m$ = –3,407 eV sang trạng thái dừng có năng lượng E$_n$ = –1,514 eV, thì nguyên tử sẽ phát xạ hay hấp thụ photon có tần số:
+A. phát xạ, f = 4,572.10$^{14}$ Hz.	B. phát xạ, f = 1,188.10$^{15}$ Hz.
+C. hấp thụ, f = 1,188.10$^{15}$ Hz.	*D. hấp thụ, f = 4,572.10$^{14}$ Hz.
+Câu 26.	 Trong khoảng thời gian 4h có 75% số hạt nhân ban đầu của một đồng vị phóng xạ bị phân rã. Chu kì bán rã của đồng vị đó là:
+A. 3h.	B. 1h.	*C. 2h.	D. 4h.
+Câu 27.	 Chọn phát biểu đúng khi nói về photon:
+A. Photon có thể tồn tại trong trạng thái đứng yên.
+*B. Các photon trong cùng một chùm sáng đơn sắc đều mang năng lượng như nhau.
+C. Năng lượng photon càng lớn khi bước sóng ánh sáng ứng với photon đó càng lớn.
+D. Năng lượng của photon ánh sáng tím nhỏ hơn năng lượng photon ánh sáng đỏ.
+Câu 28.	 Năng lượng liên kết riêng là:
+A. năng lượng cần để giải phóng một electron ra khỏi nguyên tử.
+*B. năng lượng liên kết tính trung bình cho một nuclon trong hạt nhân.
+C. năng lượng cần để phá vỡ hạt nhân ra thành từng nuclon.
+D. là tỉ số giữa năng lượng liên kết và số hạt có trong nguyên tử.
+Câu 29.	 Hạt nhân $_{18}^{40}$Ar có độ hụt khối là 0,3703u. Cho khối lượng của protôn và nơtrôn lần lượt là 1,0073u và 1,0087u. Khối lượng hạt nhân $_{18}^{40}$Ar là:
+*A. 39,9525 u.	B. 39,9745u.	C. 40,6931u.	D. 40,0143u.
+Câu 30.	 Trong thí nghiệm Young về giao thoa ánh sáng đơn sắc, khoảng vân đo được trên màn sẽ giảm khi ta:
+*A. giảm bước sóng ánh sáng.	B. giảm khoảng cách 2 khe hẹp.
+C. tăng bước sóng ánh sáng.	D. tịnh tiến màn ra xa 2 khe.
+Câu 31.	 Chọn câu không đúng. Sóng ánh sáng 
+A. là sóng ngang.		B. truyền được trong chân không.
+*C. là sóng dọc.		D. có bản chất sóng điện từ.
+Câu 32.	 Xét nguyên tử Hidro theo mẫu nguyên tử Bohr, gọi r$_0$ là bán kính Bohr thì bán kính nào sau đây có thể là bán kính các quỹ đạo dừng
+A. 20r$_0$.	B. 10r$_0$	*C. 25r$_0$.	D. 12r$_0$.
+Câu 33.	 Trong một phản ứng hạt nhân, nếu tổng khối lượng của các hạt trước phản ứng nhỏ hơn tổng khối lượng các hạt sau phản ứng là 0,012 u. Phản ứng hạt nhân này:
+A. tỏa năng lượng 11,178 MeV.	*B. thu năng lượng 11,178 MeV.
+C. thu năng lượng 18,63 MeV.	D. tỏa năng lượng 18,63 MeV.
+Câu 34.	 Sự phân hạch là sự vỡ một hạt nhân nặng:
+A. thành hai hạt nhân nhẹ hơn, khi hấp thụ một protron.
+B. thường xảy ra một cách tự phát, thành nhiều hạt nhân nặng hơn.
+*C. thành hai hạt nhân nhẹ hơn và vài notron, sau khi hấp thụ một notron chậm.
+D. thành hai hạt nhân nhẹ hơn, thường xảy ra một cách tự phát.
+Câu 35.	 Tìm độ hụt khối của hạt nhân $_{47}^{107}$Ag? biết khối lượng hạt nhân Ag là 106,8783u, khối lượng notron m$_n$ = 1,0087u, khối lượng proton m$_p$ = 1,0073u.
+A. 0,6986u.	B. 0,6868u.	C. 0,9686u.	*D. 0,9868u.
+Câu 36.	 Hạt nhân nguyên tử được cấu tạo từ:
+A. các notron và electron.		B. các proton, notron, electron.
+C. các proton và electron.		*D. các nuclon.
+Câu 37.	 Trong thuyết lượng tử, hạt mang năng lượng được gọi là hạt:
+A. notron.	B. proton.	C. nuclon.	*D. photon.
+Câu 38.	 Kim loại có công thoát là A = 3,55 eV. Người ta lần lượt chiếu vào kim loại các bức xạ có bước sóng λ$_1$= 0,42 μm, λ$_2$= 0,3μm. Bức xạ nào gây ra được hiện tượng quang điện là:
+A. cả hai bức xạ λ$_1$và λ$_2$.	*B. bức xạ λ$_2$.	C. không có bức xạ nào.	D. bức xạ λ$_1$.
+Câu 39.	 Cho phản ứng hạt nhân $_1^2$H+$_3^6$Li→$_2^4$He+$_2^4$He. Biết khối lượng các hạt đơteri, liti, heli trong phản ứng trên lần lượt là 2,0136 u; 6,0172 u; 4,0015 u, tính năng lượng phản ứng trên:
+A. tỏa 4,143.10$^{-18}$ J.	B. thu 25,896 J.	*C. tỏa 4,143.10$^{-12}$ J.	D. thu 4,143.10$^{-12}$ J.
+Câu 40.	 Khi truyền trong chân không, các ánh sáng đơn sắc khác nhau có đại lượng nào sau đây luôn bằng nhau:
+A. Chu kỳ.	B. Tần số.	C. Bước sóng.	*D. Tốc độ.
