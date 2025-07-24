@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/CUxDd6Kz.js";import{p as m,c as a,t as p,$ as r}from"../chunks/B8L_ZMYm.js";import{h as e}from"../chunks/BII4EAoK.js";import{i}from"../chunks/CJR_oDH4.js";import{n as s}from"../chunks/D1vz-mjO.js";import{B as f}from"../chunks/C6UeHaTu.js";function B(o,t){m(t,!1),i(),e(n=>{p(()=>r.title=s.blog)}),f(o,{}),a()}export{B as component};
