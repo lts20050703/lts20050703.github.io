@@ -1,0 +1,178 @@
+{
+	"same_group_fade_in_ms": 1846.15384615,
+	"same_group_fade_out_ms": 1846.15384615,
+	"different_group_fade_in_ms": 0,
+	"different_group_fade_out_ms": 1846.15384615,
+	"volume": 100,
+	"volume_fade_ms": 1000,
+	"current_phase": 0,
+	"auto_advance_every_second": 0,
+	"auto_advance": false,
+	"audios": [
+		{
+			"id": "section-one-without-drums.mp3",
+			"group": 0,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 179.0769230769231,
+					"end": 415.384625,
+					"phase": "1,3",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-one-with-drums.mp3",
+			"group": 0,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 179.0769230769231,
+					"end": 415.384625,
+					"phase": "2,4",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-one-pad-without-drums.mp3",
+			"group": 0,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 177.23077724358973,
+					"end": 413.53847916666666,
+					"phase": "3",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-one-pad-with-drums.mp3",
+			"group": 0,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 177.23077724358973,
+					"end": 413.53847916666666,
+					"phase": "4",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-two-without-drums.mp3",
+			"offset": 1.84615384615387,
+			"group": 1,
+			"volume": 100,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 62.769230769230774,
+					"end": 299.0769375,
+					"phase": "5,7",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-two-with-drums.mp3",
+			"offset": 1.84615384615387,
+			"group": 1,
+			"volume": 100,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 62.769230769230774,
+					"end": 299.0769375,
+					"phase": "6,8",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-two-7b-arp-without-drums.mp3",
+			"group": 1,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 59.076918269230816,
+					"end": 295.384625,
+					"phase": "7",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-two-7b-arp-with-drums.mp3",
+			"group": 1,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 59.076918269230816,
+					"end": 295.384625,
+					"phase": "8",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-three.mp3",
+			"group": 2,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 66.46153846153847,
+					"end": 302.76925,
+					"phase": "9,10",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "section-three-orchestral.mp3",
+			"group": 2,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 62.76922596153844,
+					"end": 299.0769375,
+					"phase": "10",
+					"loop": true
+				}
+			]
+		},
+		{
+			"id": "outro.mp3",
+			"group": 3,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.84615384615,
+			"loops": [
+				{
+					"start": 130.03,
+					"end": 232.95,
+					"phase": "11",
+					"loop": true
+				}
+			]
+		}
+	]
+}
