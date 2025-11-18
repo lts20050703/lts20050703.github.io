@@ -1,0 +1,107 @@
+﻿ĐỀ SỐ 4
+https://azota.vn/de-thi/zuf3mb
+Câu 1.	Trong khoảng thời gian 4 giờ có 75% số hạt nhân ban đầu của một đồng vị phóng xạ bị phân rã. Chu kỳ bán rã của đồng vị đó là
+*A. 2 giờ.	B. 1 giờ.	C. 3 giờ.	D. 4 giờ.
+Câu 2.	Đại lượng nào sau đây đặc trưng cho mức độ bền vững của hạt nhân?
+A. Độ hụt khối.		*B. Năng lượng liên kết riêng.
+C. Năng lượng liên kết.		D. Năng lượng nghỉ.
+Câu 3.	Chất phóng xạ Pôlôni $_{84}^{210}$Po phát ra tia α và biến đổi thành chì $_{82}^{206}$Pb. Biết chu kỳ bán rã của Pôlôni là 138 ngày. Ban đầu có một mẫu Pôlôni nguyên chất với N$_0$ hạt nhân $_{84}^{210}$Po. Sau bao lâu thì có 0,75N$_0$ hạt nhân chì được tạo thành?
+*A. 276 ngày.	B. 414 ngày.	C. 552 ngày.	D. 138 ngày.
+Câu 4.	Trong thí nghiệm Y-âng về giao thoa với ánh sáng, hai khe được chiếu sáng đồng thời hai bức xạ có bước sóng lần lượt là λ$_1$ và λ$_2$ (λ$_2$>λ$_1$), khoảng cách giữa hai khe là 0,5 mm, khoảng cách từ hai khe đến màn quan sát là 2 m. Trên màn quan sát, tại vị trí cách vân sáng trung tâm 6 mm có sự trùng nhau của vân sáng bậc 3 của bức xạ λ$_1$ với vân sáng bậc k của bức xạ λ$_2$. Giá trị của k và λ$_2$ lần lượt là
+A. k = 2 và λ$_2$=0,40 μm		B. k = 1 và λ$_2$=0,60 μm 
+*C. k = 2 và λ$_2$=0,75 μm		D. k = 3 và λ$_2$=0,50 μm
+Câu 5.	Theo mẫu nguyên tử Bo, trong nguyên tử hiđrô, bán kính quỹ đạo K của electron trong nguyên tử hiđrô là r$_0$. Khi chuyển lên trạng thái kích thích thứ hai, bán kính quỹ đạo của electron tăng thêm
+*A. 8r$_0$.	B. 15r$_0$.	C. 3r$_0$.	D. 4r$_0$.
+Câu 6.	Giới hạn quang điện của Canxi là 450 nm. Công thoát electron khỏi đồng lớn hơn công thoát electron khỏi Canxi 1,38 eV. Giới hạn quang điện của đồng là
+A. 902 nm.	B. 902 nm.	*C. 300 nm.	D. 902 nm.
+Câu 7.	Công thức tính độ hụt khối của hạt nhân $_Z^A$X là
+A. 𝚫m = [Zm$_p$ + (A-Z)m$_n$] + m$_X$ 	*B. 𝚫m = [Zm$_p$ + (A-Z)m$_n$] - m$_X$
+C. 𝚫m = [Zm$_p$ - (A-Z)m$_n$] - m$_X$ 	D. 𝚫m = [Zm$_p$ + (A+Z)m$_n$] - m$_X$ 
+Câu 8.	Trong thí nghiệm Y-âng về giao thoa ánh sáng, bước sóng ánh sáng đơn sắc là 600 nm, khoảng cách giữa hai khe hẹp là 1 mm, khoảng cách từ mặt phẳng chứa hai khe đến màn là 2 m. Khoảng vân quan sát được trên màn có giá trị bằng
+A. 0,9 mm.	B. 0,3 mm.	C. 1,5 mm.	*D. 1,2 mm.
+Câu 9.	Trong thí nghiệm Y-âng về giao thoa với ánh sáng đơn sắc có bước sóng 0.5μm, khoảng cách từ mặt phẳng chứa hai khe đến màn quan sát là 2 m. Ở cùng một phía so với vân sáng trung tâm, vân tối thứ 2 và vân sáng bậc 3 cách nhau 2,5 mm. Khoảng cách giữa hai khe là
+A. 2 mm.	*B. 0,6 mm.	C. 1,5 mm.	D. 1 mm.
+Câu 10.	Biết N$_A$= 6,02.10$^{23}$  hạt/mol. Trong 119 gam $_{92}^{238}$U có số prôtôn gần bằng
+*A. 2,77.10$^{25}$.	B. 4,4.10$^{25}$.	C. 7,2.10$^{25}$.	D. 3,01.10$^{23}$.
+Câu 11.	Trong nguyên tử hiđrô, bán kính Bo là r$_0$ = 5,3.10$^{-11}$ m. Ở một trạng thái kích thích của nguyên tử hiđrô, electron chuyển động trên quỹ đạo dừng có bán kính r = 8,48.10$^{-10}$ m. Quỹ đạo đó có tên gọi là quỹ đạo dừng
+A. M.	*B. N.	C. O.	D. P.
+Câu 12.	Theo mẫu nguyên tử Bo, trong nguyên tử hiđrô, khi electron chuyển từ quỹ đạo P về quỹ đạo K thì nguyên tử phát ra phôtôn ứng với bức xạ có tần số f$_1$. Khi electron chuyển từ quỹ đạo P về quỹ đạo L thì nguyên tử phát ra phôtôn ứng với bức xạ có tần số f$_2$. Nếu electron chuyển từ quỹ đạo L về quỹ đạo K thì nguyên tử phát ra phôtôn ứng với bức xạ có tần số
+A. f$_3$=$\sqrt{f_1^2+f_2^2}$	B. f$_3$=f$_1$+f$_2$	C. $\frac{1}{f_3}$ = $\frac{1}{f_1}$ + $\frac{1}{f_2}$ 	*D. f$_3$=f$_1$-f$_2$
+Câu 13.	Tia hồng ngoại là những bức xạ có
+A. bước sóng nhỏ hơn bước sóng ánh sáng đỏ.
+B. khả năng đâm xuyên mạnh, có thể xuyên qua lớp chì dày cỡ cm.
+*C. bản chất là sóng điện từ.
+D. khả năng ion hóa mạnh không khí.
+Câu 14.	Xét nguyên tử hiđrô theo mẫu nguyên tử Bo. Gọi r$_0$ là bán kính Bo. Bán kính quỹ đạo dừng L có giá trị là
+A. 9r$_0$.	B. 3r$_0$.	C. 2r$_0$.	*D. 4r$_0$.
+Câu 15.	Hạt nhân nguyên tử được cấu tạo bởi
+A. nơtron và electron.		*B. prôtôn và nơtron.
+C. prôtôn và electron.		D. prôtôn, nơtron và electron.
+Câu 16.	Hạt nhân $_{Z_1}^{A_1}$X và $_{Z_2}^{A_2}$Y có độ hụt khối lần lượt là 𝚫m$_1$ và 𝚫m$_2$. Biết hạt nhân $_{Z_1}^{A_1}$X bền vững hơn hạt nhân $_{Z_2}^{A_2}$Y. Hệ thức nào sau đây là đúng?
+*A. $\frac{𝚫m_1}{A_1}$ > $\frac{𝚫m_2}{A_2}$ 	B. 𝚫m$_1$ > 𝚫m$_2$ 	C. A$_1$ > A$_2$ 	D.  $\frac{𝚫m_1}{A_1}$ < $\frac{𝚫m_2}{A_2}$
+Câu 17.	Trong thí nghiệm Y-âng về giao thoa với ánh sáng đơn sắc, khoảng cách giữa hai khe là 1 mm, khoảng cách từ mặt phẳng chứa hai khe đến màn quan sát là 2 m. Trong hệ vân trên màn, vân sáng bậc 3 cách vân trung tâm 2,4 mm. Bước sóng của ánh sáng dùng trong thí nghiệm
+A. 0.5μm 	B. 0.6μm 	*C. 0.4μm 	D. 0.7μm 
+Câu 18.	Tia laze có đặc điểm nào sau đây?
+A. Luôn có cường độ nhỏ.		B. Không bị khúc xạ khi đi qua lăng kính.
+C. Luôn là ánh sáng trắng.	*D. Có tính đơn sắc cao.
+Câu 19.	Kí hiệu của hạt nhân nguyên tử X có 3 prôtôn và 4 nơtron là
+*A. $_3^7$X 	B. $_7^3$X 	C. $_4^7$X 	D. $_3^4$X 
+Câu 20.	Chiếu một chùm sáng đơn sắc hẹp tới mặt bên của một lăng kính thủy tinh đặt trong không khí. Khi đi qua lăng kính, chùm sáng này
+A. bị đổi màu.		B. bị thay đổi tần số.
+C. không bị lệch khỏi phương truyền ban đầu.	*D. không bị tán sắc.
+Câu 21.	Hiện tượng giao thoa sóng ánh sáng chỉ quan sát được khi hai nguồn ánh sáng là hai nguồn
+*A. kết hợp.	B. cùng cường độ sáng.	C. cùng màu sắc.	D. đơn sắc.
+Câu 22.	Các phản ứng hạt nhân không tuân theo định luật bảo toàn
+A. số khối.	*B. khối lượng.	C. điện tích.	D. động lượng.
+Câu 23.	Ban đầu một mẫu chất phóng xạ nguyên chất có khối lượng m$_0$, chu kỳ bán rã của chất này là 3,8 ngày. Sau 15,2 ngày khối lượng của chất phóng xạ đó còn lại là 2,24 g. Khối lượng m$_0$ là
+A. 5,60 g.	B. 8,96 g.	*C. 35,84 g.	D. 17,92 g.
+Câu 24.	Hạt nhân $_4^{10}$Be có khối lượng 10,0135 u. Khối lượng của nơtron m$_n$ = 1,0087 u, khối lượng prôtôn m$_p$ = 1,0073 u. 1u = 931,5 Mev/c$^2$. Năng lượng liên kết của hạt nhân $_4^{10}$Be là
+A. 6,3249 eV.	*B. 63,2489 MeV.	C. 6,3249 MeV.	D. 63,2489 eV.
+Câu 25.	Hiện tượng quang điện ngoài là hiện tượng electron bị bứt ra khỏi tấm kim loại khi
+A. chiếu vào tấm kim loại này một chùm hạt nhân Heli.
+B. cho dòng điện chạy qua tấm kim loại này.
+*C. chiếu vào tấm kim loại này một bức xạ điện từ có bước sóng thích hợp.
+D. tấm kim loại này bị nung nóng bởi một nguồn nhiệt.
+Câu 26.	Ban đầu có một mẫu phóng xạ nguyên chất, sau thời gian τ số hạt nhân chất phóng xạ giảm đi e lần (e là cơ số của loga tự nhiên với lne = 1). Sau thời gian t=3$^τ$ thì khối lượng chất phóng xạ trong mẫu còn lại bao nhiêu phần trăm so với ban đầu?
+A. 15%.	B. 12,5%.	C. 25%.	*D. 5%.
+Câu 27.	Giới hạn quang điện của một kim loại là 0,50 µm. Công thoát êlectron của kim loại này bằng bao nhiêu? (Cho hằng số Plăng h = 6,625.10$^{-34}$ J.s; tốc độ ánh sáng trong chân không c = 3.10$^8$ m/s; 1eV = 1,6.10$^{-19}$J)
+A. 3,975 eV.	*B. 2,48 eV.	C. 3,65 eV.	D. 1,24 eV.
+Câu 28.	Giới hạn quang điện của mỗi kim loại là
+A. công nhỏ nhất dùng để bức electron ra khỏi kim loại đó.
+B. công lớn nhất dùng để bức electron ra khỏi kim loại đó.
+*C. bước sóng dài nhất của bức xạ chiếu vào kim loại đó để gây ra được hiện tượng quang điện.
+D. bước sóng ngắn nhất của bức xạ chiếu vào kim loại đó để gây ra được hiện tượng quang điện.
+Câu 29.	Khi nói về tia tử ngoại, phát biểu nào sau đây sai?
+*A. bước sóng lớn hơn bước sóng ánh sáng tím.	B. kích thích sự phát quang của nhiều chất.
+C. tác dụng lên phim ảnh.		D. có bản chất là sóng điện từ.
+Câu 30.	Cho 4 tia phóng xạ: tia α, tia β$^+$, tia β$^-$, tia γ  đi vào một miền có điện trường đều theo phương vuông góc với đường sức điện. Tia phóng xạ không bị lệch khỏi phương truyền ban đầu là 
+A. Tia α.	B. Tia β$^+$.	*C. Tia β$^-$.	D. Tia γ.
+Câu 31.	Khi electron ở quỹ đạo dừng thứ n thì năng lượng của nguyên tử hiđrô được tính theo công thức E$_n$ = -$\frac{13,6}{n^2}$ (eV) (n = 1, 2, 3, ...). Khi electron trong nguyên tử hiđrô chuyển từ quỹ đạo dừng n = 3 sang quỹ đạo dừng n = 2 thì nguyên tử hiđrô phát ra phôtôn ứng với bức xạ có bước sóng bằng
+*A. 0.6576μm 	B. 0.4861μm 	C. 0.4350μm 	D. 0.4102μm 
+Câu 32.	Khi nói về thuyết lượng tử ánh sáng, phát biểu nào sau đây là đúng?
+A. Năng lượng của phôtôn càng lớn khi tần số của ánh sáng ứng với phôtôn đó càng nhỏ.
+*B. Ánh sáng được tạo bởi các hạt gọi là phôtôn.
+C. Năng lượng phôtôn càng nhỏ khi cường độ chùm sáng càng nhỏ.
+D. Phôtôn có thể chuyển động hay đứng yên tùy thuộc vào nguồn sáng chuyển động hay đứng yên.
+Câu 33.	Bước sóng dài nhất để bứt được electron ra khỏi hai kim loại X và Y lần lượt là 3 nm và 4,5 nm, công thoát tương ứng là A1 và A2. Chọn câu đúng.
+A. A$_2$ = 2A$_1$ 	B. A$_1$ = 2A$_2$ 	C. A$_2$ = 1.5A$_1$ 	*D. A$_1$ = 1.5A$_1$ 
+Câu 34.	Giới hạn quang điện của các kim loại bạc, đồng, kẽm và nhôm lần lượt là 0.26μm; 0.3μm; 0.35μm; 0.36μm. Nếu chiếu bức xạ có bước sóng λ$_1$ vào các kim loại trên thì hiện tượng quang điện chỉ xảy ra với kim loại nhôm. Nếu chiếu bức xạ có bước sóng λ$_2$ vào các kim loại trên thì hiện tượng quang điện chỉ không xảy ra với kim loại bạc. Hiệu λ$_1$ - λ$_2$ không thể nhận giá trị nào sau đây?
+*A. 0.04μm 	B. 0.08μm 	C. 0.09μm 	D. 0.06μm 
+Câu 35.	Hạt nhân Urani $_{92}^{238}$U sau một chuỗi phân rã, biến đổi thành hạt nhân chì $_{82}^{206}$Pb. Trong quá trình đó, chu kỳ bán rã của $_{92}^{238}$U biến đổi thành hạt nhân chì là 4,47.109 năm. Giả sử khối đá lúc mới hình thành không chứa chì và tất cả lượng chì có mặt trong đó đều là sản phẩm phân rã của $_{92}^{238}$U. Nếu hiện nay tỉ lệ khối lượng của $_{92}^{238}$U và $_{82}^{206}$Pb là 50 thì tuổi của đá ấy là bao nhiêu?
+A. 1,2.10$^8$ năm.	*B. 1,5.10$^8$ năm.	C. 0,5.10$^8$ năm.	D. 2.10$^8$ năm.
+Câu 36.	Trong y học để diệt các tế bào ung thư người ta có thể sử dụng tia nào sau đây?
+A. Tia gamma.	B. Tia hồng ngoại.	*C. Tia X.	D. Tia tử ngoại.
+Câu 37.	Electron có khối lượng nghỉ m$_e$ = 9,1.10$^{-31}$ kg. Theo thuyết tương đối, khi hạt này chuyển động với tốc độ v = $\frac{2}{3}$ c (c là tốc độ ánh sáng trong chân không) thì khối lượng tương đối tính của hạt electron này là
+A. 13,65.10$^{-31}$ kg.	B. 6,10.10$^{-31}$ kg.	*C. 12,21.10$^{-31}$ kg.	D. 6,83.10$^{-31}$ kg.
+Câu 38.	Phát biểu nào sau đây là sai khi nói về ánh sáng đơn sắc?
+A. Trong cùng một môi trường truyền, tốc độ ánh sáng tím nhỏ hơn tốc độ ánh sáng đỏ.
+B. Ánh sáng đơn sắc là ánh sáng không bị thay đổi màu sắc khi đi qua lăng kính.
+*C. Chiết suất của một môi trường trong suốt đối với ánh sáng đỏ lớn hơn chiết suất của môi trường đó đối với ánh sáng tím.
+D. Trong chân không, các ánh sáng đơn sắc khác nhau truyền đi với cùng tốc độ.
+Câu 39.	Trong thí nghiệm Y-âng về giao thoa với ánh sáng đơn sắc, tại điểm M trên màn có vân sáng bậc 5. Dịch chuyển màn quan sát ra xa thêm 20 cm thì tại M là vân tối thứ 5 tính từ vân sáng trung tâm. Trước lúc dịch chuyển, khoảng cách từ mặt phẳng chứa hai khe đến màn quan sát bằng
+A. 2,2 m.
+B. 1,6 m.
+C. 2 m.
+*D. 1,8 m.
+Câu 40.	Trong chân không, bức xạ có bước sóng nào say đây là bức xạ hồng ngoại?
+A. 250 nm.	B. 450 nm.	*C. 600 nm.	D. 900 nm.

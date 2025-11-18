@@ -1,0 +1,108 @@
+﻿ĐỀ SỐ 2
+https://azota.vn/de-thi/rskjbh
+Câu 1. Hãy chọn phát biểu đúng. Chiếu một chùm bức xạ đơn sắc vào một tấm kẽm được đặt cô lập về điện. Hiện tượng quang điện chắc chắn không xảy ra nếu bức xạ có bước sóng
+A. 0,2(µm).	*B. 0,4(µm).	C. 0,3(µm).	D. 0,1(µm).
+Câu 2. Hạt nhân bền vững nhất trong các hạt nhân $_3^7$Li, $_{92}^{238}$U, $_{33}^{75}$As và $_8^{16}$O là
+A. $_3^7$Li.	B. $_{92}^{238}$U.	*C. $_{33}^{75}$As.	D. $_8^{16}$O.
+Câu 3. Công thoát electron của một kim loại là A = 7,23.10$^{−19}$(J). Chiếu lần lượt vào bề mặt tấm kim loại này các bức xạ có bước sóng: λ1 = 0,18(µm), λ2 = 0,21(µm), λ3 = 0,28(µm), λ4 = 0,32(µm) và λ5 = 0,40(µm). Bức xạ nào gây ra được hiện tượng quang điện đối với kim loại trên?
+A. λ1, λ3 và λ4.	*B. λ1 và λ2.	C. λ2, λ3 và λ5.	D. λ2, λ3 và λ4.
+Câu 4.	 Chọn câu sai. Hiện tượng thể hiện tính chất lượng tử của ánh sáng là
+A. hiện tượng phát quang.		B. hiện tượng quang dẫn.
+*C. hiện tượng giao thoa ánh sáng.	D. hiện tượng quang điện.
+Câu 5.	 Pin quang điện (còn gọi là pin Mặt Trời) là nguồn điện chạy bằng năng lượng ánh sáng. Nó biến đổi trực tiếp
+A. nhiệt năng thành điện năng.	B. hóa năng thành điện năng.
+C. điện năng thành quang năng.	*D. quang năng thành điện năng.
+Câu 6.	 Nơtron là hạt sơ cấp
+*A. không mang điện.		B. mang điện tích âm.
+C. có tên gọi khác là hạt nơtrinô.	D. mang điện tích dương.
+Câu 7.	 Một nguyên tố phóng xạ có chu kỳ bán rã là T. Giả sử ban đầu có N$_0$ hạt nhân phóng xạ thì sau thời gian t số hạt nhân đã phân rã được tính là
+A. ΔN=$\frac{N_0}{2^{\frac{t}{T}}}$.	B. ΔN = N$_0$. e$^{λt}$.	C. ΔN = N$_0$ (e$^{-λt}$ - 1).	*D. ΔN = N$_0$ (1 - e$^{-λt}$).
+Câu 8.	 Tốc độ của các electron khi đập vào anốt của một ống Cu-lít-giơ là 45000(km/s). Để tăng tốc độ này thêm 5000(km/s), phải tăng hiệu điện thế đặt vào ống thêm bao nhiêu? (Bỏ qua tốc độ của electron bứt ra từ catốt)
+*A. 1351(V).	B. 12868(V).	C. 5759(V).	D. 7109(V).
+Câu 9.	 Tia nào sau đây không phải là tia phóng xạ
+A. Tia α. *B. Tia X. C. Tia β+. D. Tia γ.
+Câu 10.	 Hiện tượng một chùm sáng đa sắc phức tạp sau khi qua lăng kính bị phân tích thành nhiều chùm sáng đơn sắc khác nhau là hiện tượng
+*A. tán sắc ánh sáng.	B. khúc xạ ánh sáng.	C. nhiễu xạ ánh sáng.	D. giao thoa ánh sáng.
+Câu 11.	 Cho khối lượng hạt nhân $_6^{12}$C là m$_C$ = 12,00000u; của prôtôn là m$_p$ = 1,00728u; của nơtron là m$_n$ = 1,00867u và 1u = 931,5MeV/c$^2$. Năng lượng tối thiểu để tách hạt nhân $_6^{12}$C thành các nuclôn riêng biệt bằng
+A. 44,7(MeV).	*B. 89,14(MeV).	C. 7,43(MeV).	D. 8,94(MeV).
+Câu 12.	 Trường hợp nào sau đây nguyên tử hiđrô phát xạ phôtôn? Electron chuyển từ quỹ đạo
+A. L đến quỹ đạo N.	B. K đến quỹ đạo M.	*C. L đến quỹ đạo K.	D. M đến quỹ đạo O.
+Câu 13.	 Hãy chỉ ra phát biểu sai. Trong một phản ứng hạt nhân có định luật bảo toàn
+A. năng lượng toàn phần.	B. điện tích.	C. số nuclôn.	*D. động năng.
+Câu 14.	 Một bức xạ đơn sắc có tần số 3.10$^{14}$(Hz). Lấy c = 3.10$^8$(m/s). Đây là
+*A. bức xạ hồng ngoại.	B. ánh sáng tím.	C. bức xạ tử ngoại.	D. ánh sáng đỏ.
+Câu 15.	 Nguyên tắc hoạt động của quang điện trở dựa trên hiện tượng
+*A. quang điện trong.	B. giao thoa ánh sáng.	C. tán sắc ánh sáng.	D. quang điện ngoài.
+Câu 16.	 Quang phổ liên tục do một vật rắn bị nung nóng phát ra
+A. chỉ phụ thuộc vào bản chất của vật đó.
+B. không phụ thuộc vào bản chất và nhiệt độ của vật đó.
+*C. chỉ phụ thuộc vào nhiệt độ của vật đó.
+D. phụ thuộc vào cả bản chất và nhiệt độ của vật đó.
+Câu 17.	 Phản ứng hạt nhân sau: $_3^7$Li+$_1^1$H→$_2^4$He+$_2^4$He. Biết m$_{Li}$ = 7,0144u; m$_H$ = 1,0073u; m$_{He}$ = 4,0015u, 1u = 931,5MeV/c$^2$. Phản ứng tỏa ra năng lượng là
+A. 12,6(MeV).	B. 17,25(MeV).	C. 7,26(MeV).	*D. 17,42(MeV).
+Câu 18. Các mức năng lượng của các trạng thái dừng của nguyên tử hiđrô được xác định bằng công thức $E_{n} = - \frac{13,6}{n^2}$ (eV) (n = 1, 2, 3, ...). Nếu nguyên tử hiđrô hấp thụ một phôtôn có năng lượng 0,306eV thì bước sóng nhỏ nhất của bức xạ mà nguyên tử hiđrô có thể phát ra là
+A. 9,74.10$^{-8}$(m).
+*B. 9,51.10$^{-8}$(m).
+C. 1,02.10$^{-8}$(m).
+D. 4,06.10$^{-6}$(m).
+Câu 19.	 Hiện tượng quang điện trong là hiện tượng
+*A. giải phóng electron khỏi mối liên kết trong chất bán dẫn khi được chiếu ánh sáng thích hợp.
+B. bứt electron ra khỏi bề mặt kim loại khi bị chiếu sáng.
+C. giải phóng electron khỏi kim loại bằng cách đốt nóng.
+D. giải phóng electron khỏi một chất bằng cách bắn phá ion.
+Câu 20.	 Tầng Ozon là lớp “áo giáp” bảo vệ cho con người và sinh vật trên Trái Đất khỏi tác dụng hủy diệt của
+A. tia đơn sắc màu đỏ có trong ánh sáng Mặt Trời.	B. tia hồng ngoại có trong ánh sáng Mặt Trời.
+C. tia đơn sắc màu tím có trong ánh sáng Mặt Trời.	*D. tia tử ngoại có trong ánh sáng Mặt Trời.
+Câu 21.	 Phát biểu nào sau đây là sai khi nói về thuyết lượng tử ánh sáng?
+A. Trong chân không, các phôtôn bay với tốc độ 3.10$^8$(m/s) dọc theo các tia sáng.
+B. Nguyên tử vật chất không hấp thụ hay bức xạ ánh sáng một cách liên tục mà thành từng phần riêng biệt, đứt quãng.
+C. Chùm sáng là dòng hạt, mỗi hạt là một phôtôn.
+*D. Năng lượng của các phôtôn ánh sáng là như nhau, không phụ thuộc vào tần số ánh sáng.
+Câu 22.	 Giới hạn quang điện của Nhôm và của Natri lần lượt là 0,36(μm) và 0,5(μm). Cho 1(eV) = 1,6.10$^{‒19}$(J). Công thoát của electron khỏi Nhôm lớn hơn công thoát của electron khỏi Natri một lượng là
+A. 0,140(eV).	B. 0,322(eV).	C. 1,546(eV).	*D. 0,966(eV).
+Câu 23.	 Gọi m$_p$, m$_n$, m$_X$ lần lượt là khối lượng của prôtôn, nơtron và hạt nhân $_Z^A$X. Năng lượng liên kết của hạt nhân $_Z^A$X được xác định bởi công thức
+*A. W = [Z.m$_p$ + (A - Z).m$_n$ - m$_X$].c2.	B. W = [Z.m$_p$ - (A - Z).m$_n$ + m$_X$].
+C. W = [Z.m$_p$ + (A - Z).m$_n$ - m$_X$].	D. W = [Z.m$_p$ + (A - Z).m$_n$ + m$_X$].c$^2$.
+Câu 24.	 Trong thí nghiệm Young về giao thoa ánh sáng, khoảng cách giữa hai khe là 0,2(mm); khoảng cách từ mặt phẳng chứa hai khe đến màn quan sát là 1(m); bước sóng của ánh sáng đơn sắc chiếu vào hai khe là 0,7(µm). Tính khoảng vân giao thoa.
+A. 0,35(mm).	*B. 3,5(mm).	C. 3,5(µm).	D. 1,4(µm).
+Câu 25.	 Trong thí nghiệm giao thoa ánh sáng khe Young, trên màn quan sát vân sáng là những vị trí mà hai sóng ánh sáng tại đó
+A. ngược pha.	B. lệch pha nhau 0,5π.	C. vuông pha.	*D. cùng pha.
+Câu 26.	 Bước sóng của một ánh sáng đơn sắc trong chân không là λ, khi truyền vào trong nước có chiết suất n thì tần số của ánh sáng đơn sắc đó là
+A. $\frac{nc}{λ}$.	B. $\frac{c}{λn}$.	C. cλ.	*D. $\frac{c}{λ}$.
+Câu 27.	 Tia Laze không sử dụng để nghiên cứu hiện tượng vật lí nào sau đây?
+A. Khúc xạ ánh sáng.	B. Phản xạ ánh sáng.	C.Giao thoa ánh sáng.	*D. Tán sắc ánh sáng
+Câu 28.	 Trong thí nghiệm Young về giao thoa ánh sáng, khoảng cách giữa hai khe là 0,5(mm); khoảng cách từ mặt phẳng chứa hai khe đến màn quan sát là 1(m). Nguồn S phát đồng thời 3 bức xạ có bước sóng là λ$_1$ = 0,4µm; λ$_2$ = 0,5µm; λ$_3$ = 0,6µm. Trong khoảng từ vị trí vân trung tâm O đến điểm M cách O một khoảng 6cm có bao nhiêu vân cùng màu với vân trung tâm (tính cả các điểm tại O và M)?
+A. 5.	*B. 6.	C. 3.	D. 4.
+Câu 29.	 Hiện tượng quang dẫn là hiện tượng
+A. điện trở của một chất bán dẫn tăng khi được chiếu sáng.
+B. điện trở của một kim loại giảm khi được chiếu sáng.
+*C. điện trở của một chất bán dẫn giảm khi được chiếu ánh sáng thích hợp.
+D. truyền dẫn ánh sáng theo các sợi quang uốn cong một cách bất kì.
+Câu 30.	 Bán kính quỹ đạo dừng của electron trong nguyên tử hiđrô được tính theo công thức r$_n$ = n$^2$r$_0$; với r$_0$ là bán kính Bo và n ∈ N*. Bán kính quỹ đạo dừng của electron không thể là
+A. 4r$_0$.	B. 9r$_0$.	*C. 20r$_0$.	D. 25r$_0$.
+Câu 31.	 Chọn phát biểu sai. Bức xạ (hay tia) hồng ngoại là bức xạ
+A. có tác dụng nhiệt.	B. có bước sóng từ 0,75(µm) đến cỡ milimét.
+*C. do các vật nung nóng phát ra có màu đỏ hồng.	D. có bản chất là sóng điện từ.
+Câu 32.	 Quang phát quang là hiện tượng
+A. hấp thụ một bức xạ để giải phóng electron.	*B. hấp thụ bức xạ này để phát ra bức xạ khác.
+C. hấp thụ năng lượng nhiệt để phát ra electron.	D. hấp thụ electron để phát ra một bức xạ.
+Câu 33.	 Khi electron ở quỹ đạo dừng thứ n thì năng lượng của nguyên tử hiđrô được xác định bởi công thức E$_n$=-$\frac{13,6}{n^2}$  (eV) với n = 1, 2, 3,... ứng với các quỹ đạo K, L, M,... Nguyên tử hiđrô đang ở trạng thái cơ bản, để chuyển lên trạng thái kích thích thứ 3 thì nguyên tử hiđrô phải hấp thụ một phôtôn có năng lượng
+A. -12,09(eV).	B. 12,09(eV).	C. -12,75(eV).	*D. 12,75(eV).
+Câu 34.	 Hạt nhân nguyên tử pôlôni $_{84}^{210}$Po có
+*A. 210 nuclon; 84 proton và 126 nơtron.	B. 84 nuclon; 210 proton và 126 nơtron.
+C. 210 proton; 84 nuclon và 126 nơtron.	D. 210 nuclon; 84 nơtron và 126 proton.
+Câu 35.	 Một nguồn phát ra đồng thời 4 bức xạ có bước sóng lần lượt là 250(nm), 450(nm), 650(nm) và 850(nm). Dùng nguồn sáng này chiếu vào khe F của máy quang phổ lăng kính, số vạch màu quan sát được trên tấm kính ảnh (tấm kính mờ) của buồng tối là
+*A. 2.	B. 1.	C. 4.	D. 3.
+Câu 36.	 Khi nói về tia hồng ngoại, phát biểu nào sau đây là sai?
+*A. Các vật ở nhiệt độ cao trên 2000$^o$C chỉ phát ra tia hồng ngoại.
+B. Tác dụng nổi bật của tia hồng ngoại là tác dụng nhiệt.
+C. Tia hồng ngoại có tần số nhỏ hơn tần số của ánh sáng tím.
+D. Tia hồng ngoại có bản chất là sóng điện từ.
+Câu 37.	 Xác định hạt nhân X trong phản ứng sau: α+$_{13}^{27}$Al→X+n
+A. Silic28.	B. Phôtpho32.	*C. Phôtpho30.	D. Phôtpho31.
+Câu 38.	 Trong một thí nghiệm Young về giao thoa ánh sáng, nguồn sáng phát ra đồng thời hai bức xạ đơn sắc, trên màn thu được hai hệ vân giao thoa với các khoảng vân lần lượt là 1,35(mm) và 2,25(mm). Trong số các điểm mà tại đó cả hai bức xạ đều cho vân tối thì M và N là hai điểm gần nhau nhất. Khoảng cách M$_N$ bằng
+A. 4,375(mm).	*B. 6,75(mm).	C. 3,375(mm).	D. 3,2(mm).
+Câu 39.	 Hãy chọn phát biểu đúng. Giới hạn quang điện của một hợp kim gồm bạc, đồng và kẽm sẽ là
+A. 0,40(µm).	*B. 0,35(µm).	C. 0,30(µm).	D. 0,26(µm).
+Câu 40.	 Trong miền ánh sáng nhìn thấy, chiết suất của thủy tinh có giá trị nhỏ nhất đối với ánh sáng đơn sắc nào sau đây?
+A. Ánh sáng lam.	B. Ánh sáng tím.	*C. Ánh sáng đỏ.	D. Ánh sáng lục.
