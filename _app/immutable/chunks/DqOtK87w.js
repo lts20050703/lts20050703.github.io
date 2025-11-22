@@ -1,0 +1,1 @@
+import{B as b,X as t,b as h,Y as k,Z as B}from"./HufPbK5P.js";function u(r,i){return r===i||r?.[B]===i}function Y(r={},i,a,S){return b(()=>{var f,s;return t(()=>{f=s,s=[],h(()=>{r!==a(...s)&&(i(r,...s),f&&u(a(...f),r)&&i(null,...f))})}),()=>{k(()=>{s&&u(a(...s),r)&&i(null,...s)})}}),r}export{Y as b};

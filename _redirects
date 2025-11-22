@@ -96,6 +96,7 @@
 /links/guilded/ https://www.guilded.gg/u/lts20050703 302
 /2023/ /aozta/ 301
 /status/ https://stats.uptimerobot.com/0gGQZzBZSC 301
+/project/ /projects/ 301
 /april-lie/ https://april-lie.20050703.xyz/ 301
 /april_lie/ https://april-lie.20050703.xyz/ 301
 /beep-test/ https://beep-test.20050703.xyz/ 301
@@ -111,9 +112,12 @@
 /wist/ https://wist.20050703.xyz/ 301
 /nang_khieu_library/ /nang-khieu-library/ 301
 /nang_khieu_library/encode/ /nang-khieu-library/encode/ 301
+/library/ /nang-khieu-library/ 301
 /adaptive_music/ /adaptive-music/ 301
 /werewolf_moderator/ /werewolf-moderator/ 301
-/werewolf_night/ /werewolf-night/ 301
+/werewolf_night/ /werewolf-moderator/ 301
+/werewolf-night/ /werewolf-moderator/ 301
+/msn/ /werewolf-moderator/ 301
 /openclozes/an-old-man-looked-back-on-his-life/ /openclozes/?link=/openclozes/an-old-man-looked-back-on-his-life.txt 301
 /openclozes/an_old_man_looked_back_on_his_life/ /openclozes/?link=/openclozes/an-old-man-looked-back-on-his-life.txt 301
 /openclozes/getting-along-in-one's-school-work/ /openclozes/?link=/openclozes/getting-along-in-one's-school-work.txt 301
@@ -198,3 +202,5 @@
 /2023/sinh/3536/ /aozta/?link=/aozta/sinh/3536.txt 301
 /2023/sinh/3738/ /aozta/?link=/aozta/sinh/3738.txt 301
 /2023/sinh/2426282930353637383940/ /aozta/?link=/aozta/sinh/2426282930353637383940.txt 301
+/blog/2023/04/15/1/ /blog/1684923240000 301
+/blog/2024/04/26/0/ /blog/1714071600000 301
