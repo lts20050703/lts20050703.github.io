@@ -1,0 +1,1 @@
+import{w as b,_ as t,b as h,$ as k,a0 as S}from"./Dh-QpTF3.js";function u(r,i){return r===i||r?.[S]===i}function d(r={},i,a,T){return b(()=>{var f,s;return t(()=>{f=s,s=[],h(()=>{r!==a(...s)&&(i(r,...s),f&&u(a(...f),r)&&i(null,...f))})}),()=>{k(()=>{s&&u(a(...s),r)&&i(null,...s)})}}),r}export{d as b};
