@@ -1,0 +1,1 @@
+import{z as o,u as l,l as t,A as u,b as a}from"./CfxMfjxc.js";function f(n){t===null&&o(),u&&t.l!==null?c(t).m.push(n):l(()=>{const e=a(n);if(typeof e=="function")return e})}function c(n){var e=n.l;return e.u??={a:[],b:[],m:[]}}export{f as o};

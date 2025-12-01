@@ -1,0 +1,1 @@
+import{E as b,a0 as t,b as h,a1 as k,a2 as E}from"./CfxMfjxc.js";function u(r,a){return r===a||r?.[E]===a}function c(r={},a,f,S){return b(()=>{var i,s;return t(()=>{i=s,s=[],h(()=>{r!==f(...s)&&(a(r,...s),i&&u(f(...i),r)&&a(null,...i))})}),()=>{k(()=>{s&&u(f(...s),r)&&a(null,...s)})}}),r}export{c as b};
