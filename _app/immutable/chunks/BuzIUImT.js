@@ -1,1 +1,0 @@
-import{l as o,F as c,m as _,o as d,G as T,H as b,I as m,J as p,K as f}from"./CFdZUXEq.js";import{B as y}from"./CLGmhkSB.js";function v(t,i,l=!1){_&&d();var e=new y(t),u=l?c:0;function n(a,r){if(_){const h=T(t)===b;if(a===h){var s=m();p(s),e.anchor=s,f(!1),e.ensure(a,r),f(!0);return}}e.ensure(a,r)}o(()=>{var a=!1;i((r,s=!0)=>{a=!0,n(s,r)}),a||n(!1,null)},u)}export{v as i};
