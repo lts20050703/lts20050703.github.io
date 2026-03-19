@@ -1,0 +1,1 @@
+import{n as e}from"./T264fQYV.js";import{I as t,P as n,pt as r}from"./rS59gUOi.js";var i=e({default:()=>c,metadata:()=>a}),a={title:`Ảo z ta 2023.04.15.12 có gì mới?`},{title:o}=a,s=t(`<p>Sinh: cập nhật nội dung thi cuối học kỳ 2 (xem ảnh đính kèm)</p> <p><img src="/patch-notes/0.webp"/></p>`,1);function c(e){var t=s();r(2),n(e,t)}export{c as n,a as r,i as t};

@@ -1,0 +1,1 @@
+function e(e,t=`medium`,n){let r=new Date(e*1e3);return new Intl.DateTimeFormat(navigator.language??`en`,{dateStyle:t,timeStyle:n}).format(r)}export{e as t};
