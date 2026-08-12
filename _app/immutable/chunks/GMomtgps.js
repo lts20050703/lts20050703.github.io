@@ -1,0 +1,1 @@
+import{n as e}from"./hePW80VL.js";import{F as t,N as n}from"./CYb38XDQ.js";import"./xihTtKlq.js";var r=e({default:()=>s,metadata:()=>i}),i={title:`Ảo z ta 2023.04.17.0 có gì mới?`},{title:a}=i,o=t(`<ul><li>Giao diện điện thoại: dời các nút kiểm tra và đáp án lên trên</li></ul>`);function s(e){var t=o();n(e,t)}export{r as t};

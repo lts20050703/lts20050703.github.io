@@ -1,1 +1,0 @@
-import{n as e}from"./hePW80VL.js";import{F as t,N as n}from"./f66t-BCg.js";import"./xihTtKlq.js";var r=e({default:()=>s,metadata:()=>i}),i={title:`Ảo z ta 2023.04.16.14 có gì mới?`},{title:a}=i,o=t(`<p>Sửa giao diện trên điện thoại</p>`);function s(e){var t=o();n(e,t)}export{r as t};
