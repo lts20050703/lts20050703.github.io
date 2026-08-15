@@ -34,7 +34,7 @@ Câu 13. Chất nào sau đây được dùng để làm mềm nước có tính
 Câu 14. Chất nào sau đây có tính lưỡng tính? 
         *A. Al<sub>2</sub>O<sub>3</sub>. 	B. AlCl<sub>3</sub>. 	C. Al. 	D. Al(NO<sub>3</sub>)<sub>3</sub>. 
 Câu 15. X có công thức phân tử Na<sub>3</sub>AlF<sub>6</sub> được thêm vào Al<sub>2</sub>O<sub>3</sub> trong quá trình điện phân Al<sub>2</sub>O<sub>3</sub> nóng chảy để sản xuất nhôm. Vai trò của X là: làm tăng độ dẫn điện của Al<sub>2</sub>O<sub>3</sub> nóng chảy, làm giảm nhiệt độ nóng chảy của Al<sub>2</sub>O<sub>3</sub>, tạo lớp ngăn cách để bảo vệ Al nóng chảy. Vậy X có tên là gì?
-<img src="/aozta/hoa315.webp">
+<img src="/aozta/hoa315.avif">
 A. Phèn chua. 	B. Hemantit. 	C. Boxit. 	*D. Criolit. 
 Câu 16. Cho dung dịch NaOH tác dụng với dung dịch Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>, thu được kết tủa X màu nâu đỏ. Tên gọi của X là
 *A. sắt(III) hiđroxit. B. sắt(III) oxit. C. natri sunfat. D. sắt(II) hiđroxit.
@@ -53,7 +53,7 @@ Câu 22. Nguyên liệu chính dùng để sản xuất nhôm là:
 Câu 23. Đốt cháy kim loại X trong oxi, thu được oxit Y. Hòa tan Y trong dung dịch HCl loãng dư, thu được dung dịch Z chứa hai muối. Kim loại X là 
         A. Mg. 	B. Al. 	C. Zn. 	*D. Fe. 
 Câu 24. Tiến hành phản ứng khử X (oxit kim loại) bằng khí H<sub>2</sub> (dư) theo sơ đồ hình vẽ dưới đây: 
-<img src="/aozta/hoa324.webp">
+<img src="/aozta/hoa324.avif">
 Oxit X là 
         *A. CuO. 	B. K<sub>2</sub>O. 	C. MgO. 	D. Al<sub>2</sub>O<sub>3</sub>. 
 Câu 25. Cho 2,8 gam kim loại M tác dụng với khí Cl<sub>2</sub> dư, thu được 8,125 gam muối. Kim loại M là 
@@ -109,7 +109,7 @@ Câu 38. Khối lượng dung dịch HNO<sub>3</sub> 6,3% loãng tối thiểu �
 Câu 39. Nung hỗn hợp gồm 0,12 mol Al và 0,04 mol Fe<sub>3</sub>O<sub>4</sub> một thời gian, thu được hỗn hợp rắn X. Hòa tan hoàn toàn X trong dung dịch HCl dư thu được 0,15 mol khí H<sub>2</sub> và m gam muối. Giá trị của m là  
 	 A. 34,10. 	B. 32,58. 	*C. 31,97. 	D. 33,39. 
 Câu 40. Hàn nhiệt là phương pháp hàn dựa trên cơ sở của phản ứng tỏa nhiệt giữa một oxit kim loại với một kim loại khác có ái lực hóa học với oxi mạnh hơn. Thông dụng nhất là phản ứng giữa nhôm và oxit sắt từ (Fe<sub>3</sub>O<sub>4</sub>). Phản ứng xảy ra khi nung nóng một lượng nhỏ hỗn hợp đến nhiệt độ khoảng 1200 - 1300°C, sau đó phản ứng tiếp tục được duy trì nhờ nhiệt độ của phản ứng và lan nhanh ra toàn khối hỗn hợp làm nhiệt độ tăng lên đến 3000°C, nung nóng chảy sắt tạo thành thép lỏng và làm nóng chảy các tạp chất tạo thành xỉ lỏng.
-<img src="/aozta/hoa340.webp">
+<img src="/aozta/hoa340.avif">
 1. Chi tiết hàn; 2. Khuôn; 3. Hệ thống rót; 4. Nồi chứa; 5. Xỉ; 6. Thép lỏng 
 Tiến hành mở lỗ rót ở đáy nồi phản ứng để rót thép lỏng vào khuôn. Thép lỏng có nhiệt độ cao nung chảy mép hàn, sau đó đông đặc tạo thành mối hàn. Cho biết khối lượng riêng của sắt là 7,87 g/cm³ và lượng sắt trong mối hàn bằng 90% lượng sắt được điều chế ra và các chất được lấy đúng theo hệ số tỉ lượng. Khối lượng gần nhất của hỗn hợp tecmit cần lấy để có thể hàn được vết nứt gãy của đường ray có thể tích là 10 cm³ là 
         *A. 158 gam. 	B. 138 gam. 	C. 128 gam. 	D. 148 gam. 
