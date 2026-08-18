@@ -1,0 +1,1 @@
+import{n as e}from"./hePW80VL.js";import{F as t,N as n}from"./C2Oxycld.js";var r=e({default:()=>s,metadata:()=>i}),i={title:`What's new in Adaptive Music 2024.09.06.0?`},{title:a}=i,o=t(`<ul><li>Fixed desync fix not working on firefox.</li></ul>`);function s(e){var t=o();n(e,t)}export{r as t};
