@@ -1,0 +1,73 @@
+{
+	"same_group_fade_in_ms": 1643.83561644,
+	"same_group_fade_out_ms": 1643.83561644,
+	"different_group_fade_in_ms": 0,
+	"different_group_fade_out_ms": 1643.83561644,
+	"volume": 100,
+	"volume_fade_ms": 1000,
+	"current_phase": 0,
+	"auto_advance_every_second": 0,
+	"auto_advance": false,
+	"audios": [
+		{
+			"id": "GMHS_Progress1_Master.mp3",
+			"group": 0,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.64383561644,
+			"loops": [
+				{
+					"start": 19.726027397260275,
+					"end": 284.3835208333333,
+					"loop": true,
+					"phase": "1"
+				}
+			]
+		},
+		{
+			"id": "GMHS_Progress2_Master.mp3",
+			"group": 1,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.64383561644,
+			"loops": [
+				{
+					"start": 20.136986301369863,
+					"end": 284.7945,
+					"loop": true,
+					"phase": "2"
+				}
+			]
+		},
+		{
+			"id": "GMHS_Progress2Day_Master.mp3",
+			"group": 1,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.64383561644,
+			"loops": [
+				{
+					"start": 20.136986301369863,
+					"end": 284.7945,
+					"loop": true,
+					"phase": "3"
+				}
+			]
+		},
+		{
+			"id": "GMHS_Progress3_Master.mp3",
+			"group": 2,
+			"volume": 100,
+			"offset": 0,
+			"bar_duration": 1.64383561644,
+			"loops": [
+				{
+					"start": 23.013698630136986,
+					"end": 273.4247291666667,
+					"loop": true,
+					"phase": "4"
+				}
+			]
+		}
+	]
+}
